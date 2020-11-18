@@ -7,13 +7,13 @@
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>Migrate from Jekyll</title>
+  <title>移动应用开发方面，Etsy的持续交付流水线探索</title>
   <meta name="author" content="乔梁" />
   
   
   
   
-  <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环理论, ipsum">
+  <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环理论, 案例">
   
   
   <meta name="description" content="乔梁的经验总结">
@@ -66,11 +66,11 @@
   
   <meta property="og:locale" content="en_us">
   <meta property="og:site_name" content="持续交付 2.0">
-  <meta property="og:title" content="Migrate from Jekyll">
+  <meta property="og:title" content="移动应用开发方面，Etsy的持续交付流水线探索">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="http://www.continuousdelivery20.com/blog/2015/10/10/migrate-from-jekyll/" />
+  <meta property="og:url" content="http://www.continuousdelivery20.com/blog/2014/02/28/etsy-mobile-cd/" />
   <meta property="og:description" content="乔梁的经验总结">
-  <meta property="og:image" content="http://www.continuousdelivery20.com/img/banners/banner-5.jpg">
+  <meta property="og:image" content="http://www.continuousdelivery20.com/img/banners/banner-1.jpg">
   <meta property="og:image:type" content="image/jpg">
   
   
@@ -79,27 +79,27 @@
     <meta property="og:image:height" content="750">
   
   
-  <meta property="og:updated_time" content="2015-10-10T13:07:31&#43;0200">
+  <meta property="og:updated_time" content="2014-02-28T00:00:00Z">
   
     
     
-    <meta property="article:section" content="lorem">
-    <meta property="article:tag" content="ipsum">
+    <meta property="article:section" content="实践案例">
+    <meta property="article:tag" content="案例">
     
     
-    <meta property="article:published_time" content="2015-10-10T13:07:31&#43;0200">
-    <meta property="article:modified_time" content="2015-10-10T13:07:31&#43;0200">
+    <meta property="article:published_time" content="2014-02-28T00:00:00Z">
+    <meta property="article:modified_time" content="2014-02-28T00:00:00Z">
   
 
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@GoHugoIO">
-  <meta name="twitter:title" content="Migrate from Jekyll">
+  <meta name="twitter:title" content="移动应用开发方面，Etsy的持续交付流水线探索">
   
-  <meta name="twitter:image" content="http://www.continuousdelivery20.com/img/banners/banner-5.jpg">
+  <meta name="twitter:image" content="http://www.continuousdelivery20.com/img/banners/banner-1.jpg">
   
   <meta name="twitter:description" content="乔梁的经验总结">
-  <meta name="twitter:creator" content="@jekyllrb">
+  
 
 </head>
 
@@ -117,9 +117,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="/">
-                    <img src="/img/logo.png" alt="Migrate from Jekyll logo" class="hidden-xs hidden-sm">
-                    <img src="/img/logo-small.png" alt="Migrate from Jekyll logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Migrate from Jekyll - go to homepage</span>
+                    <img src="/img/logo.png" alt="移动应用开发方面，Etsy的持续交付流水线探索 logo" class="hidden-xs hidden-sm">
+                    <img src="/img/logo-small.png" alt="移动应用开发方面，Etsy的持续交付流水线探索 logo" class="visible-xs visible-sm">
+                    <span class="sr-only">移动应用开发方面，Etsy的持续交付流水线探索 - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -197,7 +197,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Migrate from Jekyll</h1>
+                <h1>移动应用开发方面，Etsy的持续交付流水线探索</h1>
             </div>
         </div>
     </div>
@@ -213,142 +213,68 @@
 
                     <div class="col-md-9" id="blog-post">
 
-                        <p class="text-muted text-uppercase mb-small text-right">October 10, 2015</p>
+                        <p class="text-muted text-uppercase mb-small text-right">February 28, 2014</p>
 
                         <div id="post-content">
-                          <h2 id="move-static-content-to-static">Move static content to <code>static</code></h2>
-<p>Jekyll has a rule that any directory not starting with <code>_</code> will be copied as-is to the <code>_site</code> output. Hugo keeps all static content under <code>static</code>. You should therefore move it all there.
-With Jekyll, something that looked like</p>
-<pre><code>▾ &lt;root&gt;/
-    ▾ images/
-        logo.png
-</code></pre>
-<p>should become</p>
-<pre><code>▾ &lt;root&gt;/
-    ▾ static/
-        ▾ images/
-            logo.png
-</code></pre>
-<p>Additionally, you&rsquo;ll want any files that should reside at the root (such as <code>CNAME</code>) to be moved to <code>static</code>.</p>
-<h2 id="create-your-hugo-configuration-file">Create your Hugo configuration file</h2>
-<p>Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the <a href="/overview/configuration/">Hugo configuration documentation</a> for details.</p>
-<h2 id="set-your-configuration-publish-folder-to-_site">Set your configuration publish folder to <code>_site</code></h2>
-<p>The default is for Jekyll to publish to <code>_site</code> and for Hugo to publish to <code>public</code>. If, like me, you have <a href="http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html"><code>_site</code> mapped to a git submodule on the <code>gh-pages</code> branch</a>, you&rsquo;ll want to do one of two alternatives:</p>
-<ol>
-<li>
-<p>Change your submodule to point to map <code>gh-pages</code> to public instead of <code>_site</code> (recommended).</p>
-<pre><code> git submodule deinit _site
- git rm _site
- git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
-</code></pre>
-</li>
-<li>
-<p>Or, change the Hugo configuration to use <code>_site</code> instead of <code>public</code>.</p>
-<pre><code> {
-     ..
-     &quot;publishdir&quot;: &quot;_site&quot;,
-     ..
- }
-</code></pre>
-</li>
-</ol>
-<h2 id="convert-jekyll-templates-to-hugo-templates">Convert Jekyll templates to Hugo templates</h2>
-<p>That&rsquo;s the bulk of the work right here. The documentation is your friend. You should refer to <a href="http://jekyllrb.com/docs/templates/">Jekyll&rsquo;s template documentation</a> if you need to refresh your memory on how you built your blog and <a href="/layout/templates/">Hugo&rsquo;s template</a> to learn Hugo&rsquo;s way.</p>
-<p>As a single reference data point, converting my templates for <a href="http://heyitsalex.net/">heyitsalex.net</a> took me no more than a few hours.</p>
-<h2 id="convert-jekyll-plugins-to-hugo-shortcodes">Convert Jekyll plugins to Hugo shortcodes</h2>
-<p>Jekyll has <a href="http://jekyllrb.com/docs/plugins/">plugins</a>; Hugo has <a href="/doc/shortcodes/">shortcodes</a>. It&rsquo;s fairly trivial to do a port.</p>
-<h3 id="implementation">Implementation</h3>
-<p>As an example, I was using a custom <a href="https://github.com/alexandre-normand/alexandre-normand/blob/74bb12036a71334fdb7dba84e073382fc06908ec/_plugins/image_tag.rb"><code>image_tag</code></a> plugin to generate figures with caption when running Jekyll. As I read about shortcodes, I found Hugo had a nice built-in shortcode that does exactly the same thing.</p>
-<p>Jekyll&rsquo;s plugin:</p>
-<pre><code>module Jekyll
-  class ImageTag &lt; Liquid::Tag
-    @url = nil
-    @caption = nil
-    @class = nil
-    @link = nil
-    // Patterns
-    IMAGE_URL_WITH_CLASS_AND_CAPTION =
-    IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK = /(\w+)(\s+)((https?:\/\/|\/)(\S+))(\s+)&quot;(.*?)&quot;(\s+)-&gt;((https?:\/\/|\/)(\S+))(\s*)/i
-    IMAGE_URL_WITH_CAPTION = /((https?:\/\/|\/)(\S+))(\s+)&quot;(.*?)&quot;/i
-    IMAGE_URL_WITH_CLASS = /(\w+)(\s+)((https?:\/\/|\/)(\S+))/i
-    IMAGE_URL = /((https?:\/\/|\/)(\S+))/i
-    def initialize(tag_name, markup, tokens)
-      super
-      if markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK
-        @class   = $1
-        @url     = $3
-        @caption = $7
-        @link = $9
-      elsif markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION
-        @class   = $1
-        @url     = $3
-        @caption = $7
-      elsif markup =~ IMAGE_URL_WITH_CAPTION
-        @url     = $1
-        @caption = $5
-      elsif markup =~ IMAGE_URL_WITH_CLASS
-        @class = $1
-        @url   = $3
-      elsif markup =~ IMAGE_URL
-        @url = $1
-      end
-    end
-    def render(context)
-      if @class
-        source = &quot;&lt;figure class='#{@class}'&gt;&quot;
-      else
-        source = &quot;&lt;figure&gt;&quot;
-      end
-      if @link
-        source += &quot;&lt;a href=\&quot;#{@link}\&quot;&gt;&quot;
-      end
-      source += &quot;&lt;img src=\&quot;#{@url}\&quot;&gt;&quot;
-      if @link
-        source += &quot;&lt;/a&gt;&quot;
-      end
-      source += &quot;&lt;figcaption&gt;#{@caption}&lt;/figcaption&gt;&quot; if @caption
-      source += &quot;&lt;/figure&gt;&quot;
-      source
-    end
-  end
-end
-Liquid::Template.register_tag('image', Jekyll::ImageTag)
-</code></pre>
-<p>is written as this Hugo shortcode:</p>
-<pre><code>&lt;!-- image --&gt;
-&lt;figure {{ with .Get &quot;class&quot; }}class=&quot;{{.}}&quot;{{ end }}&gt;
-    {{ with .Get &quot;link&quot;}}&lt;a href=&quot;{{.}}&quot;&gt;{{ end }}
-        &lt;img src=&quot;{{ .Get &quot;src&quot; }}&quot; {{ if or (.Get &quot;alt&quot;) (.Get &quot;caption&quot;) }}alt=&quot;{{ with .Get &quot;alt&quot;}}{{.}}{{else}}{{ .Get &quot;caption&quot; }}{{ end }}&quot;{{ end }} /&gt;
-    {{ if .Get &quot;link&quot;}}&lt;/a&gt;{{ end }}
-    {{ if or (or (.Get &quot;title&quot;) (.Get &quot;caption&quot;)) (.Get &quot;attr&quot;)}}
-    &lt;figcaption&gt;{{ if isset .Params &quot;title&quot; }}
-        {{ .Get &quot;title&quot; }}{{ end }}
-        {{ if or (.Get &quot;caption&quot;) (.Get &quot;attr&quot;)}}&lt;p&gt;
-        {{ .Get &quot;caption&quot; }}
-        {{ with .Get &quot;attrlink&quot;}}&lt;a href=&quot;{{.}}&quot;&gt; {{ end }}
-            {{ .Get &quot;attr&quot; }}
-        {{ if .Get &quot;attrlink&quot;}}&lt;/a&gt; {{ end }}
-        &lt;/p&gt; {{ end }}
-    &lt;/figcaption&gt;
-    {{ end }}
-&lt;/figure&gt;
-&lt;!-- image --&gt;
-</code></pre>
-<h3 id="usage">Usage</h3>
-<p>I simply changed:</p>
-<pre><code>{% image full http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg &quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were &quot;having fun&quot; and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&quot; -&gt;http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/ %}
-</code></pre>
-<p>to this (this example uses a slightly extended version named <code>fig</code>, different than the built-in <code>figure</code>):</p>
-<pre><code>{{% fig class=&quot;full&quot; src=&quot;http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg&quot; title=&quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were having fun and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&quot; link=&quot;http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/&quot; %}}
-</code></pre>
-<p>As a bonus, the shortcode named parameters are, arguably, more readable.</p>
-<h2 id="finishing-touches">Finishing touches</h2>
-<h3 id="fix-content">Fix content</h3>
-<p>Depending on the amount of customization that was done with each post with Jekyll, this step will require more or less effort. There are no hard and fast rules here except that <code>hugo server --watch</code> is your friend. Test your changes and fix errors as needed.</p>
-<h3 id="clean-up">Clean up</h3>
-<p>You&rsquo;ll want to remove the Jekyll configuration at this point. If you have anything else that isn&rsquo;t used, delete it.</p>
-<h2 id="a-practical-example-in-a-diff">A practical example in a diff</h2>
-<p><a href="http://heyitsalex.net/">Hey, it&rsquo;s Alex</a> was migrated in less than a <em>father-with-kids day</em> from Jekyll to Hugo. You can see all the changes (and screw-ups) by looking at this <a href="https://github.com/alexandre-normand/alexandre-normand/compare/869d69435bd2665c3fbf5b5c78d4c22759d7613a...b7f6605b1265e83b4b81495423294208cc74d610">diff</a>.</p>
+                          <h2 id="移动应用开发方面etsy的持续交付流水线探索">移动应用开发方面，Etsy的持续交付流水线探索</h2>
+<p>在很久以前，本站报导过Etsy如何实现Web端每日在生产环境上部署40次。现在移动应用大潮来了，它又是如何做的呢？本文发表于2014年2月，虽然有一些迟了，但相信对广大读者还是会有很多启发，也会带来更大的信心</p>
+<p>移动app的好评在用户转化率和品牌树立方面都有非常积极的帮助。相反，差评可能会有非常严重的后果。正如很多人所说：“移动应用的死活取决于它在应用市场中评分”</p>
+<p>esty_app_cd_1.png</p>
+<p>上面这个图是Etsy iOS应用的一个真实反馈。做为Etsy的开发人员，看到它真的很沮丧，但它是事实：有一些bug会从我们的指缝溜走，却被用户发现。对于Web端开发，我们使用我们的持续交付常规武器（从一些传统软件公司看来，可能是核武器）作为安全网来快速解决那些溜达到生产环境中的bug。然而，移动应用的发布需要第三方的审核（应用商店），平均耗时５天以上。</p>
+<p>esty_app_cd_2.png</p>
+<p>即使审核通过，是否升级，什么时候升级都是用户自己说的算——他们可能一直停留在某个旧版本上。根据我们的分析数据，Etsy目前有5个iOS版本和10个Android版本被用户使用。</p>
+<p>通过持续集成 （Continuous Integration ，通常简称CI），我们能够在项目的开发和测试阶段发现并修复大部分问题，不至于影响到用户的体验：本文揭示Etsy对安卓和iOS应用实现持续集成流水线的过程。</p>
+<h3 id="每次提交git-push都要在主干上并在集成服务器上构建">每次提交(git push)都要在主干上，并在集成服务器上构建。</h3>
+<p>这是持续集成的第一基本原则，也是问题一旦被引入，能够快速发现的第一步：编译失败。在IDE里构建我们的应用并不算持续集成。感谢上帝，iOS和Android都是命令行友好的：构建iOS应用只要一个简单的命令：</p>
+<pre><code>xcodebuild -scheme &quot;Etsy&quot; archive
+</code></pre><h3 id="准备持续集成的环境">准备持续集成的环境</h3>
+<p>用于集成的机器应该与开发者的机器分开——它们要为构建和测试提供一个稳定、受控、可再生的环境。“确保所有用于集成的机器都是幂等的”这一点至关重要。为了确保统一性和可扩展性，使用一个环境准备(provisioning)的框架来管理所有的依赖是一个不错的方法。</p>
+<p>在Etsy，我们很高兴用Chef来管理我们的基础设施 – 我们用它来准备我们的Mac Mini机器集合。在安装包管理的homebrew以及方便管理ruby环境的rbenv帮助下，我们的系统运维师Jon Cowie 施了一点点hdiutil小魔法(来管理disk images），我们的cookbooks也就准备好了。对于我们构建和运行测试所需安装的Xcode，Git，以及所有Android包来说，其中95%的工作，我们已经通过编程方式实现安装了，还有一些步骤需要手工完成。</p>
+<p>另外，如果你与iOS provisioning profiles打过交道，一定能体会到，对它的管理和更新是多么烦人；假如有一个集中式系统，来管理所有的profiles，那能为工程师节省很多时间。</p>
+<h3 id="building-on-push-and-providing-daily-deploys">Building on push and providing daily deploys</h3>
+<p>把我们的CI机器与Jenkins服务器联动起来，安排一个计划让它每次git　push操作时都进行构建，这是小菜一碟。事情非常容易。但正是这么一个简单的步骤，每个星期可以帮助我们发现几次提交时忘记了某个文件，或编译问题——通过IRC或邮件，开发人员会得到通知，这样，这类问题在被发现几分钟内就会得到解决。除了push后立即构建app，我们还提供每日构建包，任何一个Etsy员工都可以把这个每日构建包安装到他们的移动设备上——这是“吃自己狗食”的精髓。促进我们的同事安装预发布版本的简单方法就是在他们使用官方发布版本时提醒（骚扰）他们。</p>
+<p>esty_app_cd_3.png</p>
+<h3 id="测试">测试</h3>
+<p>对于iOS设备，有七种不同的iPad，五种iPhone，还有iPod，当说到Android时，那就更不用说了，简直是多如牛毛，即便是只关注主流设备也没能少到哪里去。CI的目标是：问题一旦被引入，就立即发现：我们不能依靠测试团队在每次代码提交时，都一遍又一遍的验证同样的功能特性!</p>
+<p>在Web端，我们已经有大量的测试集，这是我们引以为豪的，而且TDD文化已经形成。基本上，我们的移动应用也借用很多web端的代码库来提供内容：数据通过API获取，而且很多页面也是web views。移动应用的大多数核心逻辑依赖于UI层，这可能通过功能测试来覆盖。正因如此，我们第一个方法是聚焦于一些功能性测试，其前提是我们的API已经在Web端被测试过了（通过单元测试和冒烟测试）。</p>
+<p>移动应用的功能性测试并不是新鲜事情，选择性也非常广泛。在我们公司，我们用Calabash 和Cucumber。Cucumber的友好格式和预定义步骤，加上Calabash，让测试团队自己就可以写测试，非无需移动应用开发工程师的帮助。</p>
+<p>到目前为止，我们的功能测试运行在iPad/iPhone iOS 6和iOS7 以及Android上，覆盖我们第一层级的功能，包括:</p>
+<ul>
+<li>搜索列表和商店</li>
+<li>注册新用户</li>
+<li>用信用卡或礼品卡买东西</li>
+</ul>
+<p>功能测试会模拟一个真正用户的使用步骤，所以这些测试需要某种假设的资源一定存在。比如在结算测试这个例子上，这些资源就包括:</p>
+<ul>
+<li>一个专门用于测试的买家帐户</li>
+<li>一个专用于测试的卖家帐户</li>
+<li>一个与帐户已关联好的信用卡</li>
+</ul>
+<p>而我们的结算测试包括：</p>
+<ul>
+<li>用买家帐户在移动应用上登录</li>
+<li>搜索某种商品（在卖家帐户的商铺里）</li>
+<li>把它加到购物车</li>
+<li>用信用卡支付</li>
+</ul>
+<p>一旦测试结束，在后台就会有一个机制触发，用来取消这次交易，把该信用卡重置。</p>
+<p>我们的功能性测试发现了bug，下面就是在iPad上的一个例子：</p>
+<p>esty_app_cd_4.png</p>
+<p>我们的注册测试导向了这个页面，并填写了所有的可见字段。然后，测试走到了先择 “Female“, “Male”和“Rather Not Say”这一步；在这个例子中，测试失败了（因为没有“male”选项）。</p>
+<p>通过工程师每次提交代码就运行我们的测试套件，我们不但尽早地发现了bug，而且还能发现移动应用的崩溃。我们的开发人员通常在系统的最新版本上进行测试，但Jenkins有他们自己的环境：我们的测试同时运行在多个不同的系统及设备的组合上。</p>
+<h3 id="在物理设备上进行测试">在物理设备上进行测试</h3>
+<p>尽管我们的开发人员非常喜欢用我们 非常强大的设备实验室 做手工测试，但维护一堆设备，并在其之上持续运行自动化测试是个噩梦，而且还是个全职工作。通过多次尝试开发一个in-house解决方案，我们决定用Appthwack在物理设备上运行我们的测试。利用Appthwack的设备云，我们每次提交代码都会在一组专门的设备上运行测试，同时，每天晚上在更大范围的设备上运行每日回归测试。这种方式是最近才用的，我们仍旧在找寻物理设备运行测试的方法，在一个200多台的设备上收集测试状态及报告是一个挑战。</p>
+<h3 id="一定要有一个dashboard">一定要有一个dashboard</h3>
+<p>我们有15个Jenkins jobs来构建和运行测试，快速地把关键信息通知到开发人员是一个巨大的挑战。一个简单的自己开发的dashboard来展示所有的配置和测试状态不是一个不错的选择，陪伴了我们很久：</p>
+<p>esty_app_cd_5.png</p>
+<h3 id="静态分析与code-reviews">静态分析与code reviews</h3>
+<p>自动化测试不能发现所有的bug和潜在的崩溃——这与web端一样，开发人员在提交前强制进行code reviews。与Esty的其它代码一样，移动应用的代码也放在Github的企业仓库里，code reviews是一个pull request以及一个与其相关联的issue。通过使用GitHub pull request builder Jenkins plugin, 我们可以由系统触发一次构建，做一些静态代码分析（参看static analysis with OCLint post），然后把结果放到一个Github issue上：</p>
+<p>esty_app_cd_6.png</p>
+<h3 id="基础设施总结">基础设施总结</h3>
+<p>esty_app_cd_7.png</p>
+<h3 id="挑战与下一步">挑战与下一步</h3>
+<p>对于构建我们的持续集成基础设施，我们非常努力，当然，面对的挑战也是一个接着一个。比如不能自动化安装某些软件依赖包。一旦稳定了，我们还要持续保持更新，总有新的发布(iOS 7, Mavericks) ，可能会导致测试或测试框架出问题。而且，功能性测试本质上就比较脆弱，需要持续关注和优化。</p>
+<p>我们现在已经达到：测试和基础设施已足够稳定，用于发现崩溃和最基本的功能问题。从基础设施角度出发，我们的下一步是：通过我们的供应商Appthwack，在物理设备上扩张我们的测试。集成才刚刚开始，但已经有问题出现了：如何在200个设备上并发运行同样的结帐测试（添加一个商品到购物车，用礼品卡结算）——我们是要在每台设备上创建一个帐户吗？６个月后我们再看吧。</p>
 
                         </div>
                         

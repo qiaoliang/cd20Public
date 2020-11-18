@@ -231,8 +231,13 @@
                                             <a href="http://www.continuousdelivery20.com/blog/2015/06/24/creating-a-new-theme/"><i class="far fa-calendar"></i> June 24, 2015</a>
                                         </p>
                                     </div>
-                                    <p class="intro">Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&rsquo;t cover using CSS to style your theme.
-We&rsquo;ll start with creating a new site with a very basic template.</p>
+                                    <p class="intro">+++ date = &ldquo;2014-02-28&rdquo; title = &ldquo;移动应用开发方面，Etsy的持续交付流水线探索&rdquo; tags = [&ldquo;theme&rdquo;] categories = [&ldquo;starting&rdquo;] description = &ldquo;This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content.&rdquo; banner = &ldquo;img/banners/banner-1.jpg&rdquo;
++++
+移动应用开发方面，Etsy的持续交付流水线探索 2014年2月 在很久以前，本站报导过Etsy如何实现Web端每日在生产环境上部署40次。现在移动应用大潮来了，它又是如何做的呢？本文发表于2014年2月，虽然有一些迟了，但相信对广大读者还是会有很多启发，也会带来更大的信心
+移动app的好评在用户转化率和品牌树立方面都有非常积极的帮助。相反，差评可能会有非常严重的后果。正如很多人所说：“移动应用的死活取决于它在应用市场中评分”
+esty_app_cd_1.png
+上面这个图是Etsy iOS应用的一个真实反馈。做为Etsy的开发人员，看到它真的很沮丧，但它是事实：有一些bug会从我们的指缝溜走，却被用户发现。对于Web端开发，我们使用我们的持续交付常规武器（从一些传统软件公司看来，可能是核武器）作为安全网来快速解决那些溜达到生产环境中的bug。然而，移动应用的发布需要第三方的审核（应用商店），平均耗时５天以上。
+Introduction This tutorial will show you how to create a simple theme in Hugo.</p>
                                     <p class="read-more"><a href="http://www.continuousdelivery20.com/blog/2015/06/24/creating-a-new-theme/" class="btn btn-template-main">Continue reading</a>
                                     </p>
                                 </div>
@@ -313,6 +318,10 @@ We&rsquo;ll start with creating a new site with a very basic template.</p>
                 <a href="/categories/starting">starting (1)</a>
             </li>
             
+            <li>
+                <a href="/categories/%e5%ae%9e%e8%b7%b5%e6%a1%88%e4%be%8b">实践案例 (1)</a>
+            </li>
+            
         </ul>
     </div>
 
@@ -357,6 +366,10 @@ We&rsquo;ll start with creating a new site with a very basic template.</p>
             
             <li>
                 <a href="/tags/theme"><i class="fas fa-tags"></i> theme</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%a1%88%e4%be%8b"><i class="fas fa-tags"></i> 案例</a>
             </li>
             
         </ul>
