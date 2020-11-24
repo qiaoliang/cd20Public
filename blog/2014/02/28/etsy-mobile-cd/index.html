@@ -216,12 +216,11 @@
                         <p class="text-muted text-uppercase mb-small text-right">By <a href="#">John Doe</a> | February 28, 2014</p>
 
                         <div id="post-content">
-                          <h2 id="移动应用开发方面etsy的持续交付流水线探索">移动应用开发方面，Etsy的持续交付流水线探索</h2>
-<p>在很久以前，本站报导过Etsy如何实现Web端每日在生产环境上部署40次。现在移动应用大潮来了，它又是如何做的呢？本文发表于2014年2月，虽然有一些迟了，但相信对广大读者还是会有很多启发，也会带来更大的信心</p>
+                          <p>在很久以前，本站报导过Etsy如何实现Web端每日在生产环境上部署40次。现在移动应用大潮来了，它又是如何做的呢？本文发表于2014年2月，虽然有一些迟了，但相信对广大读者还是会有很多启发，也会带来更大的信心</p>
 <p>移动app的好评在用户转化率和品牌树立方面都有非常积极的帮助。相反，差评可能会有非常严重的后果。正如很多人所说：“移动应用的死活取决于它在应用市场中评分”</p>
-<p><img src="img/blog/esty_app_cd/esty_app_cd_1.png" alt=""></p>
+<p><img src="/img/blog/esty_app_cd/esty_app_cd_1.png" alt=""></p>
 <p>上面这个图是Etsy iOS应用的一个真实反馈。做为Etsy的开发人员，看到它真的很沮丧，但它是事实：有一些bug会从我们的指缝溜走，却被用户发现。对于Web端开发，我们使用我们的持续交付常规武器（从一些传统软件公司看来，可能是核武器）作为安全网来快速解决那些溜达到生产环境中的bug。然而，移动应用的发布需要第三方的审核（应用商店），平均耗时５天以上。</p>
-<p>esty_app_cd_2.png</p>
+<p><img src="/img/blog/esty_app_cd/esty_app_cd_2.png" alt=""></p>
 <p>即使审核通过，是否升级，什么时候升级都是用户自己说的算——他们可能一直停留在某个旧版本上。根据我们的分析数据，Etsy目前有5个iOS版本和10个Android版本被用户使用。</p>
 <p>通过持续集成 （Continuous Integration ，通常简称CI），我们能够在项目的开发和测试阶段发现并修复大部分问题，不至于影响到用户的体验：本文揭示Etsy对安卓和iOS应用实现持续集成流水线的过程。</p>
 <h3 id="每次提交git-push都要在主干上并在集成服务器上构建">每次提交(git push)都要在主干上，并在集成服务器上构建。</h3>
@@ -233,7 +232,7 @@
 <p>另外，如果你与iOS provisioning profiles打过交道，一定能体会到，对它的管理和更新是多么烦人；假如有一个集中式系统，来管理所有的profiles，那能为工程师节省很多时间。</p>
 <h3 id="building-on-push-and-providing-daily-deploys">Building on push and providing daily deploys</h3>
 <p>把我们的CI机器与Jenkins服务器联动起来，安排一个计划让它每次git　push操作时都进行构建，这是小菜一碟。事情非常容易。但正是这么一个简单的步骤，每个星期可以帮助我们发现几次提交时忘记了某个文件，或编译问题——通过IRC或邮件，开发人员会得到通知，这样，这类问题在被发现几分钟内就会得到解决。除了push后立即构建app，我们还提供每日构建包，任何一个Etsy员工都可以把这个每日构建包安装到他们的移动设备上——这是“吃自己狗食”的精髓。促进我们的同事安装预发布版本的简单方法就是在他们使用官方发布版本时提醒（骚扰）他们。</p>
-<p>esty_app_cd_3.png</p>
+<p><img src="/img/blog/esty_app_cd/esty_app_cd_3.png" alt=""></p>
 <h3 id="测试">测试</h3>
 <p>对于iOS设备，有七种不同的iPad，五种iPhone，还有iPod，当说到Android时，那就更不用说了，简直是多如牛毛，即便是只关注主流设备也没能少到哪里去。CI的目标是：问题一旦被引入，就立即发现：我们不能依靠测试团队在每次代码提交时，都一遍又一遍的验证同样的功能特性!</p>
 <p>在Web端，我们已经有大量的测试集，这是我们引以为豪的，而且TDD文化已经形成。基本上，我们的移动应用也借用很多web端的代码库来提供内容：数据通过API获取，而且很多页面也是web views。移动应用的大多数核心逻辑依赖于UI层，这可能通过功能测试来覆盖。正因如此，我们第一个方法是聚焦于一些功能性测试，其前提是我们的API已经在Web端被测试过了（通过单元测试和冒烟测试）。</p>
@@ -259,19 +258,19 @@
 </ul>
 <p>一旦测试结束，在后台就会有一个机制触发，用来取消这次交易，把该信用卡重置。</p>
 <p>我们的功能性测试发现了bug，下面就是在iPad上的一个例子：</p>
-<p>esty_app_cd_4.png</p>
+<p><img src="/img/blog/esty_app_cd/esty_app_cd_4.png" alt=""></p>
 <p>我们的注册测试导向了这个页面，并填写了所有的可见字段。然后，测试走到了先择 “Female“, “Male”和“Rather Not Say”这一步；在这个例子中，测试失败了（因为没有“male”选项）。</p>
 <p>通过工程师每次提交代码就运行我们的测试套件，我们不但尽早地发现了bug，而且还能发现移动应用的崩溃。我们的开发人员通常在系统的最新版本上进行测试，但Jenkins有他们自己的环境：我们的测试同时运行在多个不同的系统及设备的组合上。</p>
 <h3 id="在物理设备上进行测试">在物理设备上进行测试</h3>
 <p>尽管我们的开发人员非常喜欢用我们 非常强大的设备实验室 做手工测试，但维护一堆设备，并在其之上持续运行自动化测试是个噩梦，而且还是个全职工作。通过多次尝试开发一个in-house解决方案，我们决定用Appthwack在物理设备上运行我们的测试。利用Appthwack的设备云，我们每次提交代码都会在一组专门的设备上运行测试，同时，每天晚上在更大范围的设备上运行每日回归测试。这种方式是最近才用的，我们仍旧在找寻物理设备运行测试的方法，在一个200多台的设备上收集测试状态及报告是一个挑战。</p>
 <h3 id="一定要有一个dashboard">一定要有一个dashboard</h3>
 <p>我们有15个Jenkins jobs来构建和运行测试，快速地把关键信息通知到开发人员是一个巨大的挑战。一个简单的自己开发的dashboard来展示所有的配置和测试状态不是一个不错的选择，陪伴了我们很久：</p>
-<p>esty_app_cd_5.png</p>
+<p><img src="/img/blog/esty_app_cd/esty_app_cd_5.png" alt=""></p>
 <h3 id="静态分析与code-reviews">静态分析与code reviews</h3>
 <p>自动化测试不能发现所有的bug和潜在的崩溃——这与web端一样，开发人员在提交前强制进行code reviews。与Esty的其它代码一样，移动应用的代码也放在Github的企业仓库里，code reviews是一个pull request以及一个与其相关联的issue。通过使用GitHub pull request builder Jenkins plugin, 我们可以由系统触发一次构建，做一些静态代码分析（参看static analysis with OCLint post），然后把结果放到一个Github issue上：</p>
-<p>esty_app_cd_6.png</p>
+<p><img src="/img/blog/esty_app_cd/esty_app_cd_6.png" alt=""></p>
 <h3 id="基础设施总结">基础设施总结</h3>
-<p>esty_app_cd_7.png</p>
+<p><img src="/img/blog/esty_app_cd/esty_app_cd_7.png" alt=""></p>
 <h3 id="挑战与下一步">挑战与下一步</h3>
 <p>对于构建我们的持续集成基础设施，我们非常努力，当然，面对的挑战也是一个接着一个。比如不能自动化安装某些软件依赖包。一旦稳定了，我们还要持续保持更新，总有新的发布(iOS 7, Mavericks) ，可能会导致测试或测试框架出问题。而且，功能性测试本质上就比较脆弱，需要持续关注和优化。</p>
 <p>我们现在已经达到：测试和基础设施已足够稳定，用于发现崩溃和最基本的功能问题。从基础设施角度出发，我们的下一步是：通过我们的供应商Appthwack，在物理设备上扩张我们的测试。集成才刚刚开始，但已经有问题出现了：如何在200个设备上并发运行同样的结帐测试（添加一个商品到购物车，用礼品卡结算）——我们是要在每台设备上创建一个帐户吗？６个月后我们再看吧。</p>
@@ -352,18 +351,6 @@
             
             
             <li>
-                <a href="/categories/programming">programming (2)</a>
-            </li>
-            
-            <li>
-                <a href="/categories/pseudo">pseudo (1)</a>
-            </li>
-            
-            <li>
-                <a href="/categories/starting">starting (1)</a>
-            </li>
-            
-            <li>
                 <a href="/categories/%e5%ae%9e%e8%b7%b5%e6%a1%88%e4%be%8b">实践案例 (1)</a>
             </li>
             
@@ -388,26 +375,6 @@
     <div class="panel-body">
         <ul class="tag-cloud">
             
-            
-            <li>
-                <a href="/tags/go"><i class="fas fa-tags"></i> go</a>
-            </li>
-            
-            <li>
-                <a href="/tags/golang"><i class="fas fa-tags"></i> golang</a>
-            </li>
-            
-            <li>
-                <a href="/tags/hugo"><i class="fas fa-tags"></i> hugo</a>
-            </li>
-            
-            <li>
-                <a href="/tags/programming"><i class="fas fa-tags"></i> programming</a>
-            </li>
-            
-            <li>
-                <a href="/tags/theme"><i class="fas fa-tags"></i> theme</a>
-            </li>
             
             <li>
                 <a href="/tags/%e6%a1%88%e4%be%8b"><i class="fas fa-tags"></i> 案例</a>
@@ -462,40 +429,14 @@
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="http://www.continuousdelivery20.com/blog/2015/10/02/linked-post/">
+                        <a href="http://www.continuousdelivery20.com/blog/2014/02/28/etsy-mobile-cd/">
                           
-                            <img src="/img/banners/banner-4.jpg" class="img-responsive" alt="Linked post">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="http://www.continuousdelivery20.com/blog/2015/10/02/linked-post/">Linked post</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
-                        <a href="http://www.continuousdelivery20.com/blog/2015/09/17/go-is-for-lovers/">
-                          
-                            <img src="/img/banners/banner-2.jpg" class="img-responsive" alt="Go is for lovers">
+                            <img src="/img/banners/banner-1.jpg" class="img-responsive" alt="移动应用开发方面，Etsy的持续交付流水线探索">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="http://www.continuousdelivery20.com/blog/2015/09/17/go-is-for-lovers/">Go is for lovers</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
-                        <a href="http://www.continuousdelivery20.com/blog/2015/08/03/hugo-is-for-lovers/">
-                          
-                            <img src="/img/banners/banner-3.jpg" class="img-responsive" alt="Hugo is for lovers">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="http://www.continuousdelivery20.com/blog/2015/08/03/hugo-is-for-lovers/">Hugo is for lovers</a></h5>
+                        <h5><a href="http://www.continuousdelivery20.com/blog/2014/02/28/etsy-mobile-cd/">移动应用开发方面，Etsy的持续交付流水线探索</a></h5>
                     </div>
                 </div>
                 
