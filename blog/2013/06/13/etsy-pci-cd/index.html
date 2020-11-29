@@ -13,10 +13,10 @@
   
   
   
-  <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环模型, 敏捷方法, 敏捷开发, 精益思想, Scrum, 用户故事, 案例, 部署流水线, Etsy, 持续部署, 移动开发">
+  <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环模型, 敏捷方法, 敏捷开发, 精益思想, Scrum, 用户故事, 案例">
   
   
-  <meta name="description" content="Frequently asked questions">
+  <meta name="description" content="本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
 
   <meta name="generator" content="Hugo 0.74.2" />
 
@@ -63,23 +63,7 @@
   
   
   
-  
-  <meta property="og:locale" content="en_us">
-  <meta property="og:site_name" content="持续交付 2.0">
-  <meta property="og:title" content="移动应用开发方面，Etsy的持续交付流水线探索">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="http://www.continuousdelivery20.com/blog/2014/02/28/etsy-mobile-cd/" />
-  <meta property="og:description" content="Frequently asked questions">
-  <meta property="og:image" content="http://www.continuousdelivery20.com/img/banners/etsy-banner-1.png">
-  <meta property="og:image:type" content="image/png">
-  
-  
-  
-    <meta property="og:image:width" content="1000">
-    <meta property="og:image:height" content="682">
-  
-  
-  <meta property="og:updated_time" content="2014-02-28T00:00:00Z">
+  <meta property="og:updated_time" content="2013-06-13T00:00:00Z">
   
     
     
@@ -87,18 +71,16 @@
     <meta property="article:tag" content="案例">
     
     
-    <meta property="article:published_time" content="2014-02-28T00:00:00Z">
-    <meta property="article:modified_time" content="2014-02-28T00:00:00Z">
+    <meta property="article:published_time" content="2013-06-13T00:00:00Z">
+    <meta property="article:modified_time" content="2013-06-13T00:00:00Z">
   
 
   
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@GoHugoIO">
   <meta name="twitter:title" content="移动应用开发方面，Etsy的持续交付流水线探索">
   
-  <meta name="twitter:image" content="http://www.continuousdelivery20.com/img/banners/etsy-banner-1.png">
-  
-  <meta name="twitter:description" content="Frequently asked questions">
+  <meta name="twitter:description" content="本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
   
 
 </head>
@@ -213,11 +195,10 @@
 
                     <div class="col-md-9" id="blog-post">
 
-                        <p class="text-muted text-uppercase mb-small text-right">由 <a href="#">乔梁</a> | February 28, 2014</p>
+                        <p class="text-muted text-uppercase mb-small text-right">由 <a href="#">乔梁</a> | June 13, 2013</p>
 
                         <div id="post-content">
-                          <h1 id="heading"></h1>
-<p>在很久以前，本站报导过Etsy如何实现Web端每日在生产环境上部署40次。现在移动应用大潮来了，它又是如何做的呢？本文发表于2014年2月，虽然有一些迟了，但相信对广大读者还是会有很多启发，也会带来更大的信心。</p>
+                          <p>Etsy是以手工艺成品买卖为主要特色，曾被纽约时报拿来和eBay，Amazon比较，被誉为“祖母的地下室收藏”。</p>
 <p>移动app的好评在用户转化率和品牌树立方面都有非常积极的帮助。相反，差评可能会有非常严重的后果。正如很多人所说：“移动应用的死活取决于它在应用市场中评分”</p>
 <p><img src="/img/blog/esty_app_cd/esty_app_cd_1.png" alt=""></p>
 <p>上面这个图是Etsy iOS应用的一个真实反馈。做为Etsy的开发人员，看到它真的很沮丧，但它是事实：有一些bug会从我们的指缝溜走，却被用户发现。对于Web端开发，我们使用我们的持续交付常规武器（从一些传统软件公司看来，可能是核武器）作为安全网来快速解决那些溜达到生产环境中的bug。然而，移动应用的发布需要第三方的审核（应用商店），平均耗时５天以上。</p>
