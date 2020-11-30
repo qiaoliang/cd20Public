@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh">
 
   <head>
   <meta charset="utf-8">
@@ -16,7 +16,7 @@
   <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环模型, 敏捷方法, 敏捷开发, 精益思想, Scrum, 用户故事">
   
   
-  <meta name="description" content="本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
+  <meta name="description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
 
   <meta name="generator" content="Hugo 0.74.2" />
 
@@ -32,7 +32,7 @@
 
   
   
-    <link href="/css/style.blue.css" rel="stylesheet" id="theme-stylesheet">
+    <link href="/css/style.violet.css" rel="stylesheet" id="theme-stylesheet">
   
 
   
@@ -64,12 +64,12 @@
   
   
   
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="zh">
   <meta property="og:site_name" content="持续交付 2.0">
   <meta property="og:title" content="Blogs">
   <meta property="og:type" content="website">
   <meta property="og:url" content="http://www.continuousdelivery20.com/blog/" />
-  <meta property="og:description" content="本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
+  <meta property="og:description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
   <meta property="og:image" content="http://www.continuousdelivery20.com/img/sharing-default.png">
   <meta property="og:image:type" content="image/png">
   
@@ -84,12 +84,12 @@
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@GoHugoIO">
+  
   <meta name="twitter:title" content="Blogs">
   
   <meta name="twitter:image" content="http://www.continuousdelivery20.com/img/sharing-default.png">
   
-  <meta name="twitter:description" content="本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
+  <meta name="twitter:description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
   
 
 </head>
@@ -128,28 +128,28 @@
                   
                   <li class="dropdown">
                     
-                    <a href="/">Home</a>
+                    <a href="/">主页</a>
                     
                   </li>
                   
                   
                   <li class="dropdown active">
                     
-                    <a href="/blog/">Blog</a>
+                    <a href="/blog/">博客</a>
                     
                   </li>
                   
                   
                   <li class="dropdown">
                     
-                    <a href="/faq/">FAQ</a>
+                    <a href="/faq/">资源</a>
                     
                   </li>
                   
                   
                   <li class="dropdown">
                     
-                    <a href="/contact/">Contact</a>
+                    <a href="/contact/">关于</a>
                     
                   </li>
                   
@@ -208,7 +208,7 @@
                             <div class="row">
                                 <div class="col-md-4">
                                   <div class="image">
-                                      <a href="http://www.continuousdelivery20.com/blog/2014/02/28/etsy-mobile-cd/">
+                                      <a href="http://www.continuousdelivery20.com/blog/etsy-mobile-cd/">
                                           
                                           <img src="/img/banners/etsy-banner-1.png" class="img-responsive" alt="">
                                           
@@ -216,7 +216,7 @@
                                   </div>
                                 </div>
                                 <div class="col-md-8">
-                                    <h2><a href="http://www.continuousdelivery20.com/blog/2014/02/28/etsy-mobile-cd/">移动应用开发方面，Etsy的持续交付流水线探索</a></h2>
+                                    <h2><a href="http://www.continuousdelivery20.com/blog/etsy-mobile-cd/">移动应用开发方面，Etsy的持续交付流水线探索</a></h2>
                                     <div class="clearfix">
                                         <p class="author-category">
                                           
@@ -230,7 +230,7 @@
 
                                         </p>
                                         <p class="date-comments">
-                                            <a href="http://www.continuousdelivery20.com/blog/2014/02/28/etsy-mobile-cd/"><i class="far fa-calendar"></i> February 28, 2014</a>
+                                            <a href="http://www.continuousdelivery20.com/blog/etsy-mobile-cd/"><i class="far fa-calendar"></i> 2014-02-28</a>
                                         </p>
                                     </div>
                                     <p class="intro">在很久以前，本站报导过Etsy如何实现Web端每日在生产环境上部署40次。现在移动应用大潮来了，它又是如何做的呢？本文发表于2014年2月，虽然有一些迟了，但相信对广大读者还是会有很多启发，也会带来更大的信心。
@@ -252,7 +252,7 @@ Building on push and providing daily deploys 把我们的CI机器与Jenkins服�
  用买家帐户在移动应用上登录 搜索某种商品（在卖家帐户的商铺里） 把它加到购物车 用信用卡支付  一旦测试结束，在后台就会有一个机制触发，用来取消这次交易，把该信用卡重置。
 我们的功能性测试发现了bug，下面就是在iPad上的一个例子：
 我们的注册测试导向了这个页面，并填写了所有的可见字段。然后，测试走到了先择 “Female“, “Male”和“Rather Not Say”这一步；在这个例子中，测试失败了（因为没有“male”选项）。</p>
-                                    <p class="read-more"><a href="http://www.continuousdelivery20.com/blog/2014/02/28/etsy-mobile-cd/" class="btn btn-template-main">继续阅读</a>
+                                    <p class="read-more"><a href="http://www.continuousdelivery20.com/blog/etsy-mobile-cd/" class="btn btn-template-main">继续阅读</a>
                                     </p>
                                 </div>
                             </div>
@@ -394,14 +394,14 @@ Building on push and providing daily deploys 把我们的CI机器与Jenkins服�
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="http://www.continuousdelivery20.com/blog/2014/02/28/etsy-mobile-cd/">
+                        <a href="http://www.continuousdelivery20.com/blog/etsy-mobile-cd/">
                           
                             <img src="/img/banners/etsy-banner-1.png" class="img-responsive" alt="移动应用开发方面，Etsy的持续交付流水线探索">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="http://www.continuousdelivery20.com/blog/2014/02/28/etsy-mobile-cd/">移动应用开发方面，Etsy的持续交付流水线探索</a></h5>
+                        <h5><a href="http://www.continuousdelivery20.com/blog/etsy-mobile-cd/">移动应用开发方面，Etsy的持续交付流水线探索</a></h5>
                     </div>
                 </div>
                 
@@ -449,7 +449,7 @@ Building on push and providing daily deploys 把我们的CI机器与Jenkins服�
     <div class="container">
         <div class="col-md-12">
             
-            <p class="pull-left">Copyright (c) 2019 - 2028, 敏思特咨询（北京）有限公司; all rights reserved.  京ICP备18046893号-1</p>
+            <p class="pull-left">Copyright ©️ 2019 - 2028, 敏思特咨询（北京）有限公司; all rights reserved.  京ICP备18046893号-1</p>
             
             <p class="pull-right">
               模板来自 <a href="https://bootstrapious.com/p/universal-business-e-commerce-template">Bootstrapious</a>.
@@ -477,7 +477,7 @@ Building on push and providing daily deploys 把我们的CI机器与Jenkins服�
 <script src="//cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js"></script>
 
-<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y&v=3.exp"></script>
+<script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
 <script src="/js/hpneo.gmaps.js"></script>
 <script src="/js/gmaps.init.js"></script>
