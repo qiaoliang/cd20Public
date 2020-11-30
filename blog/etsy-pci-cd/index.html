@@ -7,16 +7,16 @@
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>Contact</title>
+  <title>既满足PCI-DSS，又做持续部署。电商网站 Etsy 如何做到的呢？</title>
   <meta name="author" content="乔梁" />
   
   
   
   
-  <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环模型, 敏捷方法, 敏捷开发, 精益思想, Scrum, 用户故事">
+  <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环模型, 敏捷方法, 敏捷开发, 精益思想, Scrum, 用户故事, 案例, 持续部署, 安全, Etsy, PCI-DSS">
   
   
-  <meta name="description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
+  <meta name="description" content="既满足PCI-DSS，又做持续部署。">
 
   <meta name="generator" content="Hugo 0.74.2" />
 
@@ -66,30 +66,41 @@
   
   <meta property="og:locale" content="zh">
   <meta property="og:site_name" content="持续交付 2.0">
-  <meta property="og:title" content="Contact">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="http://www.continuousdelivery20.com/contact/" />
-  <meta property="og:description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
-  <meta property="og:image" content="http://www.continuousdelivery20.com/img/sharing-default.png">
+  <meta property="og:title" content="既满足PCI-DSS，又做持续部署。电商网站 Etsy 如何做到的呢？">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://www.continuousdelivery20.com/blog/etsy-pci-cd/" />
+  <meta property="og:description" content="既满足PCI-DSS，又做持续部署。">
+  <meta property="og:image" content="http://www.continuousdelivery20.com/img/banners/banner-etsy-pci.png">
   <meta property="og:image:type" content="image/png">
   
   
   
-    <meta property="og:image:width" content="800">
-    <meta property="og:image:height" content="420">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="682">
   
   
+  <meta property="og:updated_time" content="2012-06-13T00:00:00Z">
   
+    
+    
+    <meta property="article:section" content="实践案例">
+    <meta property="article:tag" content="案例">
+    <meta property="article:tag" content="持续部署">
+    <meta property="article:tag" content="安全">
+    
+    
+    <meta property="article:published_time" content="2012-06-13T00:00:00Z">
+    <meta property="article:modified_time" content="2012-06-13T00:00:00Z">
   
 
   
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   
-  <meta name="twitter:title" content="Contact">
+  <meta name="twitter:title" content="既满足PCI-DSS，又做持续部署。电商网站 Etsy 如何做到的呢？">
   
-  <meta name="twitter:image" content="http://www.continuousdelivery20.com/img/sharing-default.png">
+  <meta name="twitter:image" content="http://www.continuousdelivery20.com/img/banners/banner-etsy-pci.png">
   
-  <meta name="twitter:description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
+  <meta name="twitter:description" content="既满足PCI-DSS，又做持续部署。">
   
 
 </head>
@@ -108,9 +119,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="/">
-                    <img src="/img/logo.png" alt="Contact logo" class="hidden-xs hidden-sm">
-                    <img src="/img/logo-small.png" alt="Contact logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Contact - 跳到主页</span>
+                    <img src="/img/logo.png" alt="既满足PCI-DSS，又做持续部署。电商网站 Etsy 如何做到的呢？ logo" class="hidden-xs hidden-sm">
+                    <img src="/img/logo-small.png" alt="既满足PCI-DSS，又做持续部署。电商网站 Etsy 如何做到的呢？ logo" class="visible-xs visible-sm">
+                    <span class="sr-only">既满足PCI-DSS，又做持续部署。电商网站 Etsy 如何做到的呢？ - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -133,7 +144,7 @@
                   </li>
                   
                   
-                  <li class="dropdown">
+                  <li class="dropdown active">
                     
                     <a href="/blog/">博客</a>
                     
@@ -147,7 +158,7 @@
                   </li>
                   
                   
-                  <li class="dropdown active">
+                  <li class="dropdown">
                     
                     <a href="/contact/">关于</a>
                     
@@ -188,7 +199,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Contact</h1>
+                <h1>既满足PCI-DSS，又做持续部署。电商网站 Etsy 如何做到的呢？</h1>
             </div>
         </div>
     </div>
@@ -196,93 +207,143 @@
 
 
         <div id="content">
-            
+            <div class="container">
 
-              <div class="container" id="contact">
+                <div class="row">
 
-    <div class="row">
-        <div class="col-md-8">
+                    
 
-            <section>
+                    <div class="col-md-9" id="blog-post">
 
-                <h1 id="让我们来帮助你成功-">让我们来帮助你成功 ……</h1>
-<p>你对我们的服务感兴趣吗？ 你在组织发展过程中，遇到了什么难题么？</p>
-<p>请发邮件到 <a href="mailto:ql@aaaladdin.com">ql@aaaladdin.com</a> .</p>
+                        <p class="text-muted text-uppercase mb-small text-right">由 <a href="#">乔梁</a> | 2012-06-13</p>
 
-
-                
-
-                <div class="heading">
-                  <h3>联系表单</h3>
-                </div>
-
-                <div id="contact-message"></div>
-
-                <form  method="post" action="https://formspree.io/ql@aaladdin.com">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                              <label for="name">你的名字</label>
-                                <input type="text" class="form-control" name="name" id="name" required>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="email">你的 Email</label>
-                                <input type="text" class="form-control" name="email" id="email" required>
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                              <label for="message">你的信息</label>
-                                <textarea id="message" class="form-control" name="message" required></textarea>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-12 text-center">
-                          <button type="submit" class="btn btn-template-main"><i class="far fa-envelope"></i>发送信息</button>
+                        <div id="post-content">
+                          <ul>
+<li>Etsy每天向生产环境部署25到50次；</li>
+<li>他们为其支付系统构建一个符合PCI-DSS（支付卡行业数据信息安全标准）的环境；</li>
+<li>责任分离并不是指：大家互相之间不能交流。事实上，协作是有效风险管理的最关键元素之一。所以在PCI环境中，每个人仍要遵循devops原则——团队并没有物理分隔；</li>
+<li>在支付环境中，他们要遵守规则：“开发人员不能接触生产环境的数据库”。但，DBA就坐在旁边，可以及时帮助他们，并可以通过图形方式展示一些数据库中的度量项；</li>
+<li>在PCI环境中，他们使用与非non-PCI环境相似的部署过程。不过，会加入更多的日志信息，来记录谁在什么时间做了什么，并且有专门的角色做QA环境和生产环境的发布人；</li>
+<li>在PCI环境上，开发人员可以运行大部分的测试框架，并且可以通过Splunk以只读方式查看生产系统的日志；</li>
+<li>他们有一个ticketing系统，所有的变更都需要经过这个系统。然而，因业务需要，他们从开发环境到生产环境的变更部署过程只需要不到一个小时，但所走的流程是与非紧急变更管理流程一样的；</li>
+<li>最后的建议：“确保找到合适的团队人选，并意识到，在现实中的确有一些约束条件”。然而，只要积极地合作，即便在一个对安全性有非常严格要求的环境中，仍旧可以持续交付产品。</li>
+</ul>
 
                         </div>
+                        
+                        
+
                     </div>
                     
-                </form>
 
-                
+                    
 
-            </section>
+                    
 
-        </div>
+                    <div class="col-md-3">
 
-        <div class="col-md-4">
+                        
 
-            
-            <section>
+                        
 
-              <h3 class="text-uppercase"> 地址</h3>
+<div class="panel panel-default sidebar-menu">
 
-                <p class="text-uppercase"><strong>敏思特咨询（北京）有限公司</strong>
-        <br>北京国际饭店 5层
-        <br>东城区
-        <br>北京市
-        <br>
-        <strong>中国</strong>
-      </p>
-      
-
-            </section>
-
-            
-
-        </div>
-
+    <div class="panel-heading">
+      <h3 class="panel-title">搜索</h3>
     </div>
-    
+
+    <div class="panel-body">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+                <input type="search" name="q" class="form-control" placeholder="搜索">
+                <input type="hidden" name="sitesearch" value="http://www.continuousdelivery20.com/">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+    </div>
 </div>
 
 
 
 
 
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">分类</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            
+            <li>
+                <a href="/categories/%e5%ae%9e%e8%b7%b5%e6%a1%88%e4%be%8b">实践案例 (6)</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">标签</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            
+            <li>
+                <a href="/tags/%e5%ae%89%e5%85%a8"><i class="fas fa-tags"></i> 安全</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%8c%81%e7%bb%ad%e9%83%a8%e7%bd%b2"><i class="fas fa-tags"></i> 持续部署</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%96%b9%e6%b3%95"><i class="fas fa-tags"></i> 方法</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%a1%88%e4%be%8b"><i class="fas fa-tags"></i> 案例</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+
+            </div>
             
         </div>
         

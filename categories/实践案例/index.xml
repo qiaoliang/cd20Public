@@ -21,12 +21,39 @@
     </item>
     
     <item>
+      <title>敏捷开发方法们，为什么让你感觉很糟糕？</title>
+      <link>http://www.continuousdelivery20.com/blog/why-dev-method-feel-bad/</link>
+      <pubDate>Sun, 12 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/why-dev-method-feel-bad/</guid>
+      <description>为什么软件开发方法论让你觉得糟糕？ 围绕软件开发实践和方法论，总有很多教条式的口水仗。阶段式（phase-gate）方法能够有效管理软件开发过</description>
+    </item>
+    
+    <item>
+      <title>既满足PCI-DSS，又做持续部署。电商网站 Etsy 如何做到的呢？</title>
+      <link>http://www.continuousdelivery20.com/blog/etsy-pci-cd/</link>
+      <pubDate>Wed, 13 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/etsy-pci-cd/</guid>
+      <description>Etsy每天向生产环境部署25到50次； 他们为其支付系统构建一个符合PCI-DSS（支付卡行业数据信息安全标准）的环境； 责任分离并不是指：大</description>
+    </item>
+    
+    <item>
       <title> 利用抽象分支技术，进行大规模软件的增量式改造</title>
       <link>http://www.continuousdelivery20.com/blog/abstract-branch/</link>
       <pubDate>Wed, 18 May 2011 00:00:00 +0000</pubDate>
       
       <guid>http://www.continuousdelivery20.com/blog/abstract-branch/</guid>
       <description>利用“抽象分支”做增量式大规模软件改造 很多开发团队通常严重依赖于版本控制系统的分支功能。分布式版本控制系统让分支操作更加方便。然而，在《持续</description>
+    </item>
+    
+    <item>
+      <title>IMVU如何在实施持续部署的同时确保软件质量</title>
+      <link>http://www.continuousdelivery20.com/blog/imvu-cd-with-high-quality/</link>
+      <pubDate>Fri, 09 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/imvu-cd-with-high-quality/</guid>
+      <description>正文 在科技圈的各种大会上，我们和很多人有过交谈，他们对我们在 IMVU 网站上的持续部署流程很感兴趣，想知道我们是如何每天部署50次代码的。我们也听到</description>
     </item>
     
     <item>

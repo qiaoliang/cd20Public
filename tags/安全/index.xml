@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>安全 on 持续交付 2.0</title>
+    <link>http://www.continuousdelivery20.com/tags/%E5%AE%89%E5%85%A8/</link>
+    <description>Recent content in 安全 on 持续交付 2.0</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 13 Jun 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.continuousdelivery20.com/tags/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>既满足PCI-DSS，又做持续部署。电商网站 Etsy 如何做到的呢？</title>
+      <link>http://www.continuousdelivery20.com/blog/etsy-pci-cd/</link>
+      <pubDate>Wed, 13 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/etsy-pci-cd/</guid>
+      <description>Etsy每天向生产环境部署25到50次； 他们为其支付系统构建一个符合PCI-DSS（支付卡行业数据信息安全标准）的环境； 责任分离并不是指：大</description>
+    </item>
+    
+  </channel>
+</rss>
