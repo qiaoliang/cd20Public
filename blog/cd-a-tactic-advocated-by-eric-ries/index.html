@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>为什么要持续部署（Continuous Deployment）？</title>
+  <meta name="author" content="Eric Ries" />
+  
+  
+  
+  
+  <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环模型, 敏捷方法, 敏捷开发, 精益思想, Scrum, 用户故事, 案例">
+  
+  
+  <meta name="description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
+
+  <meta name="generator" content="Hugo 0.74.2" />
+
+  
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  
+  <link href="/css/animate.css" rel="stylesheet">
+
+  
+  
+    <link href="/css/style.violet.css" rel="stylesheet" id="theme-stylesheet">
+  
+
+  
+  <link href="/css/custom.css" rel="stylesheet">
+
+  
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+
+  
+  <link href="/css/owl.carousel.css" rel="stylesheet">
+  <link href="/css/owl.theme.css" rel="stylesheet">
+
+  
+  <link rel="alternate" href="http://www.continuousdelivery20.com/index.xml" type="application/rss+xml" title="持续交付 2.0">
+
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:locale" content="zh">
+  <meta property="og:site_name" content="持续交付 2.0">
+  <meta property="og:title" content="为什么要持续部署（Continuous Deployment）？">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://www.continuousdelivery20.com/blog/cd-a-tactic-advocated-by-eric-ries/" />
+  <meta property="og:description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
+  <meta property="og:image" content="http://www.continuousdelivery20.com/img/banners/banner-eric-ries-CD.png">
+  <meta property="og:image:type" content="image/png">
+  
+  
+  
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="627">
+  
+  
+  <meta property="og:updated_time" content="2009-02-28T00:00:00Z">
+  
+    
+    
+    <meta property="article:section" content="实践案例">
+    <meta property="article:tag" content="案例">
+    
+    
+    <meta property="article:published_time" content="2009-02-28T00:00:00Z">
+    <meta property="article:modified_time" content="2009-02-28T00:00:00Z">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta name="twitter:title" content="为什么要持续部署（Continuous Deployment）？">
+  
+  <meta name="twitter:image" content="http://www.continuousdelivery20.com/img/banners/banner-eric-ries-CD.png">
+  
+  <meta name="twitter:description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
+  
+
+</head>
+
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="/">
+                    <img src="/img/logo.png" alt="为什么要持续部署（Continuous Deployment）？ logo" class="hidden-xs hidden-sm">
+                    <img src="/img/logo-small.png" alt="为什么要持续部署（Continuous Deployment）？ logo" class="visible-xs visible-sm">
+                    <span class="sr-only">为什么要持续部署（Continuous Deployment）？ - 跳到主页</span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                      <span class="sr-only">切换导航</span>
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/">主页</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown active">
+                    
+                    <a href="/blog/">博客</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/faq/">资源</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/contact/">关于</a>
+                    
+                  </li>
+                  
+                </ul>
+            </div>
+            
+
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+                    <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
+
+                </span>
+                    </div>
+                </form>
+
+            </div>
+            
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+
+        </header>
+
+        <div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>为什么要持续部署（Continuous Deployment）？</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="content">
+            <div class="container">
+
+                <div class="row">
+
+                    
+
+                    <div class="col-md-9" id="blog-post">
+
+                        <p class="text-muted text-uppercase mb-small text-right">由 <a href="#">Eric Ries</a> | 2009-02-28</p>
+
+                        <div id="post-content">
+                          <h2 id="引言">引言</h2>
+<p>本文是<img src="https://book.douban.com/subject/10945606/" alt="《精益创业">》一书的作者Eric Ries 在2009年发表的一篇博文，他是IMVU的创始人之一。文中讨论了一个更关键的问题：“IMVU为什么要做持续部署？”这也充分地表达了他关于“Learning from production and customer”的观点。</p>
+<h2 id="正文">正文</h2>
+<p>在我所倡导的<img src="https://book.douban.com/subject/10945606/" alt="《精益创业">》所有实践中，没有哪个实践比持续部署更有争议（持续部署是指：让公司在几分钟内发布软件的过程，而不是几天或几个月才发布一次）。我之前所在的一个创业公司<img src="www.imvu.com" alt="IMVU"> 使用这个流程，<img src="http://timothyfitz.wordpress.com/2009/02/10/continuous-deployment-at-imvu-doing-the-impossible-fifty-times-a-day/" alt="平均每天部署50次">。这也引发了一些争论，有些人说：这种快速发布流程会导致低质量的软件，或者阻碍公司的创新。假如我们能够接受由客户来评判，而不是专家的判定，那么，我想这些说法就很容易消散了。一个更为常见，且更为困难的问题是：如何回答那些只想知道这种持续部署是否可以用于他们自己的业务、行业或团队的人们。</p>
+<p>IMVU的历史尤其引人关注。作为一个有数百万用户消费者的互联网公司，看上去可能与那些只有一小撮潜在客户的企业软件公司，或者那些客户要在软件发布前需要严格审核的计算机安全公司没有太多关系。我想，持有这种反对观点的人实际上没有真正明白持续部署的关键点，因为他们关注点都放在了具体的实现上，而不是通用原则。目前关于持续部署的文章都<img src="http://radar.oreilly.com/2009/03/continuous-deployment-5-eas.html" alt="关注于"具体如何实现&rdquo;">， 但我在这里想说的是“为什么做？”（如果你想了解如何开始做持续部署，请参阅“<img src="http://radar.oreilly.com/2009/03/continuous-deployment-5-eas.html" alt="5个简单步骤中的连续部署">”）。</p>
+<p>持续部署的目标是通过<img src="http://startuplessonslearned.blogspot.com/2009/02/work-in-small-batches.html" alt="减少批量处理的大小">，并加快团队工作的节奏，帮助开发团队在其开发流程中消除浪费。这使团队能够一直处于一种可持续的平稳流状态， 让团队更容易去创新、试验，并达到可持续的生产率。而且，这也很好地支撑了其它的持续改进系统，比如<img src="http://startuplessonslearned.blogspot.com/2008/11/five-whys.html" alt="五个为什么">。</p>
+<p>在开发中，浪费的一个最大来源是“double-checking”。想像一下，在传统瀑布开发环境中的一个团队，没有持续部署、测试驱动开发或者持续集成。当开发人员想要提交代码时，就到了一个令人担心的时刻。他或她有两种选择：一是马上提交，二是再检查一下，确保不会出问题。两种选择都很有吸引力。假如马上提交的话，就可以说“提前完成任务了”。可是，如果提交后引起了问题，那么之前的工作速度必然要打折扣。他们为什么不再多花五分钟时间，确保自己的提交不会导致问题呢？事实上，开发人员如何应对这种问题是由他们的激励机制决定的，而激励机制是由团队文化决定的。导致问题后会受到多么严重的惩罚？谁最终会承担这些错误带来的成本？时间表有多么重要？团队是否以尽早完成工作来做评价？</p>
+<p>然而，在这种情况下，我们应该意识到，其实并没有所谓正确的答案。被这种选择性所折磨的人最终很可能哪种都做不好。结果，开发人员会走向两个极端：一些人认为应该尽快地完成事情，另一些认为应该细心地做工作检查。从长远来看，二者之间的任何一个中间状态都无法长久。一旦出了问题，无论你怎么去细心解释当时是如何做决定的，都不会令人满意。毕竟，你要么可以做得更快一些，要么可以做得更细心一些。要是你能提前知道问题多好呀啊？！事后再回头看看当时的那些评判，它们好象都存在问题。然而，从另一个角度上看，每种极端的做法都很容易起到自我保护作用。两种方式都有借口：“的确是有几个bug，但我一直在以一个安排得非常紧的时间表来完成任务，有几个bug也是再所难免的。”或者，“我知道你想快点完成这个事儿，但你要知道，我要确保绝对没问题的情况下才能交付给你，所以等一等是值得的。”</p>
+<p>这两个极端的立场在开发团队中会发”派系”冲突，可能产生很多不愉快。经理开始记下谁在哪个派系，然后再依此来分派任务。当在最后一分钟拿到了某个新功能的请求，先找个牛仔完成它—— 然后，在下一个发布中再找个人（Quality Defenders）来”擦屁股”。两边都开始从他们各自的视角来思考：“那些家伙没有看到快速行动带来的经济价值，只在意他们那完美的架构图”，又或者， “那些家伙太懒了，根本没有专业精神。” 在我的职业生涯中，经常被找来调节双方的矛盾。在我看来，这些都真是太浪费啦。</p>
+<p>其实，上述这种结果是完全符合逻辑的，因为对于那种大批量生产的开发流程来说，它迫使开发人员利用传统的“<img src="http://startuplessonslearned.blogspot.com/2008/10/engineering-managers-lament.html" alt="时间/质量/金钱，选择其中的两个">”的谬论，在时间和质量之间进行权衡。因为得到的反馈很慢，所以由于​某个错误引发的损坏和做出决定之间有很长的时间，这也使人们很难从中学习。因为每个人都在最后的某个时间点同时做整个发布的集成工作（并没有尽早集成的激励机制）， 要在很大的时间压力下解决该集成过程中中发现的冲突。某些特性像泡沫一样，看上去做好了，很美，但不得不等到下一次发布才行。然而，一旦这些特性被推迟了，就会增加下次发布的工作范围。（“毕竟，我们有完整的发布周期，而这个特性几乎就要完成啦…”），这就会导致下一个时间压力等等。然而，在生产环境中代码运行的方式与其在测试或试运行环境中并不完全一样，这也导致每次发布之后马上就会有一系列的hot-fixes。这也会增加下一次发布的工作量，也就意味着每个发布周期从一开始就已经落后了。</p>
+<p>有很多次，当我访谈一个遇到这种情况的开发团队时，他们想让我帮助“fixing people”。这种现象心理学上叫做“<img src="http://en.wikipedia.org/wiki/Fundamental_attribution_error" alt="基本归因错误">”，人们倾向于认为其他人的行为来源于其基本属性，如他们的个性，道德准则，或士气 –甚至当受到所在环境的影响时，我们也会为自己的行为找借口。所以，在这种环境下的开发人员，他们的心灵深处也会认为其团队的其他开发人员也是行动缓慢的老学究或邋遢的码农。事实并不是这样的，他们只是让他们的动机搞砸了。</p>
+<h2 id="持续部署为什么会起作用">持续部署为什么会起作用？</h2>
+<p>首先，持续部署将两种不同的“发布”概念区分开来。一种是工程师所说的：将代码部署到生产环境的过程。另一种是从市场人员的角度来看的：让用户看到。在传统的“批量及排队”这种开发模式中，两种概念是相联的。一旦新版软件被部署了，所有客户也就能看到它了。这就要求在部署之前，我们要在特定的试运行或测试环境中完成本次发布相关的所有测试。这就使得从写完代码开始，到生产环境部署这之间的这段时间里，由于某些未曾预料到的问题而令本次发布变得不可控。在这些开销中，由于市场发布与技术发布的合并，也让交付活动的协作开销急剧增加。</p>
+<p>而在持续部署环境下，一旦代码写完，就开始向生产环境进发。也就是说，我们经常只部署某个特性百分之一的功能，尽管客户可能要在很久之后才能看到它。事实上，一个新特性的绝大部分工作都是用户无法看到的。相反，这个特性与之前已完成的特性之间却有很多集成点。想像一下，当我们想要在系统中传递一个新增的参数时，就需要修改多个API。这些修改通常应该没有“副作用”，也就是说，它们不会影响当前系统的行为——这里要强调一下“应该”两个字。实际上，很多缺陷是由于那些修改中不常见或没有意识到的​副作用引起的。 对于那些只是影响生产环境中的配置参数的很小的修改来说，也是一样。尽快得到这种反馈是最好的，而持续部署恰好提供了这样的途径。</p>
+<p>持续部署也扮演了速度调解器的角色。每当部署流程遇到了一个问题时，就需要有人去诊断。在诊断期间，其他人就不能进行部署了。当团队已为部署做好准备，但部署流程被阻塞时，他们就可以马上去帮助诊断并修复部署问题。（相反的做法是团队其他人继续去写更多的代码，但是并不部署，那么这些新代码就会不断堆积，使批量变大，这对每个人都是一种损害）。对于那些通过度量个人效率来衡量其流程的团队来说，通常这个速度调解器是一种比较棘手tracky的调解。在这种环境中，每个工程师的主要目标是保持忙碌状态，写代码的时间尽可能地接近。不幸的是，这种视角忽视了团队的整个产出。即使你不采纳我所提倡的激进定义，比如“validated learning about customers”，让每个人都保持忙碌状态仍旧是局部优化。当你正在追踪和修复集成问题时，其它人写的代码很可能会由于冲突而不得不回滚。配置不匹配或多团队之间的冲突都可能会怒导致同样的结果。在这种情况下，对于整体生产率来说，最好是大家停止编码，开始讨论。一旦找到如何进行协作，以便不会导致工作重来，再开始编码，这样生产率才高。</p>
+<p>再回到我们之前讨论过的两种类型开发团队成员（牛仔和保质派），看看持续部署如何改变他们所处状况的症结。首先，持续部署对于双方来说，都能促进学习和专业地开发。双方不必争论哪种是写代码的正确方式，而是每个人都可以直接从生产环境上得到学习的机会。这就是“让错误成为你的老师”。</p>
+<p>你不能通过在任何一项活动中做得更好来改变这种情况下的潜在动机。更好的发布计划、评估、架构或集成只会减轻症状。解决这个问题的唯一传统技术是以时间表填充、额外的集成时间、代码冻结等形式添加大量队列。事实上，大多数组织并没有意识到，在单个开发人员学习生成的估算中，这种填充已经占了多少。但是填充并没有帮助，因为它会减慢整个过程。正如所有开发团队都会告诉你的那样，时间总是很短的。事实上，过度的时间压力正是他们认为自己首先有这些问题的原因。</p>
+<p>因此，我们需要找到在系统级运行的解决方案，以使团队摆脱这种钳制行为。敏捷软件运动已经做出了许多贡献：持续集成，这有助于加速缺陷反馈；故事卡和看板减少了批量大小；每天都有人站起来提高速度。持续部署是另一种这样的技术，它具有一种独特的能力，可以更好地改变开发团队的动态。</p>
+<p>为什么有用？</p>
+<p>首先，ContinuousDeployment将术语“发布”分为两个不同的定义，一个是工程师用来指将代码完全集成到生产中的过程。另一种是市场营销用来指代顾客所看到的。在传统的批处理和队列开发中，这两个概念是联系在一起的。新软件一经部署，所有客户都会看到。这要求在将发布部署到生产环境之前，在特殊的登台或测试环境中进行所有测试。这使得这个版本在这段时间内容易受到意外问题的影响：在编写代码之后，但在投入生产之前。除此之外，通过将营销发布与技术发布相结合，发布产品所需的协调开销也显著增加。</p>
+<p>在持续部署下，只要编写了代码，就可以投入生产。这意味着我们通常只部署了一个功能的1%——早在客户希望看到它之前。事实上，与新功能相关的大部分工作并不是功能本身的用户可见部分。取而代之的是数以百万计的微型触控点，它们将该功能与之前构建的所有其他功能集成在一起。想一想，当我们想通过系统传递新值时，需要对API进行许多小的更改。这些更改通常被认为是“无副作用”的，这意味着它们在插入点不会影响系统的行为-强调假设。事实上，许多错误都是由这些深刻变化的不寻常或未被注意到的副作用引起的。对于只与生产环境中的配置参数冲突的小更改也是如此。最好尽快得到这些反馈，这正是持续部署提供的。</p>
+<p>持续部署也起到了速度调节器的作用。每次部署过程遇到问题时，都需要有人参与诊断。在这段时间里，其他人故意不可能部署。当团队准备好部署，但流程被锁定时，他们将立即可用以帮助诊断和解决部署问题（另一种选择是，他们继续生成而不是部署新代码，只会增加批处理的大小，从而对每个人都不利）。对于习惯于通过个人效率来衡量进度的团队来说，这种速度调节是一个棘手的调整。在这样一个系统中，每个工程师的主要目标是保持忙碌，尽可能地将他或她的100%的时间用于编码。不幸的是，这个视图忽略了团队的总体吞吐量。即使你不采用激进的进度定义，比如我提倡的“<img src="http://startuplessonslearned.blogspot.com/2009/04/validated-learning-about-customers.html" alt="如何有效地研究你的客户群">”，让每个人都忙碌仍然是次优的。当您正处于集成问题中时，任何人正在编写的代码都可能会因为冲突而被修改。配置不匹配或多个团队互相踩脚也是一样。在这种情况下，人们停止编码并开始交谈，对整体生产力来说会好得多。一旦他们找到了如何协调他们的行动，这样他们所做的工作就不必返工了，重新开始编码是很有成效的。</p>
+<p>回到我们的开发团队，分为“西部狂野派”和“质量保守派”，让我们看看持续部署如何改变他们的状况。其一，持续的部署促进了学习和专业发展——在分歧的两边。每个人都有机会直接从生产环境中学习，而不必为正确的编码方式而争论。这就是“让你的失败成为你的老师”这句公理的含义。</p>
+<p>如果一个工程师倾向于快速交付，他们可能很快发现自己被<img src="http://startuplessonslearned.blogspot.com/2008/09/just-in-time-scalability.html" alt="集群免疫系统">逮个正着。集群免疫系统，即：cluster immune system，它由持续集成服务和 <img src="http://startuplessonslearned.blogspot.com/2008/11/five-whys.html" alt="5个 whys">组成。与传统团队的那种高风险问题相比，此时遇到的问题风险都很小，大多数仅影响自己或者比较小的范围。由于反馈迅速，牛仔们开始意识到，哪些测试、准备和检查工作的确会让他们工作得更快。他们就会知到原来还有这样的东西要可以这么快反馈。</p>
+<p>但是，对于工程师来说，总是有一种在交付前希望等待很长时间的趋势。对于这样的人，批量工作越大，集成就越难。在IMVU，我们偶尔也会招聘到一些从非常传统的组织里出来的工程蚰，他们在那样的公司里已经养成了那里的“最佳实践”和习惯。有时候，他们希望自己使用自己的分支进行工作，并在最后再做集成。尽管我总是会尽最大的努力去说服他们不要那么做，但如果他们坚持要那样的话，我也会鼓励他们试一下的。最终在一两个星期之后，我很高兴地看到他们还是回到了我所谓的“code bouncing”的主流。这就好比向墙上扔一个橡皮球。在一个code bouncing的环境下，如果有人试图一次性提交一个大版本，他们首先就会遇到集成冲突，这就要与团队中的很多成员进行沟通，了解如何恰当地解决这些冲突。当然，当他们正在解决冲突的时间，又会有新的提交，所以新的冲突又会出现了。这个循环一直重复，直到解决所有的冲突，或者要求团队的其他人员先不要提交代码。 然后，更有趣的事情开始了。把这一大堆修改扔到了持续集成服务器上，第一次一定会令增量部署系统和实时监控系统趴窝。所以，这一大包修改就被回滚了。然而，当这些问题被解决时，已经有更多新的修改被提交了。除非我们冻结整个团队的工作，但这有可能会持续几天的时间。假如我们全面要求做这种提交冻结的话，那会令其他人的工作也形成堆积，这就会进一步导致连续的code bouncing。根据我的经验，只要一两次这样的事情就足以让那些想做批量提交的同学回心转意啦。</p>
+<p>由于持续部署鼓励学习，随着时间的推移，使用这个实践的团队会越来越快。那是因为每个人的动机都与​团队的目标一致。每个人都在工作中消除浪费，这种效率提升得到的收益将会大于那些因为要做持续部署而需要构建和维护的基础设施而增加的开销。事实上，假如你也经常使用<img src="http://startuplessonslearned.blogspot.com/2008/11/five-whys.html" alt="5个Whys">的话，你也可以用一种完全增量的方式建立这种基础设施。这个过程真的非常有意思。</p>
+<p>最后，还有一个收益，那就是“士气”。曾经有一个人问我：持续部署是否会对士气产生不良影响。他是一个经理。他担心做这种更快速的发布会令工程师感到更大的压力，让他们觉得自己一直在救火和发布，根本没有时间做“真正的工作”。有一个IMVU的工程师回答了这个问题，我认为，他给出的回答比我的更好。他解释说，通过减少做每次发布的开销，每个工程师都可以有他个人的发布时间表。也就是说，只要他们已经准备好部署了，就可以部署。所以，即便是在半夜，如果你的特性做好了，你也可以提交、部署并马上告诉客户这个新特性。没有额外的申请审批、会议，或者协作要求。只需要有你、你的代码和你的客户就行了，听上去相当不错。​</p>
+
+                        </div>
+                        
+                        
+
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="col-md-3">
+
+                        
+
+                        
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title">搜索</h3>
+    </div>
+
+    <div class="panel-body">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+                <input type="search" name="q" class="form-control" placeholder="搜索">
+                <input type="hidden" name="sitesearch" value="http://www.continuousdelivery20.com/">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">分类</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            
+            <li>
+                <a href="/categories/%e5%ae%9e%e8%b7%b5%e6%a1%88%e4%be%8b">实践案例 (3)</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">标签</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            
+            <li>
+                <a href="/tags/%e6%96%b9%e6%b3%95"><i class="fas fa-tags"></i> 方法</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%a1%88%e4%be%8b"><i class="fas fa-tags"></i> 案例</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+
+            </div>
+            
+        </div>
+        
+
+        <footer id="footer">
+    <div class="container">
+
+        
+        <div class="col-md-4 col-sm-6">
+            <h4>关于我们</h4>
+
+            <p></p>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+        <div class="col-md-4 col-sm-6">
+
+             
+            <h4>最新博客</h4>
+
+            <div class="blog-entries">
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/etsy-mobile-cd/">
+                          
+                            <img src="/img/banners/etsy-banner-1.png" class="img-responsive" alt="Etsy的移动端持续交付流水线">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/etsy-mobile-cd/">Etsy的移动端持续交付流水线</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/abstract-branch/">
+                          
+                            <img src="/img/banners/banner-branch-1.png" class="img-responsive" alt=" 利用抽象分支技术，进行大规模软件的增量式改造">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/abstract-branch/"> 利用抽象分支技术，进行大规模软件的增量式改造</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/cd-a-tactic-advocated-by-eric-ries/">
+                          
+                            <img src="/img/banners/banner-eric-ries-CD.png" class="img-responsive" alt="为什么要持续部署（Continuous Deployment）？">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/cd-a-tactic-advocated-by-eric-ries/">为什么要持续部署（Continuous Deployment）？</a></h5>
+                    </div>
+                </div>
+                
+            </div>
+
+            <hr class="hidden-md hidden-lg">
+             
+
+        </div>
+        
+
+        
+        <div class="col-md-4 col-sm-6">
+
+          <h4>联系</h4>
+
+            <p class="text-uppercase"><strong>敏思特咨询（北京）有限公司</strong>
+        <br>北京国际饭店 5层
+        <br>东城区
+        <br>北京市
+        <br>
+        <strong>中国</strong>
+      </p>
+      
+
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+    </div>
+    
+</footer>
+
+
+
+
+
+
+
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            
+            <p class="pull-left">Copyright ©️ 2019 - 2028, 敏思特咨询（北京）有限公司; all rights reserved.  京ICP备18046893号-1</p>
+            
+            <p class="pull-right">
+              模板来自 <a href="https://bootstrapious.com/p/universal-business-e-commerce-template">Bootstrapious</a>.
+              
+
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+    
+
+    
+<script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js"></script>
+
+<script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+<script src="/js/hpneo.gmaps.js"></script>
+<script src="/js/gmaps.init.js"></script>
+<script src="/js/front.js"></script>
+
+
+<script src="/js/owl.carousel.min.js"></script>
+
+
+
+  </body>
+</html>

@@ -7,7 +7,7 @@
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>移动应用开发方面，Etsy的持续交付流水线探索</title>
+  <title>Etsy的移动端持续交付流水线</title>
   <meta name="author" content="乔梁" />
   
   
@@ -16,7 +16,7 @@
   <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环模型, 敏捷方法, 敏捷开发, 精益思想, Scrum, 用户故事, 案例, 部署流水线, Etsy, 持续部署, 移动开发">
   
   
-  <meta name="description" content="Frequently asked questions">
+  <meta name="description" content="Etsy的移动端持续交付流水线">
 
   <meta name="generator" content="Hugo 0.74.2" />
 
@@ -66,10 +66,10 @@
   
   <meta property="og:locale" content="zh">
   <meta property="og:site_name" content="持续交付 2.0">
-  <meta property="og:title" content="移动应用开发方面，Etsy的持续交付流水线探索">
+  <meta property="og:title" content="Etsy的移动端持续交付流水线">
   <meta property="og:type" content="article">
   <meta property="og:url" content="http://www.continuousdelivery20.com/blog/etsy-mobile-cd/" />
-  <meta property="og:description" content="Frequently asked questions">
+  <meta property="og:description" content="Etsy的移动端持续交付流水线">
   <meta property="og:image" content="http://www.continuousdelivery20.com/img/banners/etsy-banner-1.png">
   <meta property="og:image:type" content="image/png">
   
@@ -94,11 +94,11 @@
   
   <meta name="twitter:card" content="summary_large_image">
   
-  <meta name="twitter:title" content="移动应用开发方面，Etsy的持续交付流水线探索">
+  <meta name="twitter:title" content="Etsy的移动端持续交付流水线">
   
   <meta name="twitter:image" content="http://www.continuousdelivery20.com/img/banners/etsy-banner-1.png">
   
-  <meta name="twitter:description" content="Frequently asked questions">
+  <meta name="twitter:description" content="Etsy的移动端持续交付流水线">
   
 
 </head>
@@ -117,9 +117,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="/">
-                    <img src="/img/logo.png" alt="移动应用开发方面，Etsy的持续交付流水线探索 logo" class="hidden-xs hidden-sm">
-                    <img src="/img/logo-small.png" alt="移动应用开发方面，Etsy的持续交付流水线探索 logo" class="visible-xs visible-sm">
-                    <span class="sr-only">移动应用开发方面，Etsy的持续交付流水线探索 - 跳到主页</span>
+                    <img src="/img/logo.png" alt="Etsy的移动端持续交付流水线 logo" class="hidden-xs hidden-sm">
+                    <img src="/img/logo-small.png" alt="Etsy的移动端持续交付流水线 logo" class="visible-xs visible-sm">
+                    <span class="sr-only">Etsy的移动端持续交付流水线 - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -197,7 +197,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>移动应用开发方面，Etsy的持续交付流水线探索</h1>
+                <h1>Etsy的移动端持续交付流水线</h1>
             </div>
         </div>
     </div>
@@ -216,8 +216,9 @@
                         <p class="text-muted text-uppercase mb-small text-right">由 <a href="#">乔梁</a> | 2014-02-28</p>
 
                         <div id="post-content">
-                          <h1 id="heading"></h1>
-<p>在很久以前，本站报导过Etsy如何实现Web端每日在生产环境上部署40次。现在移动应用大潮来了，它又是如何做的呢？本文发表于2014年2月，虽然有一些迟了，但相信对广大读者还是会有很多启发，也会带来更大的信心。</p>
+                          <h2 id="引言">引言</h2>
+<p>在很久以前，本站报导过Etsy如何实现Web端每日在生产环境上部署40次。现在移动应用大潮来了，它又是如何做的呢？</p>
+<h2 id="正文">正文</h2>
 <p>移动app的好评在用户转化率和品牌树立方面都有非常积极的帮助。相反，差评可能会有非常严重的后果。正如很多人所说：“移动应用的死活取决于它在应用市场中评分”</p>
 <p><img src="/img/blog/esty_app_cd/esty_app_cd_1.png" alt=""></p>
 <p>上面这个图是Etsy iOS应用的一个真实反馈。做为Etsy的开发人员，看到它真的很沮丧，但它是事实：有一些bug会从我们的指缝溜走，却被用户发现。对于Web端开发，我们使用我们的持续交付常规武器（从一些传统软件公司看来，可能是核武器）作为安全网来快速解决那些溜达到生产环境中的bug。然而，移动应用的发布需要第三方的审核（应用商店），平均耗时５天以上。</p>
@@ -329,7 +330,7 @@
             
             
             <li>
-                <a href="/categories/%e5%ae%9e%e8%b7%b5%e6%a1%88%e4%be%8b">实践案例 (1)</a>
+                <a href="/categories/%e5%ae%9e%e8%b7%b5%e6%a1%88%e4%be%8b">实践案例 (3)</a>
             </li>
             
         </ul>
@@ -353,6 +354,10 @@
     <div class="panel-body">
         <ul class="tag-cloud">
             
+            
+            <li>
+                <a href="/tags/%e6%96%b9%e6%b3%95"><i class="fas fa-tags"></i> 方法</a>
+            </li>
             
             <li>
                 <a href="/tags/%e6%a1%88%e4%be%8b"><i class="fas fa-tags"></i> 案例</a>
@@ -409,12 +414,38 @@
                     <div class="image same-height-always">
                         <a href="http://www.continuousdelivery20.com/blog/etsy-mobile-cd/">
                           
-                            <img src="/img/banners/etsy-banner-1.png" class="img-responsive" alt="移动应用开发方面，Etsy的持续交付流水线探索">
+                            <img src="/img/banners/etsy-banner-1.png" class="img-responsive" alt="Etsy的移动端持续交付流水线">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="http://www.continuousdelivery20.com/blog/etsy-mobile-cd/">移动应用开发方面，Etsy的持续交付流水线探索</a></h5>
+                        <h5><a href="http://www.continuousdelivery20.com/blog/etsy-mobile-cd/">Etsy的移动端持续交付流水线</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/abstract-branch/">
+                          
+                            <img src="/img/banners/banner-branch-1.png" class="img-responsive" alt=" 利用抽象分支技术，进行大规模软件的增量式改造">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/abstract-branch/"> 利用抽象分支技术，进行大规模软件的增量式改造</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/cd-a-tactic-advocated-by-eric-ries/">
+                          
+                            <img src="/img/banners/banner-eric-ries-CD.png" class="img-responsive" alt="为什么要持续部署（Continuous Deployment）？">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/cd-a-tactic-advocated-by-eric-ries/">为什么要持续部署（Continuous Deployment）？</a></h5>
                     </div>
                 </div>
                 
