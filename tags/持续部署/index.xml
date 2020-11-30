@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>持续部署 on 持续交付 2.0</title>
+    <link>http://www.continuousdelivery20.com/tags/%E6%8C%81%E7%BB%AD%E9%83%A8%E7%BD%B2/</link>
+    <description>Recent content in 持续部署 on 持续交付 2.0</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Jun 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.continuousdelivery20.com/tags/%E6%8C%81%E7%BB%AD%E9%83%A8%E7%BD%B2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>既满足PCI-DSS，又做持续部署。电商网站 Etsy 如何做到的呢？</title>
+      <link>http://www.continuousdelivery20.com/blog/2013/06/13/etsy-pci-cd/</link>
+      <pubDate>Thu, 13 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/2013/06/13/etsy-pci-cd/</guid>
+      <description>  Etsy每天向生产环境部署25到50次； 他们为其支付系统构建一个符合PCI-DSS（支付卡行业数据信息安全标准）的环境； 责任分离并不是指：大家互相之间不能交流。事实上，协作是有效风险管理的最关键元素之一。所以在PCI环境中，每个人仍要遵循devops原则——团队并没有物理分隔； 在支付环境中，他们要遵守规则：“开发人员不能接触生产环境的数据库”。但，DBA就坐在旁边，可以及时帮助他们，并可以通过图形方式展示一些数据库中的度量项； 在PCI环境中，他们使用与非non-PCI环境相似的部署过程。不过，会加入更多的日志信息，来记录谁在什么时间做了什么，并且有专门的角色做QA环境和生产环境的发布人； 在PCI环境上，开发人员可以运行大部分的测试框架，并且可以通过Splunk以只读方式查看生产系统的日志； 他们有一个ticketing系统，所有的变更都需要经过这个系统。然而，因业务需要，他们从开发环境到生产环境的变更部署过程只需要不到一个小时，但所走的流程是与非紧急变更管理流程一样的； 最后的建议：“确保找到合适的团队人选，并意识到，在现实中的确有一些约束条件”。然而，只要积极地合作，即便在一个对安全性有非常严格要求的环境中，仍旧可以持续交付产品。  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -7,7 +7,7 @@
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>Tags</title>
+  <title>持续部署</title>
   <meta name="author" content="乔梁" />
   
   
@@ -66,9 +66,9 @@
   
   <meta property="og:locale" content="en_us">
   <meta property="og:site_name" content="持续交付 2.0">
-  <meta property="og:title" content="Tags">
+  <meta property="og:title" content="持续部署">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://www.continuousdelivery20.com/tags/" />
+  <meta property="og:url" content="http://www.continuousdelivery20.com/tags/%E6%8C%81%E7%BB%AD%E9%83%A8%E7%BD%B2/" />
   <meta property="og:description" content="本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
   <meta property="og:image" content="http://www.continuousdelivery20.com/img/sharing-default.png">
   <meta property="og:image:type" content="image/png">
@@ -79,13 +79,13 @@
     <meta property="og:image:height" content="420">
   
   
-  <meta property="og:updated_time" content="2014-02-28T00:00:00Z">
+  <meta property="og:updated_time" content="2013-06-13T00:00:00Z">
   
 
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@GoHugoIO">
-  <meta name="twitter:title" content="Tags">
+  <meta name="twitter:title" content="持续部署">
   
   <meta name="twitter:image" content="http://www.continuousdelivery20.com/img/sharing-default.png">
   
@@ -108,9 +108,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="/">
-                    <img src="/img/logo.png" alt="Tags logo" class="hidden-xs hidden-sm">
-                    <img src="/img/logo-small.png" alt="Tags logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Tags - 跳到主页</span>
+                    <img src="/img/logo.png" alt="持续部署 logo" class="hidden-xs hidden-sm">
+                    <img src="/img/logo-small.png" alt="持续部署 logo" class="visible-xs visible-sm">
+                    <span class="sr-only">持续部署 - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -133,7 +133,7 @@
                   </li>
                   
                   
-                  <li class="dropdown active">
+                  <li class="dropdown">
                     
                     <a href="/blog/">Blog</a>
                     
@@ -188,7 +188,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Tags</h1>
+                <h1>持续部署</h1>
             </div>
         </div>
     </div>
@@ -203,6 +203,42 @@
                     <div class="col-md-9" id="blog-listing-medium">
 
                         
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="http://www.continuousdelivery20.com/blog/2013/06/13/etsy-pci-cd/">
+                                          
+                                          <img src="/img/banners/etsy-banner-pci.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="http://www.continuousdelivery20.com/blog/2013/06/13/etsy-pci-cd/">既满足PCI-DSS，又做持续部署。电商网站 Etsy 如何做到的呢？</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          由 <a href="#">乔梁</a>
+                                          
+                                          
+                                          
+                                          in <a href="/categories/%e5%ae%9e%e8%b7%b5%e6%a1%88%e4%be%8b">实践案例</a>
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="http://www.continuousdelivery20.com/blog/2013/06/13/etsy-pci-cd/"><i class="far fa-calendar"></i> June 13, 2013</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">  Etsy每天向生产环境部署25到50次； 他们为其支付系统构建一个符合PCI-DSS（支付卡行业数据信息安全标准）的环境； 责任分离并不是指：大家互相之间不能交流。事实上，协作是有效风险管理的最关键元素之一。所以在PCI环境中，每个人仍要遵循devops原则——团队并没有物理分隔； 在支付环境中，他们要遵守规则：“开发人员不能接触生产环境的数据库”。但，DBA就坐在旁边，可以及时帮助他们，并可以通过图形方式展示一些数据库中的度量项； 在PCI环境中，他们使用与非non-PCI环境相似的部署过程。不过，会加入更多的日志信息，来记录谁在什么时间做了什么，并且有专门的角色做QA环境和生产环境的发布人； 在PCI环境上，开发人员可以运行大部分的测试框架，并且可以通过Splunk以只读方式查看生产系统的日志； 他们有一个ticketing系统，所有的变更都需要经过这个系统。然而，因业务需要，他们从开发环境到生产环境的变更部署过程只需要不到一个小时，但所走的流程是与非紧急变更管理流程一样的； 最后的建议：“确保找到合适的团队人选，并意识到，在现实中的确有一些约束条件”。然而，只要积极地合作，即便在一个对安全性有非常严格要求的环境中，仍旧可以持续交付产品。  </p>
+                                    <p class="read-more"><a href="http://www.continuousdelivery20.com/blog/2013/06/13/etsy-pci-cd/" class="btn btn-template-main">继续阅读</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
                         
 
                         <ul class="pager">
