@@ -6,7 +6,7 @@
     <description>Recent content in 方法 on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 18 May 2011 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2009 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/tags/%E6%96%B9%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title> 利用抽象分支技术，进行大规模软件的增量式改造</title>
       <link>http://www.continuousdelivery20.com/blog/abstract-branch/</link>
-      <pubDate>Wed, 18 May 2011 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 18 May 2009 00:00:00 +0000</pubDate>
       
       <guid>http://www.continuousdelivery20.com/blog/abstract-branch/</guid>
       <description>利用“抽象分支”做增量式大规模软件改造 很多开发团队通常严重依赖于版本控制系统的分支功能。分布式版本控制系统让分支操作更加方便。然而，在《持续</description>
