@@ -6,10 +6,19 @@
     <description>Recent content in 实践案例 on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Dec 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/categories/%E5%AE%9E%E8%B7%B5%E6%A1%88%E4%BE%8B/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SRE落地：用VALET模式统一语言</title>
+      <link>http://www.continuousdelivery20.com/blog/sre-valet-model/</link>
+      <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/sre-valet-model/</guid>
+      <description>本文源自《SRE工作手册》英文版第三章，讲述的是家得宝（THD）公司在SRE转型中如何使用VALET。 VALET 是一个易记易用的模式语言，分别代表：</description>
+    </item>
     
     <item>
       <title>微软巨人，如何将敏捷原则应用于团队改造</title>
