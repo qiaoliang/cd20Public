@@ -6,10 +6,19 @@
     <description>Recent content in Tags on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 28 Feb 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DevOps</title>
+      <link>http://www.continuousdelivery20.com/tags/devops/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/devops/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>案例</title>

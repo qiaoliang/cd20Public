@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevOps on 持续交付 2.0</title>
+    <link>http://www.continuousdelivery20.com/tags/devops/</link>
+    <description>Recent content in DevOps on 持续交付 2.0</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.continuousdelivery20.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>微软巨人，如何将敏捷原则应用于团队改造</title>
+      <link>http://www.continuousdelivery20.com/blog/ms-devops-1-team/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/ms-devops-1-team/</guid>
+      <description>本文主要是讲Azure DevOps和DevOps Server团队在应用敏捷原则过程中，如何管理团队，角色，计划，迭代和流程的改进，由Aaro</description>
+    </item>
+    
+  </channel>
+</rss>
