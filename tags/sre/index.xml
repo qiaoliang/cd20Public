@@ -13,10 +13,10 @@
     
     <item>
       <title>SRE落地：用VALET模式统一语言</title>
-      <link>http://www.continuousdelivery20.com/blog/sre-valet-model/</link>
+      <link>http://www.continuousdelivery20.com/blog/2020-12-18-sre-valet-model/</link>
       <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.continuousdelivery20.com/blog/sre-valet-model/</guid>
+      <guid>http://www.continuousdelivery20.com/blog/2020-12-18-sre-valet-model/</guid>
       <description>本文源自《SRE工作手册》英文版第三章，讲述的是家得宝（THD）公司在SRE转型中如何使用VALET。 VALET 是一个易记易用的模式语言，分别代表：</description>
     </item>
     

@@ -7,13 +7,13 @@
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>SRE落地：用VALET模式统一语言</title>
-  <meta name="author" content="持续交付2.0" />
+  <title>微软巨人，如何将敏捷原则应用于团队改造</title>
+  <meta name="author" content="持续交付2.0 译" />
   
   
   
   
-  <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环模型, 敏捷方法, 敏捷开发, 精益思想, Scrum, 用户故事, DevOps, SRE, google, 智能运维, AIOps">
+  <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环模型, 敏捷方法, 敏捷开发, 精益思想, Scrum, 用户故事, DevOps, ">
   
   
   <meta name="description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
@@ -66,38 +66,38 @@
   
   <meta property="og:locale" content="zh">
   <meta property="og:site_name" content="持续交付 2.0">
-  <meta property="og:title" content="SRE落地：用VALET模式统一语言">
+  <meta property="og:title" content="微软巨人，如何将敏捷原则应用于团队改造">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="http://www.continuousdelivery20.com/blog/sre-valet-model/" />
+  <meta property="og:url" content="http://www.continuousdelivery20.com/blog/2020-11-18-ms-devops-1-team/" />
   <meta property="og:description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
-  <meta property="og:image" content="http://www.continuousdelivery20.com/img/banners/sre-valet.jpg">
-  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:image" content="http://www.continuousdelivery20.com/img/banners/blog-team.png">
+  <meta property="og:image:type" content="image/png">
   
   
   
-    <meta property="og:image:width" content="1000">
-    <meta property="og:image:height" content="667">
+    <meta property="og:image:width" content="2124">
+    <meta property="og:image:height" content="1458">
   
   
-  <meta property="og:updated_time" content="2020-12-18T00:00:00Z">
+  <meta property="og:updated_time" content="2020-11-18T00:00:00Z">
   
     
     
     <meta property="article:section" content="实践案例">
     <meta property="article:tag" content="DevOps">
-    <meta property="article:tag" content="SRE">
+    <meta property="article:tag" content="">
     
     
-    <meta property="article:published_time" content="2020-12-18T00:00:00Z">
-    <meta property="article:modified_time" content="2020-12-18T00:00:00Z">
+    <meta property="article:published_time" content="2020-11-18T00:00:00Z">
+    <meta property="article:modified_time" content="2020-11-18T00:00:00Z">
   
 
   
   <meta name="twitter:card" content="summary_large_image">
   
-  <meta name="twitter:title" content="SRE落地：用VALET模式统一语言">
+  <meta name="twitter:title" content="微软巨人，如何将敏捷原则应用于团队改造">
   
-  <meta name="twitter:image" content="http://www.continuousdelivery20.com/img/banners/sre-valet.jpg">
+  <meta name="twitter:image" content="http://www.continuousdelivery20.com/img/banners/blog-team.png">
   
   <meta name="twitter:description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
   
@@ -118,9 +118,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="/">
-                    <img src="/img/logo.png" alt="SRE落地：用VALET模式统一语言 logo" class="hidden-xs hidden-sm">
-                    <img src="/img/logo-small.png" alt="SRE落地：用VALET模式统一语言 logo" class="visible-xs visible-sm">
-                    <span class="sr-only">SRE落地：用VALET模式统一语言 - 跳到主页</span>
+                    <img src="/img/logo.png" alt="微软巨人，如何将敏捷原则应用于团队改造 logo" class="hidden-xs hidden-sm">
+                    <img src="/img/logo-small.png" alt="微软巨人，如何将敏捷原则应用于团队改造 logo" class="visible-xs visible-sm">
+                    <span class="sr-only">微软巨人，如何将敏捷原则应用于团队改造 - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -198,7 +198,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>SRE落地：用VALET模式统一语言</h1>
+                <h1>微软巨人，如何将敏捷原则应用于团队改造</h1>
             </div>
         </div>
     </div>
@@ -214,100 +214,78 @@
 
                     <div class="col-md-9" id="blog-post">
 
-                        <p class="text-muted text-uppercase mb-small text-right">由 <a href="#">持续交付2.0</a> | 2020-12-18</p>
+                        <p class="text-muted text-uppercase mb-small text-right">由 <a href="#">持续交付2.0 译</a> | 2020-11-18</p>
 
                         <div id="post-content">
-                          <p>本文源自《SRE工作手册》英文版第三章，讲述的是家得宝（THD）公司在SRE转型中如何使用VALET。</p>
-<p>VALET 是一个易记易用的模式语言，分别代表：</p>
+                          <p>本文主要是讲Azure DevOps和DevOps Server团队在应用敏捷原则过程中，如何管理团队，角色，计划，迭代和流程的改进，由Aaron Bjork分享。</p>
+<p>原文：Agile principles in practice - Azure DevOps | Microsoft Docs</p>
+<p>亚伦·比约克（Aaron Bjork）是 Azure DevOps团队的项目经理，他于2018年分享了Azure DevOps团队如何采纳敏捷原则以及其实践情况。</p>
+<h2 id="azure-devops和azure-devops-server简介">Azure DevOps和Azure DevOps Server简介</h2>
+<p>Azure DevOps和Azure DevOps Server是供软件开发团队协作，规划，编写，生成，测试和部署其代码的平台，该团队由约800名员工组成。</p>
+<p>Azure DevOps是基于订阅的云服务产品。其开发团队进行为期3周的迭代，并在每次迭代结束时发布版本。</p>
+<p>Azure DevOps Server是私有化本地部署产品，它每年打包约3-4次更新，然后通过更新包将其部署到私有化的Azure DevOps Server。</p>
+<h2 id="引入敏捷原则的前后对比">引入敏捷原则的前后对比</h2>
+<p>在下面的列表中，您可以找到我们的开发团队在将敏捷实践应用于工作流程中所做的一些改变。</p>
+<p><img src="/img/blog/ms-devops-team-1.webp" alt=""></p>
+<h2 id="四个关键性变化">四个关键性变化</h2>
+<p>我们决定，做出下面四个关键点的变化，能让我们的开发和发布周期更高效且健康。</p>
+<h3 id="一文化的改变">一、文化的改变</h3>
+<p><em>&ldquo;文化可以把战略当早餐吃掉。&rdquo; - 彼得•德鲁克</em></p>
+<p>我们发现，对人而言，关键的激励因素是自治（ autonomy,），精湛（mastery）和目标（purpose）。在微软，我们正在寻找将这些因素带给我们的产品经理，开发人员和设计人员的方法，以使他们感到有能力构建正确的产品。</p>
+<p>我们在引入的方法中会认真考虑两个因素，即对齐和自治：</p>
 <ul>
-<li>Volume</li>
-<li>Availability</li>
-<li>Latency</li>
-<li>Error</li>
-<li>Ticket</li>
+<li>对齐：自上而下发生，确保人们了解我们将要做的事情，并确保人们在业务目标，方面以及我们为什么要努力做的事情上保持一致</li>
+<li>自治：从下而上发生，确保人们每天上班，并觉得他们对日常活动和决策产生重大影响</li>
 </ul>
-<p>内容简介：</p>
-<p>一、家得宝运维工作的原始状态
-二、SRE改进步骤</p>
+<h3 id="二改变对待团队的方法">二、改变对待团队的方法</h3>
+<p>在Azure DevOps中，我们开始更多地考虑团队而不是个人。我们将人员和团队分为两部分：产品经理和工程师。</p>
+<p>产品经理：负责构建的内容以及为什么构建它</p>
+<p>工程师：负责建造并确保高质量</p>
+<h4 id="1团队有以下特点">1、团队有以下特点：</h4>
+<ul>
+<li>跨职能</li>
+<li>10 ～ 12人组成</li>
+<li>自我管理</li>
+<li>明确12～18个月内的章程与目标</li>
+<li>独立的团队工作空间</li>
+<li>自主负责生产环境中的特性</li>
+<li>自主负责特性的部署</li>
+</ul>
+<h4 id="2团队的结构变化如下">2、团队的结构变化如下：</h4>
+<p>以前，团队是根据系统的水平分层而组建的，如UI团队，数据团队和API团队等，但是，现在我们想要的是在产品中端到端拥有特性领域的团队。我们在某些水平层次上实施严格的准则，以确保团队之间产品的统一性。</p>
+<p>我们力争做到了按垂直领域组建团队：</p>
+<p><img src="/img/blog/ms-devops-team-2.webp" alt=""></p>
+<h4 id="3可以自主选择团队">3、可以自主选择团队</h4>
+<p>每隔约18个月，我们就会进行所谓的“黄色粘性运动”。在这项活动中，开发人员可以选择他们感兴趣的产品领域，并希望在接下来的两个计划周期内继续工作。此活动为团队提供了自治权——可以选择他们要从事的工作，还可以帮助组织保持一致，因为这可以确保我们在团队之间保持平衡。</p>
+<p>大约有80％的人最终选择他们目前所服务的团队，但是这让他们感到有选择的权利。</p>
+<h4 id="4透明与责任">4、透明与责任</h4>
+<p>在每个冲刺的末尾，每个团队都会发送一封邮件，说明他们在上一个冲刺中已经完成的工作以及在下一个冲刺中计划做的事情。</p>
+<h3 id="三改变做计划与学习的方式">三、改变做计划与学习的方式</h3>
+<p><em>“计划毫无价值，而计划就是一切。”       ——艾森豪威尔</em></p>
+<p>我们将规划分成四个级别，它们是：</p>
 <ol>
-<li>建立统一语言</li>
-<li>自动数据收集</li>
-<li>建设仪表盘</li>
-<li>写入开发负责人的OKR</li>
-<li>管理批处理任务的SLO</li>
+<li>迭代级 (3个星期)</li>
+<li>半季度级 (3个迭代)</li>
+<li>半年级(6个月)</li>
+<li>战略级(12个月)</li>
 </ol>
-<p>正文如下：</p>
-<p>家得宝（THD）是世界上最大的家居装饰零售商，在北美拥有2200多家商店，每个商店都拥有 35,000 多种独特产品(并在线提供了超过 150 万种产品。在其基础架构中，托管着各种软件应用程序，这些软件应用程序支持近 40 万名员工，每年处理超过 15 亿笔客户交易。这些商店与全球供应链和一个电子商务网站紧密集成，每年访问量超过 20 亿。</p>
-<p>在其软件服务架构向微服务的迁移的过程中，也完成了全栈所有权的“自由和责任文化”的增强。它让开发人员可以在其需要时按需推送代码上线，并让其共同负责服务的技术运营。</p>
-<p>为了达成这种共有制的工作模式，运维团队和开发团队需要统一沟通语言，以促进责任制，并跨越复杂性。这种语言就是：服务水平目标(SLO)。相互依赖的服务之间需要了解以下信息（这里假设 A服务 依赖 B服务），负责A服务的团队会问：</p>
-<ul>
-<li>B服务有多可靠？它是为三个 9 ，三个半 9 或四个 9 而构建的？</li>
-<li>B服务有计划的停机时间吗？</li>
-<li>对 B 服务的延迟上限，可以有什么样的预期？</li>
-<li>B 能处理 A 服务 发送的多少请求量吗？如何处理过载？B 服务是否已逐步达到其SLO？</li>
-</ul>
-<p>如果每个服务都可以为这些问题提供透明且一致的答案，那么团队将对他们的依存关系有清晰的了解，从而可以更好地进行沟通，并提高团队之间的信任度和责任。</p>
-<p>改进步骤如下：</p>
-<h2 id="一原始的状态">一、原始的状态</h2>
-<p>家得宝原来的监控工具和仪表板数量很多，并且是分散在各处的。服务出现中断时，有时候根本找不到根源。通常，最开始会从用户接入服务处进行故障排除，然后进行反向跟踪，直到发现问题为止，这会浪费无数小时。如果某个服务做了计划内停机，其他相关服务很可能不知道，只会感到惊讶。如果团队的服务水平目标是99.9%，然而，他们并不知道他们所依赖的服务是否可以为他们提供更好的服务水平，比如（四个9）。</p>
-<p>这些脱节导致了软件开发和运营团队之间的困惑、失望与对立。</p>
-<h2 id="二建立通用语言">二、建立通用语言</h2>
-<p>建立一个通用语言对于让各方意见统一至关重要。家得宝希望保持此框架尽可能简单，以帮助更快地统一传播。经过仔细研究，发现了一些模式。每个服务都可能监控它的&quot;流量&rdquo;，&ldquo;等待时间&rdquo;，&ldquo;错误&quot;和&quot;利用率&quot;这四个指标，但不幸的是，所有指标的整体监控都不一致，名称不同或数据不足。</p>
-<p>另外，生产环境最接近面向客户的指标是“支持工单数”。家得宝衡量应用程序的可靠性的主要（也是唯一的）方法是跟踪内部支持部门收到的支持电话数量。</p>
-<p>所以，将 SLO 总结为 VALET：</p>
-<ul>
-<li>Volume 容量（流量）</li>
-</ul>
-<p>​       <em>我的服务可以处理多少业务量？</em></p>
-<ul>
-<li>Availability 可用性</li>
-</ul>
-<p>​      <em>我需要时可以启动服务吗？</em></p>
-<ul>
-<li>Latency 延迟</li>
-</ul>
-<p>​      <em>使用该服务时，服务是否快速响应？</em></p>
-<ul>
-<li>Error 错误</li>
-</ul>
-<p>​     <em>使用该服务时是否抛出了错误？</em></p>
-<ul>
-<li>Ticket 故障单</li>
-</ul>
-<p>​    <em>服务是否需要人工干预才能完成我的请求？</em></p>
-<h2 id="三自动valet数据收集">三、自动VALET数据收集</h2>
-<p>家得宝将SLO正式纳入THD对开发经理的年度绩效评估中。虽然每周大约有50个服务定期按其SLO进行捕获和报告，但开始的管理方法太土，这些指标临时存储在电子表格中。</p>
-<h3 id="tps报告">TPS报告</h3>
-<p>家得宝建立了一个框架来自动捕获已部署到云端环境的服务 VALET 数据，并称此框架为“TPS报告”，是家得宝用来进行容量和性能测试（每秒事务处理）的术语，很多管理者可能希望查看此数据。家得宝的网络服务前端生成的所有日志均被写入BigQuery中，以供TPS报告进行处理。最终，家得宝将其他各种监控系统的指标也纳入进来，例如 Stackdriver 的可用性探针。</p>
-<p>TPS报告将这些数据转换为任何人都可以查询的每小时 VALET 指标。新创建的服务会自动注册到TPS报告中，因此可以立即查询。由于数据全部存储在BigQuery中，因此可以跨时间段有效地报告VALET指标。员工可以使用这些数据来构建各种自动报告和警报。最有趣的集成是一个聊天机器人，员工也可以直接在聊天平台中询问它，每个服务的VALET值是多少。例如，任何服务都可以显示最后一小时的VALET，VALET与前一周的对比，以及其它一些数据。</p>
-<h3 id="valet服务">VALET服务</h3>
-<p>然后，家得宝又创建一个 VALET 应用程序，以存储和报告 SLO 数据。由于 SLO 可以最好地用作趋势工具，因此该服务每天、每周和每月对 SLO 进行跟踪。请注意，我 SLO 是一种趋势分析工具，可用于错误预算，但未直接连接到监控系统。相反，家得宝仍旧有各种不同的监控平台，每个监控平台都有自己的报警。这些监控系统每天汇总其 SLO ，并发布到 VALET 服务以进行趋势分析。这种设置的缺点是，监控系统中设置的警报阈值未与 SLO 集成在一起。但是，可以根据需要灵活地更改监控系统。</p>
-<p>TPS 报告是第一个与 VALET 服务集成的系统，到目前为止，家得宝的 VALET 与其各种本地应用程序平台（在 VALET 中注册的服务的一半以上）集成。</p>
-<h3 id="valet-仪表板">VALET 仪表板</h3>
-<p><img src="/img/blog/sre-valet.webp" alt=""></p>
-<p>VALET 仪表板如上图所示，用于可视化和报告此数据，并且相对简单。它允许用户：</p>
-<ul>
-<li>
-<p>注册新服务。这通常意味着将服务分配给一个或多个URL，这些URL可能已经收集了VALET数据。</p>
-</li>
-<li>
-<p>为五个 VALET 类别中的任何一个设定 SLO 目标。</p>
-</li>
-<li>
-<p>在每个 VALET 类别下添加新的指标类型。例如，一项服务可以跟踪 P99 的延迟，而另一项服务可以跟踪 P90 （或两者）的延迟。后端处理系统可以跟踪每天的交易量（一天创建的购买订单），而客户服务前端可以跟踪每秒的高峰交易。</p>
-</li>
-</ul>
-<p>VALET 仪表板使用户可以立即报告许多服务的 SLO ，并以多种方式对数据进行切片和切块。例如，一个团队可以查看过去一周不满足 SLO 的所有服务的统计信息。寻求查看服务性能的团队可以查看所有服务及其所依赖服务的延迟。VALET 仪表板将数据存储在简单的Cloud SQL数据库中，开发人员使用流行的 BI 工具来构建报告。</p>
-<p>这些报告成为开发人员采取新的最佳实践的基础：定期对其服务进行 SLO 审核(通常是每周或每月)。基于这些审查，开发人员可以创建操作项以将服务返回到其 SLO ，或者可以决定需要调整不切实际的 SLO。</p>
-<h2 id="四将valet应用于批处理应用">四、将VALET应用于批处理应用</h2>
-<p>当围绕 SLO 开发可靠的报告时，家得宝还发现，只要对 VALET 稍作调整，就可以用在批处理应用程序上，如下所示:</p>
-<p>**容量：**处理的记录量</p>
-<p>**可用性：**在一定时间内完成工作的频率(以百分比为单位)</p>
-<p>**延迟：**作业运行所需的时间</p>
-<p>**错误：**无法处理的记录</p>
-<p>**故障单：**操作员必须手动修复数据并重新处理作业的次数</p>
-<h2 id="五下一个待解决的组织问题如何与产品经理沟通slo">五、下一个待解决的组织问题——如何与产品经理沟通SLO</h2>
-<p>尽管对技术人员来说， VALET 很直观，但是对于产品经理来说，这个概念并不是那么直观。如何以业务术语转换指标，并在产品和开发之间共享可见的目标(SLO！)可能是个挑战。一旦解决，这将减少在大公司中经常看到的对可靠性的错位期望。</p>
+<p>工程师和团队主要负责迭代级和半季度级计划，领导层负责半年级和战略级规划。</p>
+<p>我们发现，这种计划结构有助于我们在计划时最大程度地学习。我们能够获得反馈，部署，找出客户想要的东西，并实际快速有效地实施这些事情。</p>
+<h3 id="四创造了保持健康的新方法">四、创造了保持健康的新方法</h3>
+<p>在此之前，我们会推迟发现或修复代码缺陷，让它一直堆积到开发阶段结束时。到了最后时刻，我们才发现它，才对其进行修复，然后再验证一次。重复这个过程，这就像在不断制造一个缺陷“过山车”游戏。随着缺陷数量的减少，团队士气也在下降，因为在这个期间，他们除了修复缺陷以外，什么也做不了。</p>
+<h4 id="1缺陷上限法">1、缺陷上限法</h4>
+<p>错误上限由以下公式计算：工程师的数量 X 5 = Bug的上限</p>
+<p>如果团队的Bug数在迭代结束时超过了这个Bug上限，则该团队不能再开发新功能，而是必须把Bug数降至上限之下。这是一种偿还债务的方式。</p>
+<h4 id="2屏蔽干扰">2、屏蔽干扰</h4>
+<p>团队已经想出了自己的方式来提供聚焦工作，并以缺陷和生产事件的形式来解决这种中断文化。</p>
+<p>团队将每个冲刺自行组织为两个不同子团队：功能（F团队）和屏障（L团队）。F团队开发所承诺的功能，L团队处理所有生产环境站点出现的问题和事件。轮转节奏由团队确定，它使成员可以更轻松地计划工作以外的活动。</p>
+<h2 id="小结four-takeaways">小结（Four Takeaways）</h2>
+<ol>
+<li>认真地对待敏捷，但不必过于“迂腐”。敏捷可能过于严格了，应该让它像思维方式或文化一样成长。</li>
+<li>不要庆祝“活动”，而要为“结果”喝彩。写代码并不比功能部署重要。</li>
+<li>您不能欺骗发布。除非你具有“迭代末尾必须发布新服务或更新产品”的心态，否则你一定无法完成发布所需的所有工作。“每个迭代必须发布”的要求有助于建立节奏。</li>
+<li>建立你想要的文化后，您将获得想要的行为。</li>
+</ol>
 
                         </div>
                         
@@ -460,40 +438,40 @@
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="http://www.continuousdelivery20.com/blog/sre-valet-model/">
+                        <a href="http://www.continuousdelivery20.com/blog/2020-12-18-sre-valet-model/">
                           
                             <img src="/img/banners/sre-valet.jpg" class="img-responsive" alt="SRE落地：用VALET模式统一语言">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="http://www.continuousdelivery20.com/blog/sre-valet-model/">SRE落地：用VALET模式统一语言</a></h5>
+                        <h5><a href="http://www.continuousdelivery20.com/blog/2020-12-18-sre-valet-model/">SRE落地：用VALET模式统一语言</a></h5>
                     </div>
                 </div>
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="http://www.continuousdelivery20.com/blog/ms-devops-1-team/">
+                        <a href="http://www.continuousdelivery20.com/blog/2020-11-18-ms-devops-1-team/">
                           
                             <img src="/img/banners/blog-team.png" class="img-responsive" alt="微软巨人，如何将敏捷原则应用于团队改造">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="http://www.continuousdelivery20.com/blog/ms-devops-1-team/">微软巨人，如何将敏捷原则应用于团队改造</a></h5>
+                        <h5><a href="http://www.continuousdelivery20.com/blog/2020-11-18-ms-devops-1-team/">微软巨人，如何将敏捷原则应用于团队改造</a></h5>
                     </div>
                 </div>
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="http://www.continuousdelivery20.com/blog/etsy-mobile-cd/">
+                        <a href="http://www.continuousdelivery20.com/blog/2014-02-28-etsy-mobile-cd/">
                           
                             <img src="/img/banners/etsy-banner-1.png" class="img-responsive" alt="Etsy的移动端持续交付流水线">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="http://www.continuousdelivery20.com/blog/etsy-mobile-cd/">Etsy的移动端持续交付流水线</a></h5>
+                        <h5><a href="http://www.continuousdelivery20.com/blog/2014-02-28-etsy-mobile-cd/">Etsy的移动端持续交付流水线</a></h5>
                     </div>
                 </div>
                 
