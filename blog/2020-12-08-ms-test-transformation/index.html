@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>微软测试转型的历程与心法(5000字长文)</title>
+  <meta name="author" content="乔梁" />
+  
+  
+  
+  
+  <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环模型, 敏捷方法, 敏捷开发, 精益思想, Scrum, 用户故事, DevOps, 微软, 组织转型, 工程效能, Microsoft, Orgnasition, 组织变革, 自动化测试">
+  
+  
+  <meta name="description" content="Microsoft">
+
+  <meta name="generator" content="Hugo 0.74.2" />
+
+  
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  
+  <link href="/css/animate.css" rel="stylesheet">
+
+  
+  
+    <link href="/css/style.violet.css" rel="stylesheet" id="theme-stylesheet">
+  
+
+  
+  <link href="/css/custom.css" rel="stylesheet">
+
+  
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+
+  
+  <link href="/css/owl.carousel.css" rel="stylesheet">
+  <link href="/css/owl.theme.css" rel="stylesheet">
+
+  
+  <link rel="alternate" href="http://www.continuousdelivery20.com/index.xml" type="application/rss+xml" title="持续交付 2.0">
+
+  
+  
+  
+  
+  
+  
+  <meta property="og:updated_time" content="2020-12-08T00:00:00Z">
+  
+    
+    
+    <meta property="article:section" content="实践案例">
+    <meta property="article:tag" content="DevOps">
+    <meta property="article:tag" content="微软">
+    <meta property="article:tag" content="组织转型">
+    <meta property="article:tag" content="工程效能">
+    
+    
+    <meta property="article:published_time" content="2020-12-08T00:00:00Z">
+    <meta property="article:modified_time" content="2020-12-08T00:00:00Z">
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:title" content="微软测试转型的历程与心法(5000字长文)">
+  
+  <meta name="twitter:description" content="Microsoft">
+  
+
+</head>
+
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="/">
+                    <img src="/img/logo.png" alt="微软测试转型的历程与心法(5000字长文) logo" class="hidden-xs hidden-sm">
+                    <img src="/img/logo-small.png" alt="微软测试转型的历程与心法(5000字长文) logo" class="visible-xs visible-sm">
+                    <span class="sr-only">微软测试转型的历程与心法(5000字长文) - 跳到主页</span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                      <span class="sr-only">切换导航</span>
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/">主页</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown active">
+                    
+                    <a href="/blog/">博客</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/faq/">资源</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/contact/">关于</a>
+                    
+                  </li>
+                  
+                </ul>
+            </div>
+            
+
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+                    <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
+
+                </span>
+                    </div>
+                </form>
+
+            </div>
+            
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+
+        </header>
+
+        <div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>微软测试转型的历程与心法(5000字长文)</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="content">
+            <div class="container">
+
+                <div class="row">
+
+                    
+
+                    <div class="col-md-9" id="blog-post">
+
+                        <p class="text-muted text-uppercase mb-small text-right">由 <a href="#">乔梁</a> | 2020-12-08</p>
+
+                        <div id="post-content">
+                          <h2 id="一微软如何做测试">一、微软如何做测试</h2>
+<p>长期以来，Microsoft都为每个软件产品都设定了一个基本的工程人员配置。每个产品团队都有三个不同的职能人员。产品经理（PM）负责了解客户需求并编写特性规范，开发人员负责设计和编码。测试人员负责测试。</p>
+<p>基本上，产品：开发：测试 = 0.5 : 1 : 1，团队之间只会存在稍许差异。</p>
+<p>测试角色包括两种职位：一是软件设计工程师测试人员（SDET），负责建设测试基础设施，和编写自动化用例等。二是软件测试工程师（STE），他们负责运行自动化测试用例或执行手动测试。我们找SDE候选人与SDET的候选人其实是相同能力模型的人。他们被录用时具有非常相似的资格和技能。如果是社招的话，我们通常会招聘开发人员，然后将其转为SDET。</p>
+<h3 id="a我们实际上是如何运转的">a）我们实际上是如何运转的</h3>
+<p>过去，这种做法运作情况还不错。我们的Windows和Office等大型产品取得了商业成功。测试团队会根据很正式的质量度量指标，来确认产品是否质量达到了发布的标准。这让我们有信心宣布“可以发布产品了”。测试团队在测试技术和工具方面建立了深厚的专业知识。此模型的好处之一是，当我们完成开发阶段，准备进行产品质量验收时，我们会要求测试人员出具非常正式的验收标准和正式质量度量报告。他们还在测试方面积累了深厚的专业知识，因为测试团队只专注于测试，并日复一日地进行思考这件事。</p>
+<h3 id="b哪些是不奏效的">b）哪些是不奏效的</h3>
+<p>它真的有效吗？一言以蔽之——无效。我们已经开始意识到了这种模式中的一些问题，但产品的商业成功在一定程度上掩盖了这些问题。到90年代末，问题爆发了。开发人员将写好的代码直接丢给了SDET。SDET将写好的自动化测试用例抛给了STE。而我们通过不断增加STE的人力投入（尤其是供应商）来应对越来越多的工作量。STE在测试团队晋升的职业机会非常有限。维护这种人员配置是非常昂贵。测试环节成了产品发布的瓶颈，并导致产品延迟，当然，我们此时也没能看破这个问题的本质。</p>
+<h2 id="2第一次转型-大约是2000年-sdet-与-ste的角色合并">2、第一次转型, 大约是2000年: SDET 与 STE的角色合并</h2>
+<p>到2000年，整个公司都意识到了这个问题。我们进行了测试团队的第一个重大转变。即：在公司范围内放弃STE这个角色，让SDET不仅负责开发测试用例，还负责运行和维护自动化用例。对于公司而言，这是一个痛苦的过渡。我们努力工作，将STE转移到其他角色，有的人做到了，但更多的人无法完成角色转换。</p>
+<p>这改善了我们的团队职责模型。它改善了SDET的责任感，激励他们编写更好且更多的自动化测试用例。但是核心问题仍然存在。SDET无法跟“部门墙”那边开发人员丢过来的新功能的速度。</p>
+<p>当时，我们唯一能想到的办法是：用“延长产品整个发布周期中的验证阶段”的方法进行补偿。对这个持续存在的问题的另一种应对方法是引入了称为MQ（Quality Milestone。质量里程碑）的概念。这是在一个新版本的发布周期最开始时，增加的一个特殊阶段，目的是填补上一个版本所遗留下来的所有测试债务。这本来算是个好主意，但由于下面几个原因，它在实际工作中并不起作用。首先，由于它特意留下了一段时间用来提高质量，但这促使人们推迟在正常工作过程中偿还测试债务。其次，由于有这么一个专门用来提升质量的时间段，它促使团队进行一些相对来说比较随意的质量提升计划。这个MQ通常会导致优先级倒置。最后一点，由于这个阶段需要一个数量的固定人力进行质量提升工作，所以有时不好定义工作优先权，或者让本该做重要事情的人做一些低优先级工作。</p>
+<h2 id="3进入互联网时代的快节奏">3、进入互联网时代的快节奏</h2>
+<p>随着2000年代中期，互联网云时代到来，事情发生了巨大变化。因为微软原来是卖商业套装软件的公司，云时代需要微软自己维护云平台，要求交付速度越来越快，给工程系统带来了新的压力。</p>
+<p>原来那种有一个较长时间段的软件质量稳定阶段的时代已经过去了。我们无法通过Beta里程碑或“狗食”（在Microsoft内部部署自己的代码）获得客户的认可。微服务需要独立且持续地部署。这些服务需要保持高可用性，并且必须支持无停机时间的部署。</p>
+<p>最初，我们对这些新挑战做出的反应是：继续使用我们已知的做事方式，只是要做得更快而已。我们用更大的管理力度强行推动现有自动化测试用例的执行。为了让自动化测试用例执行得更快，更智能，我们的手段就是只执行那些我们评估后认为受代码变更所影响的测试用例。</p>
+<p>当然，这种方法是行不通的。测试成为主要瓶颈——最终，我们走到了一个临界点。从理论上讲，我们是按照云时代所要求的快节奏进行工作的，但是，发布火车并没能按时发车。在Azure DevOps产品上，有时我们会在迭代结束后再花三个星期来稳定和部署——而三个星期正好是下一个迭代所应该有的周期时间。我们有效地消耗掉了一个迭代周期。</p>
+<h2 id="4互联网时代的质量保障有哪些变化">4、互联网时代的质量保障，有哪些变化</h2>
+<p>很明显，这种工作模型根本无法正常运作；我们做错了。其实，我们并不是第一个认识到这个问题的微软团队。在我们之前，还有很多产品，比如必应（Bing），就已经看到了这一点。我们开始观察云时代诞生的那些优秀公司的最佳实践。</p>
+<p>在云时代的节奏下，如何改变我们的产品质量保障方法？我们做了三件事。</p>
+<p>我们重新定义了软件质量的责任人，我们修正了质量责任制。</p>
+<p>我们学习到，为了频繁发布，Master分支必须始终保持与Release分支一样健康。我们定义了一个核心原则——Master分支一直保持可以随时发布。该原则涉及到软件开发中的方方面面——源代码管理，代码实践，构建等等。从测试的角度来看，我们推动了两件事：测试左移（即，更加强调单元测试）和消除不稳定的自动化测试。</p>
+<p>我们也了解到，无法找到一个与生产环境一模一样的环境，所以还要质量右移。我们建立了一套既为生产环境保驾护航，又在生产环境上确保质量的实践。</p>
+<p>换句话说，我们既向左推动测试，也向右推动测试，并去除了中间部分的大多数测试活动。这与过去那种“在中间发生的大多数测试活动（实验室中进行集成测试）”背道而驰。下面更多是描述了第一件事：质量责任主体的变化。</p>
+<h2 id="5在组织层面上的质量责任转移">5、在组织层面上的质量责任转移</h2>
+<p>我们进行了“合体工程（combined engineering）” ——微软使用的术语，就是每个工程师要同时担当开发和测试的责任。将开发团队和测试团队合并在一起不仅仅只是把开发部门和测试部门放在同一个大部门下的组织合并操作。这是一次实际的专科合并，我们只有一种角色，就是“工程师角色”，这个角色要具备过去SDE和SDET的资质，并承担相应的职责。</p>
+<p>这个新部门中，每个人都走向了一个新的角色，每个人都需要学习新的技能。这是一个非常重要的点。当我们说“合体工程”时，我们常遇到的一个问题是：我们如何训练原来的测试人员。</p>
+<p>其实，我们不得不进行双向培训。过去的开发人员必须学习如何成为一名好的测试人员，而原来的测试人员要学习如何做好代码设计。管理者不得不学习如何管理端到端的特性交付。</p>
+<p>在这种模式中，根本没有办法把测试转移给其他人或其它团队负责。每位工程师都负责自己所开发的功能的端到端质量——从单元测试，集成测试，性能测试，部署到生产环境监视等。此时，每个人与其他工程师的合作关系仍然很重要，甚至更重要。现在，人们更加重视同行评审，设计评审，代码评审，测试评审了。但是，提供高质量功能的责任并没有因此被忽视。</p>
+<p>这是整个公司一次重大的文化变革。这种变化首先发生在一个部门中，但是，随后的几年，Microsoft的每个团队都采用了这种模式（笔者注：最开始微软推动的很温柔，但是变化太慢了，所以后来就自上而下强力推动执行了）。该模式可能会有一些小的变体，但是，目前Microsoft的确没有独立的开发团队和测试团队。他们只是具有“合体工程师”的工程团队。</p>
+<h2 id="6-我们是如何搞定的">6. 我们是如何搞定的</h2>
+<p>我们如何进行这种转型？简而言之，要非常小心！我们精心盘点了测试团队所做的一切，并重新定义了在新的模式中如何完成原来测试团队的所有活动。我们特别关注了测试活动“不为人知的那部分工作”——对于测试团队所做的事情，开发人员要么不知道需要做这些事，要么不知道该怎么做这些事。</p>
+<p>我们非常清楚的第二件事是，我们不得不改变测试方式。如果我们继续用以前的方式做测试，我们就无法使用这种新模式工作。所以， 我们必须完成测试策略的左移和右移。</p>
+<p>我们给了自己大约12个月的时间来完成这个转型。如前所述，SDE和SDET在受聘时具有相同的基本技能和资质。然而，这些年来，他们的技能在承担了一系列特定的工作内容后逐渐发生了变化。这种变化是在一次又一次的迭代过程中逐步完成的。每个工程师都不断地学习和掌握其他专业的技能，最初从一个小功能特性的开发开始，然后扩大范围。最终，在工程师中，你无法再识别出谁是SDET或SDE。换句话说，那些无法完成这种转型的工程师不得不寻找其他岗位。</p>
+<h2 id="7如何应对专项问题如性能安全等等">7、如何应对专项问题，如性能、安全等等</h2>
+<p>“合体工程师”的核心原则是消除从一个职能团队向另一个职能团队移交工作任务。因为这种移交会带来延迟，并削弱责任感。没有专门的集中式团队来执行某些特定的任务。每个功能团队都有端到端交付功能的责任。</p>
+<p>同时，我们也知道了专项技能的重要性。性能测试可以认为是一项专项技能。安全测试也是一个专项技能。我们如何在“合体工程师”这种模式中做好这些专门的任务呢？我们的做法是：组成虚拟团队（v团队），每个功能团队的某个特定工程师都被要求承担除正常功能开发角色之外的特殊角色。换句话说，我们保留了某些任务所需的专业化，但是将这些工作从中央团队分配到功能团队中。</p>
+<p>我们创建了一个测试架构虚拟团队（Test Arch v-team），并找一些最资深的工程师来做。他们负责建立新的测试框架，并通过这个组织来推动我们的变化。我们还让某些质量原则相关的主题专家组成另一类虚拟团队，比如安全性和可访问性等。我们创建了性能团队，该团队定位产品中常见的性能瓶颈，并推动对它们的解决。另一个虚拟团队负责监视CI流水线的运行状况，并采取快速行动。这些特殊的虚拟团队的工程师共享专业知识，但他们的责任感与所在的功能团队保持一致。</p>
+<h2 id="8更高的交付速度">8、更高的交付速度</h2>
+<p>表面上看，每个工程师现在所做的事情的工作量是原来的两倍或更多，因此特性交付速度会变慢。然而，由于开发团队和测试团队的合并，特性团队的总人数并没有改变。向“合体工程师”的转变无疑需要为每位工程师增加培训和新技能开发方面的投资，但是这些可以通过减少交接成本和新的测试实践所带来的效率提高所抵消。自从实施这种转型以来，我们已经看到了特性交付速度上，持续且相当显着的增长。</p>
+
+                        </div>
+                        
+                        
+
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="col-md-3">
+
+                        
+
+                        
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title">搜索</h3>
+    </div>
+
+    <div class="panel-body">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+                <input type="search" name="q" class="form-control" placeholder="搜索">
+                <input type="hidden" name="sitesearch" value="http://www.continuousdelivery20.com/">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">分类</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            
+            <li>
+                <a href="/categories/%e5%ae%9e%e8%b7%b5%e6%a1%88%e4%be%8b">实践案例 (9)</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">标签</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            
+            <li>
+                <a href="/tags/devops"><i class="fas fa-tags"></i> devops</a>
+            </li>
+            
+            <li>
+                <a href="/tags/sre"><i class="fas fa-tags"></i> sre</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%ae%89%e5%85%a8"><i class="fas fa-tags"></i> 安全</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%b7%a5%e7%a8%8b%e6%95%88%e8%83%bd"><i class="fas fa-tags"></i> 工程效能</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%be%ae%e8%bd%af"><i class="fas fa-tags"></i> 微软</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%8c%81%e7%bb%ad%e9%83%a8%e7%bd%b2"><i class="fas fa-tags"></i> 持续部署</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%96%b9%e6%b3%95"><i class="fas fa-tags"></i> 方法</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%a1%88%e4%be%8b"><i class="fas fa-tags"></i> 案例</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e7%bb%84%e7%bb%87%e8%bd%ac%e5%9e%8b"><i class="fas fa-tags"></i> 组织转型</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+
+            </div>
+            
+        </div>
+        
+
+        <footer id="footer">
+    <div class="container">
+
+        
+        <div class="col-md-4 col-sm-6">
+            <h4>关于我们</h4>
+
+            <p></p>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+        <div class="col-md-4 col-sm-6">
+
+             
+            <h4>最新博客</h4>
+
+            <div class="blog-entries">
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/2020-12-18-sre-valet-model/">
+                          
+                            <img src="/img/banners/sre-valet.jpg" class="img-responsive" alt="SRE落地：用VALET模式统一语言">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/2020-12-18-sre-valet-model/">SRE落地：用VALET模式统一语言</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/2020-12-08-ms-test-transformation/">
+                          
+                            <img src="/img/banners/.jpg" class="img-responsive" alt="微软测试转型的历程与心法(5000字长文)">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/2020-12-08-ms-test-transformation/">微软测试转型的历程与心法(5000字长文)</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/2020-11-18-ms-devops-1-team/">
+                          
+                            <img src="/img/banners/blog-team.png" class="img-responsive" alt="微软巨人，如何将敏捷原则应用于团队改造">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/2020-11-18-ms-devops-1-team/">微软巨人，如何将敏捷原则应用于团队改造</a></h5>
+                    </div>
+                </div>
+                
+            </div>
+
+            <hr class="hidden-md hidden-lg">
+             
+
+        </div>
+        
+
+        
+        <div class="col-md-4 col-sm-6">
+
+          <h4>联系</h4>
+
+            <p class="text-uppercase"><strong>《持续交付2.0》爱好者社区</strong>
+        <br>北京国际饭店 5层
+        <br>东城区
+        <br>北京市
+        <br>
+        <strong>中国</strong>
+      </p>
+      
+
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+    </div>
+    
+</footer>
+
+
+
+
+
+
+
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            
+            <p class="pull-left">Copyright ©️ 2019 - 2028, 《持续交付2.0》作者 乔梁; all rights reserved.  <a href='https://beian.miit.gov.cn/'>京ICP备18046893号-1</a></p>
+            
+            <p class="pull-right">
+              模板来自 <a href="https://bootstrapious.com/p/universal-business-e-commerce-template">Bootstrapious</a>.
+              
+
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+    
+
+    
+<script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js"></script>
+
+<script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+<script src="/js/hpneo.gmaps.js"></script>
+<script src="/js/gmaps.init.js"></script>
+<script src="/js/front.js"></script>
+
+
+<script src="/js/owl.carousel.min.js"></script>
+
+
+
+  </body>
+</html>

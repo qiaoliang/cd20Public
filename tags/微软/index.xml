@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>微软 on 持续交付 2.0</title>
+    <link>http://www.continuousdelivery20.com/tags/%E5%BE%AE%E8%BD%AF/</link>
+    <description>Recent content in 微软 on 持续交付 2.0</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 08 Dec 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.continuousdelivery20.com/tags/%E5%BE%AE%E8%BD%AF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>微软测试转型的历程与心法(5000字长文)</title>
+      <link>http://www.continuousdelivery20.com/blog/2020-12-08-ms-test-transformation/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/2020-12-08-ms-test-transformation/</guid>
+      <description>一、微软如何做测试 长期以来，Microsoft都为每个软件产品都设定了一个基本的工程人员配置。每个产品团队都有三个不同的职能人员。产品经理（</description>
+    </item>
+    
+  </channel>
+</rss>
