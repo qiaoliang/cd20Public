@@ -6,19 +6,10 @@
     <description>Recent content in 实践案例 on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 03 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Dec 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/categories/%E5%AE%9E%E8%B7%B5%E6%A1%88%E4%BE%8B/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>微软:测试左移，让其运行更快、更可靠</title>
-      <link>http://www.continuousdelivery20.com/blog/2021-01-03-ms-devops-shift-left/</link>
-      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.continuousdelivery20.com/blog/2021-01-03-ms-devops-shift-left/</guid>
-      <description>我们原来是怎么工作的 2014年9月，我们已经进入了云计算的第三个年头。然而，我们当时仍旧是按照云计算时代之前的那种传统方式进行测试。 我们试图</description>
-    </item>
     
     <item>
       <title>SRE落地：用VALET模式统一语言</title>
@@ -45,6 +36,24 @@
       
       <guid>http://www.continuousdelivery20.com/blog/2020-11-18-ms-devops-1-team/</guid>
       <description>本文主要是讲Azure DevOps和DevOps Server团队在应用敏捷原则过程中，如何管理团队，角色，计划，迭代和流程的改进，由Aaro</description>
+    </item>
+    
+    <item>
+      <title>微软:测试左移，让其运行更快、更可靠</title>
+      <link>http://www.continuousdelivery20.com/blog/2021-01-03-ms-devops-shift-left/</link>
+      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/2021-01-03-ms-devops-shift-left/</guid>
+      <description>我们原来是怎么工作的 2014年9月，我们已经进入了云计算的第三个年头。然而，我们当时仍旧是按照云计算时代之前的那种传统方式进行测试。 我们试图</description>
+    </item>
+    
+    <item>
+      <title>微软：测试右移，生产环境上的持续测试</title>
+      <link>http://www.continuousdelivery20.com/blog/2021-01-05-ms-devops-shift-right-test-in-production/</link>
+      <pubDate>Tue, 04 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/2021-01-05-ms-devops-shift-right-test-in-production/</guid>
+      <description>没有哪个地方像生产环境一样 这是我们重要变某的第三部分，也是最后一部分。正如你见过的，我们减少了对在实验室内做功能测试的依赖，转而使用单元测试</description>
     </item>
     
     <item>

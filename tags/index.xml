@@ -6,80 +6,17 @@
     <description>Recent content in Tags on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 03 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Dec 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>automation</title>
-      <link>http://www.continuousdelivery20.com/tags/automation/</link>
-      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.continuousdelivery20.com/tags/automation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>DevOps</title>
       <link>http://www.continuousdelivery20.com/tags/devops/</link>
-      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.continuousdelivery20.com/tags/devops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Microsoft</title>
-      <link>http://www.continuousdelivery20.com/tags/microsoft/</link>
-      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.continuousdelivery20.com/tags/microsoft/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Unit Test</title>
-      <link>http://www.continuousdelivery20.com/tags/unit-test/</link>
-      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.continuousdelivery20.com/tags/unit-test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>单元测试</title>
-      <link>http://www.continuousdelivery20.com/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</link>
-      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.continuousdelivery20.com/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>微软</title>
-      <link>http://www.continuousdelivery20.com/tags/%E5%BE%AE%E8%BD%AF/</link>
-      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.continuousdelivery20.com/tags/%E5%BE%AE%E8%BD%AF/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>测试左移</title>
-      <link>http://www.continuousdelivery20.com/tags/%E6%B5%8B%E8%AF%95%E5%B7%A6%E7%A7%BB/</link>
-      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.continuousdelivery20.com/tags/%E6%B5%8B%E8%AF%95%E5%B7%A6%E7%A7%BB/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>自动化测试</title>
-      <link>http://www.continuousdelivery20.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
-      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.continuousdelivery20.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
       <description></description>
     </item>
     
@@ -102,11 +39,92 @@
     </item>
     
     <item>
+      <title>微软</title>
+      <link>http://www.continuousdelivery20.com/tags/%E5%BE%AE%E8%BD%AF/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E5%BE%AE%E8%BD%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>组织转型</title>
       <link>http://www.continuousdelivery20.com/tags/%E7%BB%84%E7%BB%87%E8%BD%AC%E5%9E%8B/</link>
       <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.continuousdelivery20.com/tags/%E7%BB%84%E7%BB%87%E8%BD%AC%E5%9E%8B/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>automation</title>
+      <link>http://www.continuousdelivery20.com/tags/automation/</link>
+      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Microsoft</title>
+      <link>http://www.continuousdelivery20.com/tags/microsoft/</link>
+      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/microsoft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Unit Test</title>
+      <link>http://www.continuousdelivery20.com/tags/unit-test/</link>
+      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/unit-test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>单元测试</title>
+      <link>http://www.continuousdelivery20.com/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>测试左移</title>
+      <link>http://www.continuousdelivery20.com/tags/%E6%B5%8B%E8%AF%95%E5%B7%A6%E7%A7%BB/</link>
+      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E6%B5%8B%E8%AF%95%E5%B7%A6%E7%A7%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>自动化测试</title>
+      <link>http://www.continuousdelivery20.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test in Production</title>
+      <link>http://www.continuousdelivery20.com/tags/test-in-production/</link>
+      <pubDate>Tue, 04 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/test-in-production/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>测试右移</title>
+      <link>http://www.continuousdelivery20.com/tags/%E6%B5%8B%E8%AF%95%E5%8F%B3%E7%A7%BB/</link>
+      <pubDate>Tue, 04 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E6%B5%8B%E8%AF%95%E5%8F%B3%E7%A7%BB/</guid>
       <description></description>
     </item>
     
