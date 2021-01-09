@@ -13,100 +13,100 @@
     
     <item>
       <title>SRE落地：用VALET模式统一语言</title>
-      <link>http://www.continuousdelivery20.com/blog/2020-12-18-sre-valet-model/</link>
+      <link>http://www.continuousdelivery20.com/blog/sre-valet-model/</link>
       <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.continuousdelivery20.com/blog/2020-12-18-sre-valet-model/</guid>
+      <guid>http://www.continuousdelivery20.com/blog/sre-valet-model/</guid>
       <description>本文源自《SRE工作手册》英文版第三章，讲述的是家得宝（THD）公司在SRE转型中如何使用VALET。 VALET 是一个易记易用的模式语言，分别代表：</description>
     </item>
     
     <item>
       <title>微软测试转型的历程与心法(5000字长文)</title>
-      <link>http://www.continuousdelivery20.com/blog/2020-12-08-ms-test-transformation/</link>
+      <link>http://www.continuousdelivery20.com/blog/ms-test-transformation/</link>
       <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.continuousdelivery20.com/blog/2020-12-08-ms-test-transformation/</guid>
+      <guid>http://www.continuousdelivery20.com/blog/ms-test-transformation/</guid>
       <description>一、微软如何做测试 长期以来，Microsoft都为每个软件产品都设定了一个基本的工程人员配置。每个产品团队都有三个不同的职能人员。产品经理（</description>
     </item>
     
     <item>
       <title>微软巨人，如何将敏捷原则应用于团队改造</title>
-      <link>http://www.continuousdelivery20.com/blog/2020-11-18-ms-devops-1-team/</link>
+      <link>http://www.continuousdelivery20.com/blog/ms-devops-1-team/</link>
       <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.continuousdelivery20.com/blog/2020-11-18-ms-devops-1-team/</guid>
+      <guid>http://www.continuousdelivery20.com/blog/ms-devops-1-team/</guid>
       <description>本文主要是讲Azure DevOps和DevOps Server团队在应用敏捷原则过程中，如何管理团队，角色，计划，迭代和流程的改进，由Aaro</description>
     </item>
     
     <item>
       <title>微软:测试左移，让其运行更快、更可靠</title>
-      <link>http://www.continuousdelivery20.com/blog/2021-01-03-ms-devops-shift-left/</link>
+      <link>http://www.continuousdelivery20.com/blog/ms-devops-shift-left/</link>
       <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.continuousdelivery20.com/blog/2021-01-03-ms-devops-shift-left/</guid>
+      <guid>http://www.continuousdelivery20.com/blog/ms-devops-shift-left/</guid>
       <description>我们原来是怎么工作的 2014年9月，我们已经进入了云计算的第三个年头。然而，我们当时仍旧是按照云计算时代之前的那种传统方式进行测试。 我们试图</description>
     </item>
     
     <item>
       <title>微软：测试右移，生产环境上的持续测试</title>
-      <link>http://www.continuousdelivery20.com/blog/2021-01-05-ms-devops-shift-right-test-in-production/</link>
+      <link>http://www.continuousdelivery20.com/blog/ms-devops-shift-right-test-in-production/</link>
       <pubDate>Tue, 04 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.continuousdelivery20.com/blog/2021-01-05-ms-devops-shift-right-test-in-production/</guid>
+      <guid>http://www.continuousdelivery20.com/blog/ms-devops-shift-right-test-in-production/</guid>
       <description>生产环境是唯一的，无法复制 这是我们重要变某的第三部分，也是最后一部分。正如你见过的，我们减少了对在实验室内做功能测试的依赖，转而使用单元测试</description>
     </item>
     
     <item>
       <title>Etsy的移动端持续交付流水线</title>
-      <link>http://www.continuousdelivery20.com/blog/2014-02-28-etsy-mobile-cd/</link>
+      <link>http://www.continuousdelivery20.com/blog/etsy-mobile-cd/</link>
       <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.continuousdelivery20.com/blog/2014-02-28-etsy-mobile-cd/</guid>
+      <guid>http://www.continuousdelivery20.com/blog/etsy-mobile-cd/</guid>
       <description>引言 在很久以前，本站报导过Etsy如何实现Web端每日在生产环境上部署40次。现在移动应用大潮来了，它又是如何做的呢？ 正文 移动app的好评在</description>
     </item>
     
     <item>
       <title>敏捷开发方法们，为什么让你感觉很糟糕？</title>
-      <link>http://www.continuousdelivery20.com/blog/2012-08-12-why-agile-feel-bad/</link>
+      <link>http://www.continuousdelivery20.com/blog/why-agile-feel-bad/</link>
       <pubDate>Sun, 12 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.continuousdelivery20.com/blog/2012-08-12-why-agile-feel-bad/</guid>
+      <guid>http://www.continuousdelivery20.com/blog/why-agile-feel-bad/</guid>
       <description>为什么软件开发方法论让你觉得糟糕？ 围绕软件开发实践和方法论，总有很多教条式的口水仗。阶段式（phase-gate）方法能够有效管理软件开发过</description>
     </item>
     
     <item>
       <title>既满足PCI-DSS，又做持续部署。电商网站 Etsy 如何做到的呢？</title>
-      <link>http://www.continuousdelivery20.com/blog/2012-06-13-etsy-pci-cd/</link>
+      <link>http://www.continuousdelivery20.com/blog/etsy-pci-cd/</link>
       <pubDate>Wed, 13 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://www.continuousdelivery20.com/blog/2012-06-13-etsy-pci-cd/</guid>
+      <guid>http://www.continuousdelivery20.com/blog/etsy-pci-cd/</guid>
       <description>Etsy每天向生产环境部署25到50次； 他们为其支付系统构建一个符合PCI-DSS（支付卡行业数据信息安全标准）的环境； 责任分离并不是指：大</description>
     </item>
     
     <item>
       <title>IMVU如何在实施持续部署的同时确保软件质量</title>
-      <link>http://www.continuousdelivery20.com/blog/2010-04-09-imvu-cd-with-high-quality/</link>
+      <link>http://www.continuousdelivery20.com/blog/imvu-cd-with-high-quality/</link>
       <pubDate>Fri, 09 Apr 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://www.continuousdelivery20.com/blog/2010-04-09-imvu-cd-with-high-quality/</guid>
+      <guid>http://www.continuousdelivery20.com/blog/imvu-cd-with-high-quality/</guid>
       <description>正文 在科技圈的各种大会上，我们和很多人有过交谈，他们对我们在 IMVU 网站上的持续部署流程很感兴趣，想知道我们是如何每天部署50次代码的。我们也听到</description>
     </item>
     
     <item>
       <title> 利用抽象分支技术，进行大规模软件的增量式改造</title>
-      <link>http://www.continuousdelivery20.com/blog/2009-05-18-abstract-branch/</link>
+      <link>http://www.continuousdelivery20.com/blog/abstract-branch/</link>
       <pubDate>Mon, 18 May 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://www.continuousdelivery20.com/blog/2009-05-18-abstract-branch/</guid>
+      <guid>http://www.continuousdelivery20.com/blog/abstract-branch/</guid>
       <description>很多开发团队通常严重依赖于版本控制系统的分支功能。分布式版本控制系统让分支操作更加方便。然而，在《持续交付》一书中描述的很多非常规言论中，就</description>
     </item>
     
     <item>
       <title>为什么要持续部署（Continuous Deployment）？</title>
-      <link>http://www.continuousdelivery20.com/blog/2009-02-28-cd-a-tactic-advocated-by-eric-ries/</link>
+      <link>http://www.continuousdelivery20.com/blog/cd-a-tactic-advocated-by-eric-ries/</link>
       <pubDate>Sat, 28 Feb 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://www.continuousdelivery20.com/blog/2009-02-28-cd-a-tactic-advocated-by-eric-ries/</guid>
+      <guid>http://www.continuousdelivery20.com/blog/cd-a-tactic-advocated-by-eric-ries/</guid>
       <description>本文讨论了一个非常关键的问题：“IMVU为什么要做持续部署？”。IMVU的创始人之一就是 《精益创业》 的作者Eric Ries 。这也是他非常重要的关于</description>
     </item>
     
