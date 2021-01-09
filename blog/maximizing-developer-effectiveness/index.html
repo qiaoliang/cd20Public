@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>最大化开发人员的效率</title>
+  <meta name="author" content="乔梁" />
+  
+  
+  
+  
+  <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环模型, 敏捷方法, 敏捷开发, 精益思想, Scrum, 用户故事, DevOps, 工程效能, 自动化测试, 技术管理, 开发效率">
+  
+  
+  <meta name="description" content="通过提升开发人员的体验，加入小循环反馈回路，提升工作有效性">
+
+  <meta name="generator" content="Hugo 0.74.2" />
+
+  
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
+
+  
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  
+  <link href="/css/animate.css" rel="stylesheet">
+
+  
+  
+    <link href="/css/style.violet.css" rel="stylesheet" id="theme-stylesheet">
+  
+
+  
+  <link href="/css/custom.css" rel="stylesheet">
+
+  
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+
+  
+  <link href="/css/owl.carousel.css" rel="stylesheet">
+  <link href="/css/owl.theme.css" rel="stylesheet">
+
+  
+  <link rel="alternate" href="http://www.continuousdelivery20.com/index.xml" type="application/rss+xml" title="持续交付 2.0">
+
+  
+  
+  
+  
+  
+  
+  <meta property="og:updated_time" content="2020-12-11T00:00:00Z">
+  
+    
+    
+    <meta property="article:section" content="观点">
+    <meta property="article:tag" content="DevOps">
+    <meta property="article:tag" content="工程效能">
+    <meta property="article:tag" content="自动化测试">
+    <meta property="article:tag" content="技术管理">
+    
+    
+    <meta property="article:published_time" content="2020-12-11T00:00:00Z">
+    <meta property="article:modified_time" content="2020-12-11T00:00:00Z">
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:title" content="最大化开发人员的效率">
+  
+  <meta name="twitter:description" content="通过提升开发人员的体验，加入小循环反馈回路，提升工作有效性">
+  
+
+</head>
+
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="/">
+                    <img src="/img/logo.png" alt="最大化开发人员的效率 logo" class="hidden-xs hidden-sm">
+                    <img src="/img/logo-small.png" alt="最大化开发人员的效率 logo" class="visible-xs visible-sm">
+                    <span class="sr-only">最大化开发人员的效率 - 跳到主页</span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                      <span class="sr-only">切换导航</span>
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/">主页</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown active">
+                    
+                    <a href="/blog/">博客</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/faq/">资源</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/contact/">关于</a>
+                    
+                  </li>
+                  
+                </ul>
+            </div>
+            
+
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+                    <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
+
+                </span>
+                    </div>
+                </form>
+
+            </div>
+            
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+
+        </header>
+
+        <div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>最大化开发人员的效率</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="content">
+            <div class="container">
+
+                <div class="row">
+
+                    
+
+                    <div class="col-md-9" id="blog-post">
+
+                        <p class="text-muted text-uppercase mb-small text-right">由 <a href="#">乔梁</a> | 2020-12-11</p>
+
+                        <div id="post-content">
+                          <p>科技在不断地变得更加智能和强大，新技术不断被引入到组织内，以提升整体生产力。而这也会增加复杂性和开发人员的认知开销，减少了他们个人的生产力。</p>
+<p>这里介绍一个用于最大化开发效率的框架。通过研究，我确定了关键的开发者反馈回路，包括开发者每天做200次的微反馈回路。这些微反馈都应该被不断优化，以使它们更快，更简单和更有影响力。</p>
+<p>我经常帮助工程组织中的转型工作，这通常是一个技术转型和一个 文化转型。例如，这些组织可能试图 将一个核心的单体应用分解成微服务，使它们能够由独立的团队开发和维护，通过采用DevOps方法，敏捷方法，以更快地响应来自市场的反馈信号。</p>
+<p>然而，一次又一次地，这些变革之旅在某个时间点上失败了。管理者对延期和预算超支感到不满， 技术人员努力解决来自各个方向的障碍。然而，团队由于各种各样的依赖、认知超载和在缺少新工具/流程的知识，导致最新技术成果的转化还不够快，生产力太低，没有达成对领导层的承诺。</p>
+<p>开发效率高的公司和低的公司之间，有一个鲜明的对比。当我们研究这些场景时，问题的一个主要原因是工程组织忽略了为开发人员提供一个有效的工作环境。在变革期间，组织引入了许多新的流程，和很多的新工具和新技术，这导致了开发人员的日常任务中，增加了一定的复杂性和摩擦力。</p>
+<p>通过与各种类型的公司打交道（这些公司可能是刚刚开始数字化转型，或进程已过半，而且在一开始就导入了DevOps文化），我发现，只要通过对比一个开发者一天的工作，就可以区别某个公司开发效率的高低。</p>
+<h2 id="开发者在高效环境中的一天">开发者在高效环境中的一天</h2>
+<ul>
+<li>查看团队项目管理工具，然后参加standup，她很清楚自己要做什么。</li>
+<li>注意：开发环境已自动更新，其所依赖的类库和服务也是与生产生产环境一致的，而CI/CD 流水线也是绿色的（处于成功状态）。</li>
+<li>从代码库拉下最新代码，进行增量代码开发，并通过部署到本地环境，运行单元测试进行快速验证。</li>
+<li>他开发的特性依赖于另一个团队负责的业务API。能够通过开发者门户找到该团队的文档和API规范。看了文档，他仍然有一些疑问，于是，他就跑到那个团队的on-call支持群里，快速从另一个正在负责技术支持的开发人员那里获得了帮助。</li>
+<li>他专注于自己的任务几个小时，没有任何干扰。</li>
+<li>休息一下，喝杯咖啡，散散步，和同事一起打会儿乒乓球。</li>
+<li>提交代码变更。这个变更在部署到生产环境之前，要经过多种自动检查。然后，逐步让生产环境的用记可见，，同时监控业务和运维指标。</li>
+</ul>
+<p><em>开发人员能够在一天之内就取得进展，并开心地回家了～</em></p>
+<h2 id="开发者在低效环境中的一天">开发者在低效环境中的一天</h2>
+<ul>
+<li>新一天的工作刚开始，就必须立即处理一些生产环境中的问题告警。</li>
+<li>检查多个监控系统中查看大量日志记录，以查找错误报告，因为没有跨系统的聚合日志。</li>
+<li>与电话那头儿的运维同事一直在打电放，最后确认，这个警报是误报。</li>
+<li>他必须等待架构组、安全组和治理组对其之前已完成的特性的结果反馈。</li>
+<li>一天中有很多会议，大多数会议都是状态跟进会议。</li>
+<li>现在，前一个特性已经被审查者批准了，她把它合并到另一个分支，开始长时间的E2E测试套件。而这个一个独立QA团队管理测试套件几乎总是失败的。</li>
+<li>由于他负责的代码依赖于其他团队的API，但她无法找到当前有效版本的API，只好去找另一边的项目经理沟通，试图得到答案。找答案的工单可能将需要几天，所以这阻碍了他当前任务的迅速完成。</li>
+</ul>
+<p><em>我们还可以继续描述更多的情景。</em>
+<em>但最终结果就是，开发者并没有取得什么成就， 令人沮丧和丧失动力～</em></p>
+<h2 id="什么是开发人员的高效性">什么是开发人员的高效性</h2>
+<p>高效是什么含义？作为一名开发人员来说，就是向客户交付最大价值，就是能够把能量和创新力以最佳方式达成公司目标。高效环境可以很容易地将有用且高质量的软件发布到生产环境，并高效运营，使开发人员不必处理那些具有不必要的复杂性且很琐碎的问题，或者长时间的等待，让他们有更多的时间专注于增值活动。</p>
+<p>在低效环境中，作为一名开发人员，你的一天就是处理无尽的事务，不是一件，而是很多件，时间被分割成数以千计的碎片。慢慢地，你生产力就被这些小东西破坏了。而且，这种效率低下，会产生复合效应，扩展到整个组织，而不仅仅是工程团队。更糟糕的是，这个环境中的这些人完全接受了这个现实。这种工作方式成为一种公认的惯例，并制定了在这种环境中进行开发的低效流程。开发者体验了<a href="https://www.psychologytoday.com/us/basics/learned-helplessness">习得性无助</a>。</p>
+<p>而在提供高效环境的组织中，会感受到一种动力，每件事都是简单有效的，而且开发人员很少遇到摩擦力。他们花更多的时间创造价值。 正是这种无摩擦的环境，以及支持它的文化，培养出不断提高的欲望和能力。当然，这是公司在做数字化转型中最难的。</p>
+<p><strong>高效是开发人员的动力。没有摩擦，他们就有时间创造性地思考，并运用它们。</strong></p>
+<p>组织都在寻找衡量开发人员生产力的方法。其中一个反模式就是看代码行数，输出的特性数，或者过多地专注于找出表现不佳的开发者。 更好的方式是围绕该组织如何提供一个高效的工作环境。没有摩擦，高效工程师就有时间创造性地思考和应用。如果组织不这样做，那么以我的经验，最好的工程师会离职</p>
+<p>让我们看一个公司优化了开发人员效率的例子。</p>
+<h2 id="案例分析spotify">案例分析：Spotify</h2>
+<p>Spotify在其工程师中进行用户研究，以便更好地了解开发人员的高效性。通过这项研究，他们发现了两项主要调查结果：</p>
+<ol>
+<li>
+<p>内部工具的碎片化。 基础设施和工具被建造成孤立的小“岛”，导致了工程师不得不进行上下文切换，以及认知负荷。</p>
+</li>
+<li>
+<p>信息发现能力差。Spotify没有一个地方可以找到技术信息。 随着信息的扩散，工程师们甚至不知道从哪里开始寻找信息。</p>
+</li>
+</ol>
+<p>Spotify的开发者体验研究团队将这些问题描述为一负向飞轮；也就是一个恶性循环。开发人员面临很多未知，迫使他们孤立地做出许多决定，而这在需要将碎片信息合成在一起时，增加了很多重复劳动，最终侵蚀了产品端到端的交付时间。</p>
+<p><img src="/img/blog/202101/decrease-flywheel.png" alt="图1：Spotify的负飞轮"></p>
+<p>为了减轻这些复杂性，他们开发了<a href="https://backstage.io/">一个后台系统</a>，一个带有插件的开源开发者门户体系结构，以帮助在一个地方公开所有基础设施工具平台产品，提供一个连贯的开发者体验，和一个为工程师找到他们需要的信息的统一起点。</p>
+<h2 id="如何入门">如何入门</h2>
+<p>在我所描述的高效的环境中是什么感觉？喜欢在完全拥抱DevOps文化，持续交付和产品思维的公司工作。大多数公司非常明智的，他们已经读了<a href="https://www.amazon.com/gp/product/B07B9F83WM?ie=UTF8&amp;tag=martinfowlerc-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B07B9F83WM">《加速》</a><img src="https://www.assoc-amazon.com/e/ir?t=martinfowlerc-20&amp;l=as2&amp;o=1&amp;a=0321601912" alt="img">一书，以及DevOps状态报告](<a href="https://martinfowler.com/bliki/StateOfDevOpsReport.html">https://martinfowler.com/bliki/StateOfDevOpsReport.html</a>)。他们了解他们正在努力建立什么类型的组织。</p>
+<p><strong>四大指标（Leadtime、部署频率、MTTR和变更失败率） 是衡量DevOps的重要指标。</strong></p>
+<p>然而，这些DevOps度量是<a href="https://www.investopedia.com/ask/answers/what-are-leading-lagging-and-coincident-indicators/">滞后性指标</a>。它们的确是有用的度量指标，因为它们可以让你了解你所在的位置，并可以用于验收“你的公司公司所做的一些切实可行的事情以后，是否真的变得更好了”。在理想情况下，我们希望确定一些引领性的指标，这些指标比上面提到的滞后性指标低一个或多个层级，但是更易被执行的，也与更高的层次指标相关联。有一些指标可能还要结合其他来源，比如关于开发者满意度调查的研究报告。</p>
+<p>已经有大量的好建议、实践、工具，可以应用于过程改进。但可能你仍旧很难知道到底要做什么。我的研究显示，有很多关键的开发者反馈环指示器。我建议把重点放在优化这些循环上，让它们变更快速且简单。当新的工具和技术被引入时，衡量这些反馈回路的长度和约束。这些低层次的细节指标可以清楚地显示开发人员有效性是否有所改善，或者至少不是更糟。</p>
+<h2 id="反馈回路">反馈回路</h2>
+<p>我确定的关键度量指标是：</p>
+<p><img src="/img/blog/202101/feadback-matrics.png" alt="图2：效率度量指标"></p>
+<p>这些指标是基于我所观察到的可能性。公司并不需要把上面所有的反馈回路指标都纳入到效率提升的范围中，但它们的确提供了具体的目标，用来指导做出一些决策。各组织应在其所在的具体情况下开展研究，以便找出哪些周期时间和指标是重要的技术策略。</p>
+<p>常看看应用哪些技术可以用于优化反馈循环，以及公司实现这一目标的过程，这是非常有用的。 案例研究可以提供很多可以应用于自己组织内容的想法。</p>
+<p><img src="/img/blog/202101/time-taken-bar.png" alt="图3：时间消耗示意图">
+图2：特性开发期间的反馈循环</p>
+<p>上图显示了开发人员特性开发过程中的反馈循环。你可以看到，开发人员在整个过程上的多个节点上验证他的工作成果满足规范要求和预期标准的时间与节奏。需要注意的主要观察点是：</p>
+<ul>
+<li>如果反馈环时间知一些，开发人员就会更经常地运行这个反馈环</li>
+<li>如果开发人员认为这些反馈环对他们有价值，他们就会更频繁地运行它，并对结果采取行动，而不是为了完成纯粹的形式主义。</li>
+<li>更早且更频繁地进行验证可以减少以后来的返工。</li>
+<li>反馈回路可以非常简单地解释结果，从而减少反复沟通和认知开销。</li>
+</ul>
+<p>当组织没能达成上述这些结果时，这些问题就会快速交织组合在一起，产生更多的问题。大量的精力浪费体现在等待、搜索，或尝试获得运行结果。这些问题累积起来，导致产品开发的重大延误，这将表现为在四个关键指标中得分较低，特别是部署频率和前置时间（Leadtime）。</p>
+<h2 id="引入微反馈回路">引入微反馈回路</h2>
+<p>根据我的观察，你必须抓住最基本的东西。开发者每天做10次、100次或200次，我称之为微反馈循环。这些微反馈循环可以是：</p>
+<ul>
+<li>
+<p>为了修复bug，而运行单元测试</p>
+</li>
+<li>
+<p>看到你的代码变更在本地环境或测试环境上产生了预期的变化</p>
+</li>
+<li>
+<p>在你的环境中刷新数据</p>
+</li>
+</ul>
+<p>如果授权给开发人员，开发人员自然而然会对其优化。然而，我经常发现，这些微反馈回路被忽视了。这些微循环的时间本来就缩短，所以每个微循环能缩短的时间就更小。</p>
+<p><img src="/img/blog/202101/micro-feadback-loop.png" alt="图4：微反馈回路"></p>
+<p>很难向管理层解释，为什么我们不得不关注这么小的问题。为什么我们要投入大理的时间来优化编译阶段，从 2 分钟降低到 15 秒？ 这些工作可能需要花很多时间，也可能需要将系统解耦成独立的多个组件。</p>
+<p>这么多的 2 分钟加起来很快就可以超过一天 100 分钟。这些小停顿就可能让开发人员丢失上下文或工作焦点。这么短的时间也足够让开发人员分心，比如去看看电子邮件，看看群聊天，或者走人去喝杯水，这就会让他们脱离心流状态。心流，有研究这表明，它可能需要长达 23 分钟的时间才能回到流畅状态。我并不是说，工程师不应该休息，或 偶尔出去清醒一下头脑！但他们应该是有意而为之，而不是因为环境如些，不得不分心。</p>
+<p>事实上，开发者可能会找到其它一些有用的事情来做，以填补这些时间。他们可能同时做两个任务，并来回切换，也可能一次性完成更多的代码变更，再进行编译，从而降低编译频率。在我的研究中，这两个因素都会导致延迟集成代码，延长开发时间。</p>
+<p>你需要优化到什么程度呢？怎么算够用了呢？想象一下，现在我们已经把编译时间缩短到了 15 秒，但我们认为我们可以把这个时间缩短到 3 秒。这个投资值不值得呢？这要看它难不难，以及会带来什么样的影响。。如果你能开发出一个工具，并能够让十个团队都用上，以提升速度，那么，它可能就是值得的。这就是平台思维，而不是针对单个团队的优化。</p>
+<p>分布式系统是一个特殊的挑战。 有很多理由促使我们将系统分成不同的可部署单元的原因（通常上微服务）， 然而，分布式系统也使许多事情变得困难（ <a href="https://martinfowler.com/bliki/MicroservicePrerequisites.html">微服务的前提条件</a>），包括开发人员的效率。</p>
+<p>有时团队为了团队自治而愿意做改造，或者运行时性能进行优化，但他们可能牺牲了开发人员效率，因为他们不投资于快速维护 反馈循环。而这是经常遇到的情况。</p>
+<h5 id="原文链接">原文链接：</h5>
+<p><a href="https://martinfowler.com/articles/developer-effectiveness.html">https://martinfowler.com/articles/developer-effectiveness.html</a></p>
+
+                        </div>
+                        
+                        
+
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="col-md-3">
+
+                        
+
+                        
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+      <h3 class="panel-title">搜索</h3>
+    </div>
+
+    <div class="panel-body">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+                <input type="search" name="q" class="form-control" placeholder="搜索">
+                <input type="hidden" name="sitesearch" value="http://www.continuousdelivery20.com/">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">分类</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            
+            <li>
+                <a href="/categories/%e5%ae%9e%e8%b7%b5%e6%a1%88%e4%be%8b">实践案例 (11)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/%e8%a7%82%e7%82%b9">观点 (1)</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">标签</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            
+            <li>
+                <a href="/tags/automation"><i class="fas fa-tags"></i> automation</a>
+            </li>
+            
+            <li>
+                <a href="/tags/devops"><i class="fas fa-tags"></i> devops</a>
+            </li>
+            
+            <li>
+                <a href="/tags/microsoft"><i class="fas fa-tags"></i> microsoft</a>
+            </li>
+            
+            <li>
+                <a href="/tags/sre"><i class="fas fa-tags"></i> sre</a>
+            </li>
+            
+            <li>
+                <a href="/tags/test-in-production"><i class="fas fa-tags"></i> test-in-production</a>
+            </li>
+            
+            <li>
+                <a href="/tags/unit-test"><i class="fas fa-tags"></i> unit-test</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95"><i class="fas fa-tags"></i> 单元测试</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%ae%89%e5%85%a8"><i class="fas fa-tags"></i> 安全</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%b7%a5%e7%a8%8b%e6%95%88%e8%83%bd"><i class="fas fa-tags"></i> 工程效能</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%be%ae%e8%bd%af"><i class="fas fa-tags"></i> 微软</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%8a%80%e6%9c%af%e7%ae%a1%e7%90%86"><i class="fas fa-tags"></i> 技术管理</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%8c%81%e7%bb%ad%e9%83%a8%e7%bd%b2"><i class="fas fa-tags"></i> 持续部署</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%96%b9%e6%b3%95"><i class="fas fa-tags"></i> 方法</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%a1%88%e4%be%8b"><i class="fas fa-tags"></i> 案例</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%b5%8b%e8%af%95%e5%8f%b3%e7%a7%bb"><i class="fas fa-tags"></i> 测试右移</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%b5%8b%e8%af%95%e5%b7%a6%e7%a7%bb"><i class="fas fa-tags"></i> 测试左移</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e7%bb%84%e7%bb%87%e8%bd%ac%e5%9e%8b"><i class="fas fa-tags"></i> 组织转型</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e8%87%aa%e5%8a%a8%e5%8c%96%e6%b5%8b%e8%af%95"><i class="fas fa-tags"></i> 自动化测试</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+
+            </div>
+            
+        </div>
+        
+
+        <footer id="footer">
+    <div class="container">
+
+        
+        <div class="col-md-4 col-sm-6">
+            <h4>关于我们</h4>
+
+            <p></p>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+        <div class="col-md-4 col-sm-6">
+
+             
+            <h4>最新博客</h4>
+
+            <div class="blog-entries">
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/sre-valet-model/">
+                          
+                            <img src="/img/banners/sre-valet.jpg" class="img-responsive" alt="SRE落地：用VALET模式统一语言">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/sre-valet-model/">SRE落地：用VALET模式统一语言</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/maximizing-developer-effectiveness/">
+                          
+                            <img src="/img/banners/default.png" class="img-responsive" alt="最大化开发人员的效率">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/maximizing-developer-effectiveness/">最大化开发人员的效率</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/ms-test-transformation/">
+                          
+                            <img src="/img/banners/ms-ceo.jpg" class="img-responsive" alt="微软测试转型的历程与心法(5000字长文)">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/ms-test-transformation/">微软测试转型的历程与心法(5000字长文)</a></h5>
+                    </div>
+                </div>
+                
+            </div>
+
+            <hr class="hidden-md hidden-lg">
+             
+
+        </div>
+        
+
+        
+        <div class="col-md-4 col-sm-6">
+
+          <h4>联系</h4>
+
+            <p class="text-uppercase"><strong>《持续交付2.0》爱好者社区</strong>
+        <br>北京国际饭店 5层
+        <br>东城区
+        <br>北京市
+        <br>
+        <strong>中国</strong>
+      </p>
+      
+
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+    </div>
+    
+</footer>
+
+
+
+
+
+
+
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            
+            <p class="pull-left">Copyright ©️ 2019 - 2028, 《持续交付2.0》作者 乔梁; all rights reserved.  <a href='https://beian.miit.gov.cn/'>京ICP备18046893号-1</a></p>
+            
+            <p class="pull-right">
+              模板来自 <a href="https://bootstrapious.com/p/universal-business-e-commerce-template">Bootstrapious</a>.
+              
+
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+    
+
+    
+<script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js"></script>
+
+<script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+<script src="/js/hpneo.gmaps.js"></script>
+<script src="/js/gmaps.init.js"></script>
+<script src="/js/front.js"></script>
+
+
+<script src="/js/owl.carousel.min.js"></script>
+
+
+
+  </body>
+</html>
