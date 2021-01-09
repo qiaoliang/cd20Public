@@ -6,10 +6,19 @@
     <description>Recent content in DevOps on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 18 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>最大化开发人员的效率</title>
+      <link>http://www.continuousdelivery20.com/blog/maximizing-developer-effectiveness/</link>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/maximizing-developer-effectiveness/</guid>
+      <description>科技在不断地变得更加智能和强大，新技术不断被引入到组织内，以提升整体生产力。而这也会增加复杂性和开发人员的认知开销，减少了他们个人的生产力。</description>
+    </item>
     
     <item>
       <title>SRE落地：用VALET模式统一语言</title>
@@ -18,15 +27,6 @@
       
       <guid>http://www.continuousdelivery20.com/blog/sre-valet-model/</guid>
       <description>本文源自《SRE工作手册》英文版第三章，讲述的是家得宝（THD）公司在SRE转型中如何使用VALET。 VALET 是一个易记易用的模式语言，分别代表：</description>
-    </item>
-    
-    <item>
-      <title>最大化开发人员的效率</title>
-      <link>http://www.continuousdelivery20.com/blog/maximizing-developer-effectiveness/</link>
-      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.continuousdelivery20.com/blog/maximizing-developer-effectiveness/</guid>
-      <description>科技在不断地变得更加智能和强大，新技术不断被引入到组织内，以提升整体生产力。而这也会增加复杂性和开发人员的认知开销，减少了他们个人的生产力。</description>
     </item>
     
     <item>
