@@ -6,10 +6,19 @@
     <description>Recent content in 观点与方法 on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 10 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/categories/%E8%A7%82%E7%82%B9%E4%B8%8E%E6%96%B9%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>  </title>
+      <link>http://www.continuousdelivery20.com/blog/cannot-measure-productivity/</link>
+      <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/cannot-measure-productivity/</guid>
+      <description>我们已经看到了很多有关软件生产过程，设计实践等的讨论。由于软件行业缺乏衡量软件开发有效性的一些基本要素，因此许多观点无法解决。特别是，我们无</description>
+    </item>
     
     <item>
       <title>循证决策，只要 6 个步骤</title>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>工程生产力 on 持续交付 2.0</title>
+    <link>http://www.continuousdelivery20.com/tags/%E5%B7%A5%E7%A8%8B%E7%94%9F%E4%BA%A7%E5%8A%9B/</link>
+    <description>Recent content in 工程生产力 on 持续交付 2.0</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 11 Jan 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.continuousdelivery20.com/tags/%E5%B7%A5%E7%A8%8B%E7%94%9F%E4%BA%A7%E5%8A%9B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>  </title>
+      <link>http://www.continuousdelivery20.com/blog/cannot-measure-productivity/</link>
+      <pubDate>Mon, 11 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/cannot-measure-productivity/</guid>
+      <description>我们已经看到了很多有关软件生产过程，设计实践等的讨论。由于软件行业缺乏衡量软件开发有效性的一些基本要素，因此许多观点无法解决。特别是，我们无</description>
+    </item>
+    
+  </channel>
+</rss>
