@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>DevOps</title>
-      <link>http://www.continuousdelivery20.com/tags/devops/</link>
+      <title>Data-Driven</title>
+      <link>http://www.continuousdelivery20.com/tags/data-driven/</link>
       <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://www.continuousdelivery20.com/tags/devops/</guid>
+      <guid>http://www.continuousdelivery20.com/tags/data-driven/</guid>
       <description></description>
     </item>
     
@@ -30,11 +30,11 @@
     </item>
     
     <item>
-      <title>谷歌</title>
-      <link>http://www.continuousdelivery20.com/tags/%E8%B0%B7%E6%AD%8C/</link>
+      <title>数据说话</title>
+      <link>http://www.continuousdelivery20.com/tags/%E6%95%B0%E6%8D%AE%E8%AF%B4%E8%AF%9D/</link>
       <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://www.continuousdelivery20.com/tags/%E8%B0%B7%E6%AD%8C/</guid>
+      <guid>http://www.continuousdelivery20.com/tags/%E6%95%B0%E6%8D%AE%E8%AF%B4%E8%AF%9D/</guid>
       <description></description>
     </item>
     
@@ -44,6 +44,15 @@
       <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>http://www.continuousdelivery20.com/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DevOps</title>
+      <link>http://www.continuousdelivery20.com/tags/devops/</link>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/devops/</guid>
       <description></description>
     </item>
     
@@ -75,6 +84,15 @@
     </item>
     
     <item>
+      <title>VALET</title>
+      <link>http://www.continuousdelivery20.com/tags/valet/</link>
+      <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/valet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>微软</title>
       <link>http://www.continuousdelivery20.com/tags/%E5%BE%AE%E8%BD%AF/</link>
       <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
@@ -89,15 +107,6 @@
       <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://www.continuousdelivery20.com/tags/%E7%BB%84%E7%BB%87%E8%BD%AC%E5%9E%8B/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>automation</title>
-      <link>http://www.continuousdelivery20.com/tags/automation/</link>
-      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.continuousdelivery20.com/tags/automation/</guid>
       <description></description>
     </item>
     
@@ -138,11 +147,20 @@
     </item>
     
     <item>
-      <title>Test in Production</title>
-      <link>http://www.continuousdelivery20.com/tags/test-in-production/</link>
+      <title>automation</title>
+      <link>http://www.continuousdelivery20.com/tags/automation/</link>
       <pubDate>Tue, 04 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.continuousdelivery20.com/tags/test-in-production/</guid>
+      <guid>http://www.continuousdelivery20.com/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TIP</title>
+      <link>http://www.continuousdelivery20.com/tags/tip/</link>
+      <pubDate>Tue, 04 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/tip/</guid>
       <description></description>
     </item>
     
@@ -156,11 +174,38 @@
     </item>
     
     <item>
-      <title>案例</title>
-      <link>http://www.continuousdelivery20.com/tags/%E6%A1%88%E4%BE%8B/</link>
+      <title>Etsy</title>
+      <link>http://www.continuousdelivery20.com/tags/etsy/</link>
       <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://www.continuousdelivery20.com/tags/%E6%A1%88%E4%BE%8B/</guid>
+      <guid>http://www.continuousdelivery20.com/tags/etsy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>移动开发</title>
+      <link>http://www.continuousdelivery20.com/tags/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>部署流水线</title>
+      <link>http://www.continuousdelivery20.com/tags/%E9%83%A8%E7%BD%B2%E6%B5%81%E6%B0%B4%E7%BA%BF/</link>
+      <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E9%83%A8%E7%BD%B2%E6%B5%81%E6%B0%B4%E7%BA%BF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>敏捷</title>
+      <link>http://www.continuousdelivery20.com/tags/%E6%95%8F%E6%8D%B7/</link>
+      <pubDate>Sun, 12 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E6%95%8F%E6%8D%B7/</guid>
       <description></description>
     </item>
     
@@ -183,11 +228,47 @@
     </item>
     
     <item>
-      <title>方法</title>
-      <link>http://www.continuousdelivery20.com/tags/%E6%96%B9%E6%B3%95/</link>
+      <title>案例</title>
+      <link>http://www.continuousdelivery20.com/tags/%E6%A1%88%E4%BE%8B/</link>
+      <pubDate>Wed, 13 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E6%A1%88%E4%BE%8B/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IMVU</title>
+      <link>http://www.continuousdelivery20.com/tags/imvu/</link>
+      <pubDate>Fri, 09 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/imvu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>质量保障</title>
+      <link>http://www.continuousdelivery20.com/tags/%E8%B4%A8%E9%87%8F%E4%BF%9D%E9%9A%9C/</link>
+      <pubDate>Fri, 09 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E8%B4%A8%E9%87%8F%E4%BF%9D%E9%9A%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>分支策略</title>
+      <link>http://www.continuousdelivery20.com/tags/%E5%88%86%E6%94%AF%E7%AD%96%E7%95%A5/</link>
       <pubDate>Mon, 18 May 2009 00:00:00 +0000</pubDate>
       
-      <guid>http://www.continuousdelivery20.com/tags/%E6%96%B9%E6%B3%95/</guid>
+      <guid>http://www.continuousdelivery20.com/tags/%E5%88%86%E6%94%AF%E7%AD%96%E7%95%A5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>持续集成</title>
+      <link>http://www.continuousdelivery20.com/tags/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/</link>
+      <pubDate>Mon, 18 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all,follow">
+  
+  <meta name="baiduspider" content="index,nofollow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>TIP</title>
+  <meta name="author" content="乔梁" />
+  
+  
+  
+  
+  <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环模型, 敏捷方法, 敏捷开发, 精益思想, Scrum, 研发效能, 效能度量, SRE, 持续部署, 工程效能, 持续集成">
+  
+  
+  <meta name="description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
+
+  <meta name="generator" content="Hugo 0.74.2" />
+
+  
+  <link href='local.google.fonts.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/5.13.0/css/all.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  
+  <link href="/css/animate.css" rel="stylesheet">
+
+  
+  
+    <link href="/css/style.violet.css" rel="stylesheet" id="theme-stylesheet">
+  
+
+  
+  <link href="/css/custom.css" rel="stylesheet">
+
+  
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+
+  
+  <link href="/css/owl.carousel.css" rel="stylesheet">
+  <link href="/css/owl.theme.css" rel="stylesheet">
+
+  
+  <link rel="alternate" href="http://www.continuousdelivery20.com/index.xml" type="application/rss+xml" title="持续交付 2.0">
+
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:locale" content="zh">
+  <meta property="og:site_name" content="持续交付 2.0">
+  <meta property="og:title" content="TIP">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://www.continuousdelivery20.com/tags/tip/" />
+  <meta property="og:description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
+  <meta property="og:image" content="http://www.continuousdelivery20.com/img/sharing-default.png">
+  <meta property="og:image:type" content="image/png">
+  
+  
+  
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="420">
+  
+  
+  <meta property="og:updated_time" content="2017-04-04T00:00:00Z">
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:title" content="TIP">
+  
+  <meta name="twitter:image" content="http://www.continuousdelivery20.com/img/sharing-default.png">
+  
+  <meta name="twitter:description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
+  
+
+</head>
+
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="/">
+                    <img src="/img/logo.png" alt="TIP logo" class="hidden-xs hidden-sm">
+                    <img src="/img/logo-small.png" alt="TIP logo" class="visible-xs visible-sm">
+                    <span class="sr-only">TIP - 跳到主页</span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                      <span class="sr-only">切换导航</span>
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/">主页</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/blog/">博客</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/faq/">资源</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/contact/">关于</a>
+                    
+                  </li>
+                  
+                </ul>
+            </div>
+            
+
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+                    <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
+
+                </span>
+                    </div>
+                </form>
+
+            </div>
+            
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+
+        </header>
+
+        <div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>TIP</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    
+
+                    <div class="col-md-9" id="blog-listing-medium">
+
+                        
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="http://www.continuousdelivery20.com/blog/ms-devops-shift-right-test-in-production/">
+                                          
+                                          <img src="/img/banners/shift-right.png" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="http://www.continuousdelivery20.com/blog/ms-devops-shift-right-test-in-production/">微软：测试右移，生产环境上的持续测试</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          由 <a href="#">乔梁 译</a>
+                                          
+                                          
+                                          
+                                          in <a href="/categories/%e5%ae%9e%e8%b7%b5%e6%a1%88%e4%be%8b">实践案例</a>
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="http://www.continuousdelivery20.com/blog/ms-devops-shift-right-test-in-production/"><i class="far fa-calendar"></i> 2017-04-04</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">生产环境是唯一的，无法复制 这是我们重要变某的第三部分，也是最后一部分。正如你见过的，我们减少了对在实验室内做功能测试的依赖，转而使用单元测试</p>
+                                    <p class="read-more"><a href="http://www.continuousdelivery20.com/blog/ms-devops-shift-right-test-in-production/" class="btn btn-template-main">继续阅读</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+
+                        <ul class="pager">
+                            
+                            <li class="previous disabled"><a href="#">&larr; 更新</a></li>
+                            
+
+                            
+                            <li class="next disabled"><a href="#">更旧 &rarr;</a></li>
+                            
+                        </ul>
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="col-md-3">
+
+                        
+
+                        
+
+
+
+
+
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">分类</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            
+            <li>
+                <a href="/categories/%e5%ae%9e%e8%b7%b5%e6%a1%88%e4%be%8b">实践案例 (7)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/%e8%a7%82%e7%82%b9%e4%b8%8e%e6%96%b9%e6%b3%95">观点与方法 (6)</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">标签</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            
+            <li>
+                <a href="/tags/automation"><i class="fas fa-tags"></i> automation</a>
+            </li>
+            
+            <li>
+                <a href="/tags/data-driven"><i class="fas fa-tags"></i> data-driven</a>
+            </li>
+            
+            <li>
+                <a href="/tags/devops"><i class="fas fa-tags"></i> devops</a>
+            </li>
+            
+            <li>
+                <a href="/tags/etsy"><i class="fas fa-tags"></i> etsy</a>
+            </li>
+            
+            <li>
+                <a href="/tags/imvu"><i class="fas fa-tags"></i> imvu</a>
+            </li>
+            
+            <li>
+                <a href="/tags/microsoft"><i class="fas fa-tags"></i> microsoft</a>
+            </li>
+            
+            <li>
+                <a href="/tags/sre"><i class="fas fa-tags"></i> sre</a>
+            </li>
+            
+            <li class="active">
+                <a href="/tags/tip"><i class="fas fa-tags"></i> tip</a>
+            </li>
+            
+            <li>
+                <a href="/tags/unit-test"><i class="fas fa-tags"></i> unit-test</a>
+            </li>
+            
+            <li>
+                <a href="/tags/valet"><i class="fas fa-tags"></i> valet</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%88%86%e6%94%af%e7%ad%96%e7%95%a5"><i class="fas fa-tags"></i> 分支策略</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95"><i class="fas fa-tags"></i> 单元测试</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%ae%89%e5%85%a8"><i class="fas fa-tags"></i> 安全</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%b7%a5%e7%a8%8b%e6%95%88%e8%83%bd"><i class="fas fa-tags"></i> 工程效能</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%be%ae%e8%bd%af"><i class="fas fa-tags"></i> 微软</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%8a%80%e6%9c%af%e7%ae%a1%e7%90%86"><i class="fas fa-tags"></i> 技术管理</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%8c%81%e7%bb%ad%e9%83%a8%e7%bd%b2"><i class="fas fa-tags"></i> 持续部署</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%8c%81%e7%bb%ad%e9%9b%86%e6%88%90"><i class="fas fa-tags"></i> 持续集成</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%95%8f%e6%8d%b7"><i class="fas fa-tags"></i> 敏捷</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%95%b0%e6%8d%ae%e8%af%b4%e8%af%9d"><i class="fas fa-tags"></i> 数据说话</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%a1%88%e4%be%8b"><i class="fas fa-tags"></i> 案例</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%b5%8b%e8%af%95%e5%8f%b3%e7%a7%bb"><i class="fas fa-tags"></i> 测试右移</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%b5%8b%e8%af%95%e5%b7%a6%e7%a7%bb"><i class="fas fa-tags"></i> 测试左移</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e7%a7%bb%e5%8a%a8%e5%bc%80%e5%8f%91"><i class="fas fa-tags"></i> 移动开发</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e7%bb%84%e7%bb%87%e8%bd%ac%e5%9e%8b"><i class="fas fa-tags"></i> 组织转型</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e8%87%aa%e5%8a%a8%e5%8c%96%e6%b5%8b%e8%af%95"><i class="fas fa-tags"></i> 自动化测试</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e8%b4%a8%e9%87%8f%e4%bf%9d%e9%9a%9c"><i class="fas fa-tags"></i> 质量保障</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e8%bd%af%e4%bb%b6%e5%b7%a5%e7%a8%8b"><i class="fas fa-tags"></i> 软件工程</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e9%83%a8%e7%bd%b2%e6%b5%81%e6%b0%b4%e7%ba%bf"><i class="fas fa-tags"></i> 部署流水线</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+            </div>
+            
+        </div>
+        
+
+        <footer id="footer">
+    <div class="container">
+
+        
+        <div class="col-md-4 col-sm-6">
+            <h4>关于我们</h4>
+
+            <p></p>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+        <div class="col-md-4 col-sm-6">
+
+             
+            <h4>最新博客</h4>
+
+            <div class="blog-entries">
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/evidence-based-decision-making/">
+                          
+                            <img src="/img/banners/evidence-based.jpg" class="img-responsive" alt="循证决策，只要 6 个步骤">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/evidence-based-decision-making/">循证决策，只要 6 个步骤</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/maximizing-developer-effectiveness/">
+                          
+                            <img src="/img/banners/effectiveness.png" class="img-responsive" alt="最大化开发人员的效率">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/maximizing-developer-effectiveness/">最大化开发人员的效率</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/sre-valet-model/">
+                          
+                            <img src="/img/banners/sre-valet.jpg" class="img-responsive" alt="SRE落地：用VALET模式统一语言">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/sre-valet-model/">SRE落地：用VALET模式统一语言</a></h5>
+                    </div>
+                </div>
+                
+            </div>
+
+            <hr class="hidden-md hidden-lg">
+             
+
+        </div>
+        
+
+        
+        <div class="col-md-4 col-sm-6">
+
+          <h4>联系</h4>
+
+            <p class="text-uppercase"><strong>《持续交付2.0》爱好者社区</strong>
+        <br>北京国际饭店 5层
+        <br>东城区
+        <br>北京市
+        <br>
+        <strong>中国</strong>
+      </p>
+      
+
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+    </div>
+    
+</footer>
+
+
+
+
+
+
+
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            
+            <p class="pull-left">Copyright ©️ 2019 - 2028, 《持续交付2.0》作者 乔梁; all rights reserved.  <a href='https://beian.miit.gov.cn/'>京ICP备18046893号-1</a></p>
+            
+            <p class="pull-right">
+              模板来自 <a href="https://bootstrapious.com/p/universal-business-e-commerce-template">Bootstrapious</a>.
+              
+
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+    
+
+    
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js"></script>
+
+<script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+<script src="/js/hpneo.gmaps.js"></script>
+<script src="/js/gmaps.init.js"></script>
+<script src="/js/front.js"></script>
+
+
+<script src="/js/owl.carousel.min.js"></script>
+
+
+
+  </body>
+</html>

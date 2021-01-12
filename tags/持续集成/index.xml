@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>持续集成 on 持续交付 2.0</title>
+    <link>http://www.continuousdelivery20.com/tags/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/</link>
+    <description>Recent content in 持续集成 on 持续交付 2.0</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 18 May 2009 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.continuousdelivery20.com/tags/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title> 利用抽象分支技术，进行大规模软件的增量式改造</title>
+      <link>http://www.continuousdelivery20.com/blog/abstract-branch/</link>
+      <pubDate>Mon, 18 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/abstract-branch/</guid>
+      <description>很多开发团队通常严重依赖于版本控制系统的分支功能。分布式版本控制系统让分支操作更加方便。然而，在《持续交付》一书中描述的很多非常规言论中，就</description>
+    </item>
+    
+  </channel>
+</rss>

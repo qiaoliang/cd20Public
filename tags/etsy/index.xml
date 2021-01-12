@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Etsy on 持续交付 2.0</title>
+    <link>http://www.continuousdelivery20.com/tags/etsy/</link>
+    <description>Recent content in Etsy on 持续交付 2.0</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 28 Feb 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.continuousdelivery20.com/tags/etsy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Etsy的移动端持续交付流水线</title>
+      <link>http://www.continuousdelivery20.com/blog/etsy-mobile-cd/</link>
+      <pubDate>Fri, 28 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/etsy-mobile-cd/</guid>
+      <description>引言 在很久以前，本站报导过Etsy如何实现Web端每日在生产环境上部署40次。现在移动应用大潮来了，它又是如何做的呢？ 正文 移动app的好评在</description>
+    </item>
+    
+  </channel>
+</rss>

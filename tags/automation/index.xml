@@ -6,19 +6,10 @@
     <description>Recent content in automation on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 09 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Apr 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/tags/automation/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>微软:测试左移，让其运行更快、更可靠</title>
-      <link>http://www.continuousdelivery20.com/blog/ms-devops-shift-left/</link>
-      <pubDate>Thu, 09 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.continuousdelivery20.com/blog/ms-devops-shift-left/</guid>
-      <description>我们原来是怎么工作的 2014年9月，我们已经进入了云计算的第三个年头。然而，我们当时仍旧是按照云计算时代之前的那种传统方式进行测试。 我们试图</description>
-    </item>
     
     <item>
       <title>微软：测试右移，生产环境上的持续测试</title>
