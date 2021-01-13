@@ -6,10 +6,19 @@
     <description>Recent content on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 11 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mob Refectoring：扎堆儿编程的一次经历</title>
+      <link>http://www.continuousdelivery20.com/blog/mob-programming/</link>
+      <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/mob-programming/</guid>
+      <description>这是我在2009年带领 GoCD 团队时的一个经历。套用现在的时髦词汇，就叫“mob programming”。 团队对某一模块的代码进行了一次重构，引入</description>
+    </item>
     
     <item>
       <title>马丁曾说：无法度量产出！</title>

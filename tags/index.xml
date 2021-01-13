@@ -6,10 +6,37 @@
     <description>Recent content in Tags on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 11 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>扎堆儿编程</title>
+      <link>http://www.continuousdelivery20.com/tags/%E6%89%8E%E5%A0%86%E5%84%BF%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E6%89%8E%E5%A0%86%E5%84%BF%E7%BC%96%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>自动化测试</title>
+      <link>http://www.continuousdelivery20.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>重构</title>
+      <link>http://www.continuousdelivery20.com/tags/%E9%87%8D%E6%9E%84/</link>
+      <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E9%87%8D%E6%9E%84/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>工程效能</title>
@@ -80,15 +107,6 @@
       <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>http://www.continuousdelivery20.com/tags/%E6%8A%80%E6%9C%AF%E7%AE%A1%E7%90%86/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>自动化测试</title>
-      <link>http://www.continuousdelivery20.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
-      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.continuousdelivery20.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
       <description></description>
     </item>
     

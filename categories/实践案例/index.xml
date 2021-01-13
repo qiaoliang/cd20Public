@@ -6,10 +6,19 @@
     <description>Recent content in 实践案例 on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 08 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/categories/%E5%AE%9E%E8%B7%B5%E6%A1%88%E4%BE%8B/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mob Refectoring：扎堆儿编程的一次经历</title>
+      <link>http://www.continuousdelivery20.com/blog/mob-programming/</link>
+      <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/mob-programming/</guid>
+      <description>这是我在2009年带领 GoCD 团队时的一个经历。套用现在的时髦词汇，就叫“mob programming”。 团队对某一模块的代码进行了一次重构，引入</description>
+    </item>
     
     <item>
       <title>微软测试转型的历程与心法(5000字长文)</title>
