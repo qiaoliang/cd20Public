@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://www.continuousdelivery20.com/blog/cannot-measure-productivity/</loc>
-    <lastmod>2021-01-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://www.continuousdelivery20.com/blog/</loc>
     <lastmod>2021-01-11T00:00:00+00:00</lastmod>
   </url>
@@ -44,6 +39,11 @@
   
   <url>
     <loc>http://www.continuousdelivery20.com/categories/%E8%A7%82%E7%82%B9%E4%B8%8E%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2021-01-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.continuousdelivery20.com/blog/cannot-measure-productivity/</loc>
     <lastmod>2021-01-11T00:00:00+00:00</lastmod>
   </url>
   
