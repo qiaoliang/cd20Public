@@ -6,10 +6,19 @@
     <description>Recent content in 观点与方法 on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 11 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/categories/%E8%A7%82%E7%82%B9%E4%B8%8E%E6%96%B9%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>IT系统的故障度量指标：MTTR，MTBF，MTTF</title>
+      <link>http://www.continuousdelivery20.com/blog/mttr/</link>
+      <pubDate>Thu, 14 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/mttr/</guid>
+      <description>MTTR、MTBF 和 MTTF 等指标对于任何具有服务依赖性的组织都是必不可少的。只有跟踪这些关键KPI，企业才能最大限度地延长正常运行时间，并将中断</description>
+    </item>
     
     <item>
       <title>马丁曾说：无法度量产出！</title>

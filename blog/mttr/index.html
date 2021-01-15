@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all,follow">
+  
+  <meta name="baiduspider" content="index,nofollow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>IT系统的故障度量指标：MTTR，MTBF，MTTF</title>
+  <meta name="author" content="乔梁" />
+  
+  
+  
+  
+  <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环模型, 敏捷方法, 敏捷开发, 精益思想, Scrum, 研发效能, 效能度量, SRE, 持续部署, 工程效能, 持续集成, DevOps, 度量体系, MTTR, AIops, 智能运维, 度量指标, 运维度量">
+  
+  
+  <meta name="description" content="IT系统的故障度量指标：MTTR，MTBF，MTTF">
+
+  <meta name="generator" content="Hugo 0.74.2" />
+
+  
+  <link href='local.google.fonts.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/5.13.0/css/all.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  
+  <link href="/css/animate.css" rel="stylesheet">
+
+  
+  
+    <link href="/css/style.violet.css" rel="stylesheet" id="theme-stylesheet">
+  
+
+  
+  <link href="/css/custom.css" rel="stylesheet">
+
+  
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+
+  
+  <link href="/css/owl.carousel.css" rel="stylesheet">
+  <link href="/css/owl.theme.css" rel="stylesheet">
+
+  
+  <link rel="alternate" href="http://www.continuousdelivery20.com/index.xml" type="application/rss+xml" title="持续交付 2.0">
+
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:locale" content="zh">
+  <meta property="og:site_name" content="持续交付 2.0">
+  <meta property="og:title" content="IT系统的故障度量指标：MTTR，MTBF，MTTF">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://www.continuousdelivery20.com/blog/mttr/" />
+  <meta property="og:description" content="IT系统的故障度量指标：MTTR，MTBF，MTTF">
+  <meta property="og:image" content="http://www.continuousdelivery20.com/img/banners/MTTR.png">
+  <meta property="og:image:type" content="image/png">
+  
+  
+  
+    <meta property="og:image:width" content="998">
+    <meta property="og:image:height" content="750">
+  
+  
+  <meta property="og:updated_time" content="2021-01-14T00:00:00Z">
+  
+    
+    
+    <meta property="article:section" content="观点与方法">
+    <meta property="article:tag" content="DevOps">
+    <meta property="article:tag" content="工程效能">
+    <meta property="article:tag" content="度量体系">
+    <meta property="article:tag" content="MTTR">
+    <meta property="article:tag" content="SRE">
+    
+    
+    <meta property="article:published_time" content="2021-01-14T00:00:00Z">
+    <meta property="article:modified_time" content="2021-01-14T00:00:00Z">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta name="twitter:title" content="IT系统的故障度量指标：MTTR，MTBF，MTTF">
+  
+  <meta name="twitter:image" content="http://www.continuousdelivery20.com/img/banners/MTTR.png">
+  
+  <meta name="twitter:description" content="IT系统的故障度量指标：MTTR，MTBF，MTTF">
+  
+
+</head>
+
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="/">
+                    <img src="/img/logo.png" alt="IT系统的故障度量指标：MTTR，MTBF，MTTF logo" class="hidden-xs hidden-sm">
+                    <img src="/img/logo-small.png" alt="IT系统的故障度量指标：MTTR，MTBF，MTTF logo" class="visible-xs visible-sm">
+                    <span class="sr-only">IT系统的故障度量指标：MTTR，MTBF，MTTF - 跳到主页</span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                      <span class="sr-only">切换导航</span>
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/">主页</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown active">
+                    
+                    <a href="/blog/">博客</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/faq/">资源</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/contact/">关于</a>
+                    
+                  </li>
+                  
+                </ul>
+            </div>
+            
+
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+                    <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
+
+                </span>
+                    </div>
+                </form>
+
+            </div>
+            
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+
+        </header>
+
+        <div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>IT系统的故障度量指标：MTTR，MTBF，MTTF</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="content">
+            <div class="container">
+
+                <div class="row">
+
+                    
+
+                    <div class="col-md-9" id="blog-post">
+
+                        <p class="text-muted text-uppercase mb-small text-right">由 <a href="#">乔梁</a> | 2021-01-14</p>
+
+                        <div id="post-content">
+                          <p>MTTR、MTBF 和 MTTF 等指标对于任何具有服务依赖性的组织都是必不可少的。只有跟踪这些关键KPI，企业才能最大限度地延长正常运行时间，并将中断保持在最低限度。</p>
+<p>维护服务的可靠性是 SRE 工程师每天面临的一个挑战。虽然故障度量在这种情况下非常有用，但要有效地使用它们，就要知道它们背后隐藏着什么含义，如何区分它们，如何计算它们，以及它们对您有何影响。</p>
+<h3 id="故障度量简介">故障度量简介</h3>
+<p>即使是最高效的运维团队也会遇到服务或设备故障。这就是为什么为他们做计划是至关重要的。</p>
+<p>那么，服务故障是什么样子的？</p>
+<p>故障以不同程度存在（例如部分或全部故障），但在最基本的术语中，故障仅仅意味着系统、组件或设备不能再产生特定的预期结果。即使一个服务仍在运行，并提供服务，如果没有达到预期的数量和质量，那它就是出故障了。</p>
+<p>正确地管理故障，可以帮助显著地减少故障的负面影响。为了有效地管理故障，应该监控几个关键指标。了解这些指标可以消除猜测，并为 SRE 工程师提供做出明智决策所需的硬数据。</p>
+<p>那么，应跟踪哪些故障指标？有三个指标是可以跨行业应用的，它们是 MTTR、MTBF 和 MTTF 。下面，我们讨论这些缩写词的含义，以及如何使用它们来改进。</p>
+<p>但在此之前，我们需要讨论一件经常被忽视的事情——<em>故障度量的前提是拥有可靠数据的重要性</em>。</p>
+<h4 id="可靠数据的重要性">可靠数据的重要性</h4>
+<p>要在设备故障中进行数据支持的改进，关键是要收集正确的数据并使数据准确。</p>
+<p>先进的故障统计需要大量有意义的数据。正如我们将在下面的故障度量计算中所示，必须收集以下输入作为故障维护历史的一部分：</p>
+<ol>
+<li>故障维护工时</li>
+<li>故障次数</li>
+<li>运行时间（例如：根据每周总预期运行小时数-总设备停机时间计算）</li>
+</ol>
+<p>尽管记录每次的故障维护数据可能很乏味，但这是改进操作的一个重要部分。下图是 MTTR 和 MTBF 的计算示例。</p>
+<p><img src="/img/blog/202101/Calculating-failure-metrics.png" alt="Dashboard"></p>
+<p>收集的数据不准确会引起很多问题。</p>
+<p>如果数据丢失或不准确，故障度量将无法为改进操作的决策提供信息。更糟糕的是，如果你不知道数据是不可靠的，你最终可能会做出适得其反和有害的经营决策。</p>
+<h3 id="什么是-mttr-">什么是 MTTR ?</h3>
+<p>MTTR 就是 Mean Time To Repair 的缩写，名为 <em>平均修复时间</em>，它是指修复系统并将其恢复到完整功能所需的时间量。</p>
+<p>修复开始时，MTTR时钟开始滴答作响，直到恢复操作为止。这包括修复时间、测试时间和恢复正常工作状态所需要的时间周期。</p>
+<h4 id="如何计算-mttr-">如何计算 MTTR ?</h4>
+<p>要计算MTTR，就是将总维护时间除以给定时间段内维护操作的总数。</p>
+<p><img src="/img/blog/202101/How-to-calculate-MTTR.jpg" alt="MTTR"></p>
+<p>想象一下，一个水泵在一个工作日内出现三次故障。修复每一个故障所花的时间总共是一个小时。在这种情况下，MTTR 将为 1小时/3 = 20分钟。</p>
+<p>需要注意的几点：</p>
+<p>通常，每个失败实例的严重性都会有所不同。因此，虽然有些事故需要几天时间才能修复，但其他事故可能只需要几分钟就能修复。因此，MTTR给出了期望值的平均值。</p>
+<p>为了获得可靠的结果，每次维修都必须由经过培训的合格人员进行，这些人员必须遵循明确的程序。
+每一个高效的维护系统都需要研究如何尽可能地降低MTTR。这可以通过几种不同的方式来实现。
+一种方法是通过跟踪备件和库存水平（从而在采购零件时节省停机时间）。</p>
+<p>另一种方法是实施前瞻性维护策略，如预测性维护。预测性维护（PdM）将使您能够更好地监测在役设备的状况，并通过使用直接安装在容易发生故障的部件上的状态监测传感器更准确地预测潜在故障。
+这些传感器可以提前提醒他们什么时候会发生故障。此时，修复不再是被动的，而是预测性的，因为经理有足够的时间安排执行作业所需的所有资源。</p>
+<h4 id="为什么-mttr-有用">为什么 MTTR 有用？</h4>
+<p>花费太长时间来修复系统或设备是不可取的，因为它会对业务结果产生非常不愉快的影响。对于那些对失败特别敏感的服务来说，情况尤其如此。它常常导致生产环境停工、收入损失等等。</p>
+<p>了解 MTTR 对于任何组织来说都是一个重要的工具，因为它告诉你如何有效地响应和修复生产中的问题。大多数组织都希望通过内部维护团队（由必要的资源、工具及软件支持）来降低 MTTR。</p>
+<h4 id="平均修复时间-vs-平均恢复时间">平均修复时间 vs 平均恢复时间</h4>
+<p>首字母缩略词 “ MTTR ” 有两个最常用的含义，一个是“平均修复时间”（如上所述），另一个是“平均恢复时间”</p>
+<p><img src="/img/blog/202101/Mean-time-to-repair-vs-Mean-time-to-recovery.jpg" alt="MTTR"></p>
+<p><em>平均恢复时间</em>（Mean Time To Recovery）是指从首次发现故障点到恢复运行点之间的时间。因此，除了维修时间、测试周期和恢复正常工作状态外，我们还要捕获故障通知时间和诊断时间。</p>
+<p>尽管这两个术语通常可以互换使用，但在服务级别协议（SLA）和维护合同中，区分的必要性变得非常重要。</p>
+<p>因此，这类合同的所有当事方都需要就它们究竟在衡量什么达成一致。</p>
+<h3 id="什么是平均无故障时间-mtbf">什么是平均无故障时间 (MTBF)?</h3>
+<p>第二个故障度量是平均无故障时间 (Mean Time Between Failures, 简称 MTBF )。它是指在正常运行过程中，系统从一个先前故障到下一个故障之间经过的预期时间。简单地说，MTBF可以帮助您预测系统在下一次计划外故障发生之前可以运行多长时间。</p>
+<p>对在某个时刻发生故障的预期（预测）是MTBF的一个重要部分。</p>
+<p>术语 MTBF 用于未预见故障，但不考虑因例行定期维护或例行预防性升级而停机的服务。更确切地说，它捕获了由于设计条件导致的故障，这些设计条件使得在修复系统之前必须使系统停止运行。</p>
+<p>因此，<em>MTTR 衡量可用性，MTBF衡量可用性和可靠性</em>。MTBF值越高，系统在发生故障前运行的时间就越长。</p>
+<h4 id="如何计算-mtbf">如何计算 MTBF?</h4>
+<p>从数学上讲，从一个故障到下一个故障的时间间隔可以用运行时间之和除以故障次数来计算。</p>
+<p><img src="/img/blog/202101/How-to-calculate-MTBF.jpg" alt=""></p>
+<p>看看我们在上面 MTTR 中提到的水泵的例子。在10小时的预期运行时间之外，它运行了9个小时，并且三次故障消耗了一小时的时长。因此，MTBF=9小时/3=3小时。</p>
+<p>从上面的例子可以看出，MTBF的计算中不包括恢复时间。</p>
+<p>除了前面提到的设计条件外，其他常见因素往往会影响现场系统的平均无故障时间。</p>
+<p>其中一个主要因素是人与人之间的互动。例如，MTBF 低可能表示，运营商处理不当，也可能表示过去的工程师工作执行不力。</p>
+<h5 id="为什么-mtbf-有用">为什么 MTBF 有用？</h5>
+<p>平均无故障时间（MTBF）是可靠性工程中的一个重要标志，它起源于航空工业，在航空工业中，飞机故障会导致人员死亡。</p>
+<p>对于飞机、安全设备和发电机等关键资产，平均无故障时间是衡量其预期性能的重要指标。因此，制造商使用它作为一个可量化的可靠性指标，并在许多产品的设计和生产阶段作为一个必不可少的工具。它现在常用于机械和电子系统设计、工厂安全操作、产品采购等。</p>
+<p>即使是购买某个特定品牌的汽车或电脑这样的日常决定，也会受到购买者对MTBF高于下一个品牌的产品的渴望的影响。</p>
+<p>虽然 MTBF 不考虑计划性维护，但它仍然可以用于计算预防性更换的检查频率。</p>
+<p>如果已知某项资产在下一次故障前可能会运行一定的小时数，那么引入诸如润滑或重新校准之类的预防措施可以帮助将故障降至最低，并延长资产的正常运行时间。</p>
+<h3 id="什么是平均失效时间mttf">什么是平均失效时间（MTTF）？</h3>
+<p>平均失效时间（MTTF）是衡量不可修复系统的可靠性的一个非常基本的指标。它表示一个系统预计持续运行直到失败的时长。</p>
+<p>MTTF 是我们通常所说的任何产品或设备的寿命。它的价值是通过在一个较长的时期内观察大量相同种类的系统或物件，并查看它们的平均失效时间来计算的。</p>
+<p><img src="/img/blog/202101/Mean-time-to-failure-MTTF.jpg" alt=""></p>
+<pre><code>在制造业中，MTTF 是评价产品可靠性的常用指标之一。
+然而，由于 MTTF 和 MTBF 在定义上有一定的相似性，在区分MTTF和MTBF时仍存在许多混淆。
+好消息是，记住 MTBF 仅用于可恢复系统时，MTTF 用于不可修复物品时，这一点很容易解决。
+</code></pre><p>当使用 MTTF 作为故障度量时，那对资产的修复就不是一个选择了，只能更换。</p>
+<h4 id="如何计算-mttf-">如何计算 MTTF ?</h4>
+<p>MTTF的计算方法是总运行小时数除以被跟踪的项目总数。</p>
+<p><img src="/img/blog/202101/How-to-calculate-MTTF" alt=""></p>
+<p>假设我们测试了三个相同的水泵，并且每个水泵都运行到发生一次故障。第一个泵在 8 小时后出现故障，第二个泵在 10 小时后出现故障，第三个泵在 12 小时后出现故障。</p>
+<p>那么，它的 MTTF为（8+10+12）/3=10小时。</p>
+<p>这将使我们得出结论，这种特殊类型和型号的泵平均每 10 小时需要更换一次。</p>
+<p>提高 MTTF 的唯一可靠方法是寻找由更耐用的材料制成的更高质量的产品。</p>
+<h4 id="为什么mttf有用">为什么MTTF有用？</h4>
+<p>MTTF是一个重要的指标，用于估计不可修复产品的寿命。这些产品的常见例子从汽车的风扇皮带到我们家和办公室的灯泡。</p>
+<p>尤其是，MTTF 对于可靠性工程师来说非常重要，因为他们需要估计一个组件作为一个更大的设备的一部分可以使用多长时间。当整个业务流程对相关设备的故障非常敏感时，尤其如此。</p>
+<p>在这种情况下，MTTF 成为设备可靠性的主要指标，旨在最大限度地延长资产寿命。更短的 MTTF 意味着更频繁的停机和中断。</p>
+<h3 id="最后的想法">最后的想法</h3>
+<p>SRE工程师的首要任务之一是确保系统的最大可用性，以及保持系统的安全和高效运行。了解故障度量的计算和使用将使 SRE 专业人员能够更准确地确定关键资产最有可能发生故障的时间。</p>
+<p>根据这样度量以及发现，他们可以着手制定更好的管理策略，并改进其整体维护流程。</p>
+<p>通过计算故障度量和基于这些结果的计划维护，还可以减少组织对应激式维护的依赖性，从而支持计划（预计）维护，这正是他们激发业务增长所需要的。</p>
+<p>原文链接：</p>
+<p><a href="https://limblecmms.com/blog/mttr-mtbf-mttf-guide-to-failure-metrics/">MTTR, MTBF, or MTTF? </a></p>
+
+                        </div>
+                        
+                        
+
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="col-md-3">
+
+                        
+
+                        
+
+
+
+
+
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">分类</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            
+            <li>
+                <a href="/categories/%e5%ae%9e%e8%b7%b5%e6%a1%88%e4%be%8b">实践案例 (8)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/%e8%a7%82%e7%82%b9%e4%b8%8e%e6%96%b9%e6%b3%95">观点与方法 (8)</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">标签</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            
+            <li>
+                <a href="/tags/automation"><i class="fas fa-tags"></i> automation</a>
+            </li>
+            
+            <li>
+                <a href="/tags/data-driven"><i class="fas fa-tags"></i> data-driven</a>
+            </li>
+            
+            <li>
+                <a href="/tags/devops"><i class="fas fa-tags"></i> devops</a>
+            </li>
+            
+            <li>
+                <a href="/tags/etsy"><i class="fas fa-tags"></i> etsy</a>
+            </li>
+            
+            <li>
+                <a href="/tags/imvu"><i class="fas fa-tags"></i> imvu</a>
+            </li>
+            
+            <li>
+                <a href="/tags/microsoft"><i class="fas fa-tags"></i> microsoft</a>
+            </li>
+            
+            <li>
+                <a href="/tags/mttr"><i class="fas fa-tags"></i> mttr</a>
+            </li>
+            
+            <li>
+                <a href="/tags/sre"><i class="fas fa-tags"></i> sre</a>
+            </li>
+            
+            <li>
+                <a href="/tags/tip"><i class="fas fa-tags"></i> tip</a>
+            </li>
+            
+            <li>
+                <a href="/tags/unit-test"><i class="fas fa-tags"></i> unit-test</a>
+            </li>
+            
+            <li>
+                <a href="/tags/valet"><i class="fas fa-tags"></i> valet</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%88%86%e6%94%af%e7%ad%96%e7%95%a5"><i class="fas fa-tags"></i> 分支策略</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95"><i class="fas fa-tags"></i> 单元测试</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%ae%89%e5%85%a8"><i class="fas fa-tags"></i> 安全</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%b7%a5%e7%a8%8b%e6%95%88%e8%83%bd"><i class="fas fa-tags"></i> 工程效能</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%b7%a5%e7%a8%8b%e7%94%9f%e4%ba%a7%e5%8a%9b"><i class="fas fa-tags"></i> 工程生产力</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%ba%a6%e9%87%8f"><i class="fas fa-tags"></i> 度量</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%ba%a6%e9%87%8f%e4%bd%93%e7%b3%bb"><i class="fas fa-tags"></i> 度量体系</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%be%aa%e8%af%81%e5%86%b3%e7%ad%96"><i class="fas fa-tags"></i> 循证决策</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%be%ae%e8%bd%af"><i class="fas fa-tags"></i> 微软</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%89%8e%e5%a0%86%e5%84%bf%e7%bc%96%e7%a8%8b"><i class="fas fa-tags"></i> 扎堆儿编程</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%8a%80%e6%9c%af%e7%ae%a1%e7%90%86"><i class="fas fa-tags"></i> 技术管理</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%8c%81%e7%bb%ad%e9%83%a8%e7%bd%b2"><i class="fas fa-tags"></i> 持续部署</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%8c%81%e7%bb%ad%e9%9b%86%e6%88%90"><i class="fas fa-tags"></i> 持续集成</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%95%8f%e6%8d%b7"><i class="fas fa-tags"></i> 敏捷</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%95%b0%e6%8d%ae%e8%af%b4%e8%af%9d"><i class="fas fa-tags"></i> 数据说话</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%a1%88%e4%be%8b"><i class="fas fa-tags"></i> 案例</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%b5%8b%e8%af%95%e5%8f%b3%e7%a7%bb"><i class="fas fa-tags"></i> 测试右移</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%b5%8b%e8%af%95%e5%b7%a6%e7%a7%bb"><i class="fas fa-tags"></i> 测试左移</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e7%a7%bb%e5%8a%a8%e5%bc%80%e5%8f%91"><i class="fas fa-tags"></i> 移动开发</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e7%bb%84%e7%bb%87%e8%bd%ac%e5%9e%8b"><i class="fas fa-tags"></i> 组织转型</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e8%87%aa%e5%8a%a8%e5%8c%96%e6%b5%8b%e8%af%95"><i class="fas fa-tags"></i> 自动化测试</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e8%b4%a8%e9%87%8f%e4%bf%9d%e9%9a%9c"><i class="fas fa-tags"></i> 质量保障</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e8%b4%a8%e9%87%8f%e7%ae%a1%e7%90%86"><i class="fas fa-tags"></i> 质量管理</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e8%bd%af%e4%bb%b6%e5%b7%a5%e7%a8%8b"><i class="fas fa-tags"></i> 软件工程</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e9%83%a8%e7%bd%b2%e6%b5%81%e6%b0%b4%e7%ba%bf"><i class="fas fa-tags"></i> 部署流水线</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e9%87%8d%e6%9e%84"><i class="fas fa-tags"></i> 重构</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+
+            </div>
+            
+        </div>
+        
+
+        <footer id="footer">
+    <div class="container">
+
+        
+        <div class="col-md-4 col-sm-6">
+            <h4>关于我们</h4>
+
+            <p></p>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+        <div class="col-md-4 col-sm-6">
+
+             
+            <h4>最新博客</h4>
+
+            <div class="blog-entries">
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/mttr/">
+                          
+                            <img src="/img/banners/MTTR.png" class="img-responsive" alt="IT系统的故障度量指标：MTTR，MTBF，MTTF">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/mttr/">IT系统的故障度量指标：MTTR，MTBF，MTTF</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/mob-programming/">
+                          
+                            <img src="/img/banners/mob-programming.png" class="img-responsive" alt="Mob Refectoring：扎堆儿编程的一次经历">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/mob-programming/">Mob Refectoring：扎堆儿编程的一次经历</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/cannot-measure-productivity/">
+                          
+                            <img src="/img/banners/scales.png" class="img-responsive" alt="马丁曾说：无法度量产出！">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/cannot-measure-productivity/">马丁曾说：无法度量产出！</a></h5>
+                    </div>
+                </div>
+                
+            </div>
+
+            <hr class="hidden-md hidden-lg">
+             
+
+        </div>
+        
+
+        
+        <div class="col-md-4 col-sm-6">
+
+          <h4>联系</h4>
+
+            <p class="text-uppercase"><strong>《持续交付2.0》爱好者社区</strong>
+        <br>北京国际饭店 5层
+        <br>东城区
+        <br>北京市
+        <br>
+        <strong>中国</strong>
+      </p>
+      
+
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+    </div>
+    
+</footer>
+
+
+
+
+
+
+
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            
+            <p class="pull-left">Copyright ©️ 2019 - 2028, 《持续交付2.0》作者 乔梁; all rights reserved.  <a href='https://beian.miit.gov.cn/'>京ICP备18046893号-1</a></p>
+            
+            <p class="pull-right">
+              模板来自 <a href="https://bootstrapious.com/p/universal-business-e-commerce-template">Bootstrapious</a>.
+              
+
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+    
+
+    
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js"></script>
+
+<script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+<script src="/js/hpneo.gmaps.js"></script>
+<script src="/js/gmaps.init.js"></script>
+<script src="/js/front.js"></script>
+
+
+<script src="/js/owl.carousel.min.js"></script>
+
+
+
+  </body>
+</html>
