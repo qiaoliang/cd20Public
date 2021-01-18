@@ -8,7 +8,7 @@
   <meta name="baiduspider" content="index,nofollow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>IT系统的故障度量指标：MTTR，MTBF，MTTF</title>
+  <title>系统故障的度量指标：MTTR，MTBF，MTTF</title>
   <meta name="author" content="乔梁" />
   
   
@@ -67,7 +67,7 @@
   
   <meta property="og:locale" content="zh">
   <meta property="og:site_name" content="持续交付 2.0">
-  <meta property="og:title" content="IT系统的故障度量指标：MTTR，MTBF，MTTF">
+  <meta property="og:title" content="系统故障的度量指标：MTTR，MTBF，MTTF">
   <meta property="og:type" content="article">
   <meta property="og:url" content="http://www.continuousdelivery20.com/blog/mttr/" />
   <meta property="og:description" content="IT系统的故障度量指标：MTTR，MTBF，MTTF">
@@ -99,7 +99,7 @@
   
   <meta name="twitter:card" content="summary_large_image">
   
-  <meta name="twitter:title" content="IT系统的故障度量指标：MTTR，MTBF，MTTF">
+  <meta name="twitter:title" content="系统故障的度量指标：MTTR，MTBF，MTTF">
   
   <meta name="twitter:image" content="http://www.continuousdelivery20.com/img/banners/MTTR.png">
   
@@ -122,9 +122,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="/">
-                    <img src="/img/logo.png" alt="IT系统的故障度量指标：MTTR，MTBF，MTTF logo" class="hidden-xs hidden-sm">
-                    <img src="/img/logo-small.png" alt="IT系统的故障度量指标：MTTR，MTBF，MTTF logo" class="visible-xs visible-sm">
-                    <span class="sr-only">IT系统的故障度量指标：MTTR，MTBF，MTTF - 跳到主页</span>
+                    <img src="/img/logo.png" alt="系统故障的度量指标：MTTR，MTBF，MTTF logo" class="hidden-xs hidden-sm">
+                    <img src="/img/logo-small.png" alt="系统故障的度量指标：MTTR，MTBF，MTTF logo" class="visible-xs visible-sm">
+                    <span class="sr-only">系统故障的度量指标：MTTR，MTBF，MTTF - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -202,7 +202,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>IT系统的故障度量指标：MTTR，MTBF，MTTF</h1>
+                <h1>系统故障的度量指标：MTTR，MTBF，MTTF</h1>
             </div>
         </div>
     </div>
@@ -226,7 +226,8 @@
 <h3 id="故障度量简介">故障度量简介</h3>
 <p>即使是最高效的运维团队也会遇到服务或设备故障。这就是为什么为他们做计划是至关重要的。</p>
 <p>那么，服务故障是什么样子的？</p>
-<p>故障以不同程度存在（例如部分或全部故障），但在最基本的术语中，故障仅仅意味着系统、组件或设备不能再产生特定的预期结果。即使一个服务仍在运行，并提供服务，如果没有达到预期的数量和质量，那它就是出故障了。</p>
+<p>故障以不同程度存在（例如部分或全部故障），但在最基本的术语中，故障仅仅意味着系统、组件或设备不能再产生特定的预期结果。</p>
+<p>所以，<strong>即使一个服务仍在运行，并提供服务，如果没有达到预期的数量和质量，那它就是出故障了。</strong></p>
 <p>正确地管理故障，可以帮助显著地减少故障的负面影响。为了有效地管理故障，应该监控几个关键指标。了解这些指标可以消除猜测，并为 SRE 工程师提供做出明智决策所需的硬数据。</p>
 <p>那么，应跟踪哪些故障指标？有三个指标是可以跨行业应用的，它们是 MTTR、MTBF 和 MTTF 。下面，我们讨论这些缩写词的含义，以及如何使用它们来改进。</p>
 <p>但在此之前，我们需要讨论一件经常被忽视的事情——<em>故障度量的前提是拥有可靠数据的重要性</em>。</p>
@@ -247,7 +248,7 @@
 <p>修复开始时，MTTR时钟开始滴答作响，直到恢复操作为止。这包括修复时间、测试时间和恢复正常工作状态所需要的时间周期。</p>
 <h4 id="如何计算-mttr-">如何计算 MTTR ?</h4>
 <p>要计算MTTR，就是将总维护时间除以给定时间段内维护操作的总数。</p>
-<p><img src="/img/blog/202101/How-to-calculate-MTTR.jpg" alt="MTTR"></p>
+<p><img src="/img/blog/202101/How-to-calculate-MTTR.png" alt="MTTR"></p>
 <p>想象一下，一个水泵在一个工作日内出现三次故障。修复每一个故障所花的时间总共是一个小时。在这种情况下，MTTR 将为 1小时/3 = 20分钟。</p>
 <p>需要注意的几点：</p>
 <p>通常，每个失败实例的严重性都会有所不同。因此，虽然有些事故需要几天时间才能修复，但其他事故可能只需要几分钟就能修复。因此，MTTR给出了期望值的平均值。</p>
@@ -261,7 +262,7 @@
 <p>了解 MTTR 对于任何组织来说都是一个重要的工具，因为它告诉你如何有效地响应和修复生产中的问题。大多数组织都希望通过内部维护团队（由必要的资源、工具及软件支持）来降低 MTTR。</p>
 <h4 id="平均修复时间-vs-平均恢复时间">平均修复时间 vs 平均恢复时间</h4>
 <p>首字母缩略词 “ MTTR ” 有两个最常用的含义，一个是“平均修复时间”（如上所述），另一个是“平均恢复时间”</p>
-<p><img src="/img/blog/202101/Mean-time-to-repair-vs-Mean-time-to-recovery.jpg" alt="MTTR"></p>
+<p><img src="/img/blog/202101/Mean-time-to-repair-vs-Mean-time-to-recovery.png" alt="MTTR"></p>
 <p><em>平均恢复时间</em>（Mean Time To Recovery）是指从首次发现故障点到恢复运行点之间的时间。因此，除了维修时间、测试周期和恢复正常工作状态外，我们还要捕获故障通知时间和诊断时间。</p>
 <p>尽管这两个术语通常可以互换使用，但在服务级别协议（SLA）和维护合同中，区分的必要性变得非常重要。</p>
 <p>因此，这类合同的所有当事方都需要就它们究竟在衡量什么达成一致。</p>
@@ -272,7 +273,7 @@
 <p>因此，<em>MTTR 衡量可用性，MTBF衡量可用性和可靠性</em>。MTBF值越高，系统在发生故障前运行的时间就越长。</p>
 <h4 id="如何计算-mtbf">如何计算 MTBF?</h4>
 <p>从数学上讲，从一个故障到下一个故障的时间间隔可以用运行时间之和除以故障次数来计算。</p>
-<p><img src="/img/blog/202101/How-to-calculate-MTBF.jpg" alt=""></p>
+<p><img src="/img/blog/202101/How-to-calculate-MTBF.png" alt=""></p>
 <p>看看我们在上面 MTTR 中提到的水泵的例子。在10小时的预期运行时间之外，它运行了9个小时，并且三次故障消耗了一小时的时长。因此，MTBF=9小时/3=3小时。</p>
 <p>从上面的例子可以看出，MTBF的计算中不包括恢复时间。</p>
 <p>除了前面提到的设计条件外，其他常见因素往往会影响现场系统的平均无故障时间。</p>
@@ -286,14 +287,14 @@
 <h3 id="什么是平均失效时间mttf">什么是平均失效时间（MTTF）？</h3>
 <p>平均失效时间（MTTF）是衡量不可修复系统的可靠性的一个非常基本的指标。它表示一个系统预计持续运行直到失败的时长。</p>
 <p>MTTF 是我们通常所说的任何产品或设备的寿命。它的价值是通过在一个较长的时期内观察大量相同种类的系统或物件，并查看它们的平均失效时间来计算的。</p>
-<p><img src="/img/blog/202101/Mean-time-to-failure-MTTF.jpg" alt=""></p>
+<p><img src="/img/blog/202101/Mean-time-to-failure-MTTF.png" alt=""></p>
 <pre><code>在制造业中，MTTF 是评价产品可靠性的常用指标之一。
 然而，由于 MTTF 和 MTBF 在定义上有一定的相似性，在区分MTTF和MTBF时仍存在许多混淆。
 好消息是，记住 MTBF 仅用于可恢复系统时，MTTF 用于不可修复物品时，这一点很容易解决。
 </code></pre><p>当使用 MTTF 作为故障度量时，那对资产的修复就不是一个选择了，只能更换。</p>
 <h4 id="如何计算-mttf-">如何计算 MTTF ?</h4>
 <p>MTTF的计算方法是总运行小时数除以被跟踪的项目总数。</p>
-<p><img src="/img/blog/202101/How-to-calculate-MTTF" alt=""></p>
+<p><img src="/img/blog/202101/How-to-calculate-MTTF.png" alt=""></p>
 <p>假设我们测试了三个相同的水泵，并且每个水泵都运行到发生一次故障。第一个泵在 8 小时后出现故障，第二个泵在 10 小时后出现故障，第三个泵在 12 小时后出现故障。</p>
 <p>那么，它的 MTTF为（8+10+12）/3=10小时。</p>
 <p>这将使我们得出结论，这种特殊类型和型号的泵平均每 10 小时需要更换一次。</p>
@@ -571,12 +572,12 @@
                     <div class="image same-height-always">
                         <a href="http://www.continuousdelivery20.com/blog/mttr/">
                           
-                            <img src="/img/banners/MTTR.png" class="img-responsive" alt="IT系统的故障度量指标：MTTR，MTBF，MTTF">
+                            <img src="/img/banners/MTTR.png" class="img-responsive" alt="系统故障的度量指标：MTTR，MTBF，MTTF">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="http://www.continuousdelivery20.com/blog/mttr/">IT系统的故障度量指标：MTTR，MTBF，MTTF</a></h5>
+                        <h5><a href="http://www.continuousdelivery20.com/blog/mttr/">系统故障的度量指标：MTTR，MTBF，MTTF</a></h5>
                     </div>
                 </div>
                 
