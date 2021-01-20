@@ -6,10 +6,19 @@
     <description>Recent content on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 14 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>湖水与岩石</title>
+      <link>http://www.continuousdelivery20.com/blog/lake-and-rock/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/lake-and-rock/</guid>
+      <description>湖水与岩石效应，是《精益产品开发》一书中的提到的一个隐喻： 当一个湖中有很多水时，水面很高，湖中的石块都被水所覆盖。 此时，即使湖底有很大的暗礁</description>
+    </item>
     
     <item>
       <title>系统故障的度量指标：MTTR，MTBF，MTTF</title>

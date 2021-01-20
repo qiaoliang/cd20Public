@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all,follow">
+  
+  <meta name="baiduspider" content="index,nofollow,snippet,archive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>湖水与岩石</title>
+  <meta name="author" content="乔梁" />
+  
+  
+  
+  
+  <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环模型, 敏捷方法, 敏捷开发, 精益思想, Scrum, 研发效能, 效能度量, SRE, 持续部署, 工程效能, 持续集成, 隐喻, 迭代管理, 项目管理, 精益软件开发, 精益, Lean, 湖水岩石效应">
+  
+  
+  <meta name="description" content="精益迭代管理：通过缩短时间容量，暴露问题，并解决问题。">
+
+  <meta name="generator" content="Hugo 0.74.2" />
+
+  
+  <link href='local.google.fonts.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/5.13.0/css/all.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  
+  <link href="/css/animate.css" rel="stylesheet">
+
+  
+  
+    <link href="/css/style.violet.css" rel="stylesheet" id="theme-stylesheet">
+  
+
+  
+  <link href="/css/custom.css" rel="stylesheet">
+
+  
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+
+  
+  <link href="/css/owl.carousel.css" rel="stylesheet">
+  <link href="/css/owl.theme.css" rel="stylesheet">
+
+  
+  <link rel="alternate" href="http://www.continuousdelivery20.com/index.xml" type="application/rss+xml" title="持续交付 2.0">
+
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:locale" content="zh">
+  <meta property="og:site_name" content="持续交付 2.0">
+  <meta property="og:title" content="湖水与岩石">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://www.continuousdelivery20.com/blog/lake-and-rock/" />
+  <meta property="og:description" content="精益迭代管理：通过缩短时间容量，暴露问题，并解决问题。">
+  <meta property="og:image" content="http://www.continuousdelivery20.com/img/banners/b-2021-01/lake-and-rock.png">
+  <meta property="og:image:type" content="image/png">
+  
+  
+  
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="750">
+  
+  
+  <meta property="og:updated_time" content="2021-01-20T00:00:00Z">
+  
+    
+    
+    <meta property="article:section" content="观点与方法">
+    <meta property="article:tag" content="隐喻">
+    <meta property="article:tag" content="迭代管理">
+    <meta property="article:tag" content="项目管理">
+    <meta property="article:tag" content="精益软件开发">
+    <meta property="article:tag" content="精益">
+    
+    
+    <meta property="article:published_time" content="2021-01-20T00:00:00Z">
+    <meta property="article:modified_time" content="2021-01-20T00:00:00Z">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta name="twitter:title" content="湖水与岩石">
+  
+  <meta name="twitter:image" content="http://www.continuousdelivery20.com/img/banners/b-2021-01/lake-and-rock.png">
+  
+  <meta name="twitter:description" content="精益迭代管理：通过缩短时间容量，暴露问题，并解决问题。">
+  
+
+</head>
+
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+
+    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="/">
+                    <img src="/img/logo.png" alt="湖水与岩石 logo" class="hidden-xs hidden-sm">
+                    <img src="/img/logo-small.png" alt="湖水与岩石 logo" class="visible-xs visible-sm">
+                    <span class="sr-only">湖水与岩石 - 跳到主页</span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                      <span class="sr-only">切换导航</span>
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                  
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/">主页</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown active">
+                    
+                    <a href="/blog/">博客</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/faq/">资源</a>
+                    
+                  </li>
+                  
+                  
+                  <li class="dropdown">
+                    
+                    <a href="/contact/">关于</a>
+                    
+                  </li>
+                  
+                </ul>
+            </div>
+            
+
+            <div class="collapse clearfix" id="search">
+
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+
+                    <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
+
+                </span>
+                    </div>
+                </form>
+
+            </div>
+            
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+
+        </header>
+
+        <div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>湖水与岩石</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="content">
+            <div class="container">
+
+                <div class="row">
+
+                    
+
+                    <div class="col-md-9" id="blog-post">
+
+                        <p class="text-muted text-uppercase mb-small text-right">由 <a href="#">乔梁</a> | 2021-01-20</p>
+
+                        <div id="post-content">
+                          <p><img src="/img/blog/202101/lake-and-rock.png" alt=""></p>
+<p><strong>湖水与岩石效应</strong>，是《精益产品开发》一书中的提到的一个<strong>隐喻</strong>：</p>
+<pre><code>当一个湖中有很多水时，水面很高，湖中的石块都被水所覆盖。
+此时，即使湖底有很大的暗礁，人们也看不到。
+
+但是，当水面降低时，有一些大石块就会暴露出来。
+
+随着不断降低水平面，中等石块和小石块也逐步被人们发现。
+</code></pre><h3 id="湖水岩石效应">湖水岩石效应</h3>
+<p>在《精益产品开发》第 12 章，控制在制品数量（下），开篇就讲了这个隐喻。</p>
+<p>湖水水位相当于在制品的数量，岩石相当于组织内部的问题。</p>
+<p><img src="/img/blog/202101/lake-rock-lean-development.png" alt=""></p>
+<h3 id="如何应用这个隐喻">如何应用这个隐喻</h3>
+<p>《持续交付2.0》提倡通过不断优化与改善，让验证环周期尽可能短。</p>
+<p>当组织运作一段时间后，验证环中的所有活动就趋于达到一种平衡，而且很多组织并不想打破这个平衡。因为，在这个平衡中，所有协作部门都达到了一种默契。</p>
+<p>这些活动中，有一部分是增值活动，剩余的活动就是非增值活动，如下图所示。</p>
+<p><img src="/img/blog/202101/add-value-activity.png" alt=""></p>
+<h4 id="缩短迭代周期会发生什么">缩短迭代周期，会发生什么？</h4>
+<p>当我们保持某个固定迭代周期一段时间以后，通常不断优化，我们针对将非增值活动（也就是下图中的固定成本）压缩到一定的水平。</p>
+<p>当我们缩短固定迭代周期（如从两周迭代变成一周迭代）时，由于工作方法与协作流程通常没有发生变化，所以其固定成本所占比例会上升。此时，其直观感觉是：现在两个迭代的产出不如原来一个迭代的产出。</p>
+<p>的确是这样的，因为固定开销太高。使用“湖水岩石”的隐喻，迭代周期就是湖面，固定成本就是岩石。当缩短迭代周期（降低湖面）时，固定成本（岩石）就显得高出来了。也就是下图中，后面小环的固定成本所占比例与第一个大环的固定成本所占比例是差不多的。</p>
+<p><img src="/img/blog/202101/shorten-iteration-cost.png" alt=""></p>
+<p>此时，如何改变呢？</p>
+<p>必须继续想办法，降低小环上的固定成本。才能再次达到下一级的平衡。</p>
+<h4 id="bug-的分派与修复时间">Bug 的分派与修复时间</h4>
+<p>当我们有比较长的迭代周期时，团队通常会将缺陷堆积到迭代的后期再做修复。那么，整个迭代周期就是缺陷的湖面。</p>
+<p>在某个团队中，对于缺陷，我们强化了“当日事，当日毕”的原则。希望，当天发现的缺陷在当天就能被修复和验证。</p>
+<p>这实际上就将缺陷的湖面降低到了“一天”。当然，最开始时，团队很难做到。其中有几个原因，都可以找到方法解决。</p>
+<ol>
+<li>缺陷多，当天修复不完。这也同时说明：前期工作质量差，应该在前期投入更多的精力，确保产生的缺陷少。</li>
+<li>缺陷定位的时间长。这通常是由于测试环境难以构建，场景难以复现，日志不全等原因。那么，我们就需要找到一些方法，解决这些问题。</li>
+<li>缺陷验证的时间长。原因可能与定位问题差不多。但还有一个原因是：修复了当前的缺陷，是否引入了其它方面的问题。我们也需要找到方法来解决这个问题，比如自动化测试。</li>
+</ol>
+
+                        </div>
+                        
+                        
+
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="col-md-3">
+
+                        
+
+                        
+
+
+
+
+
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">分类</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            
+            <li>
+                <a href="/categories/%e5%ae%9e%e8%b7%b5%e6%a1%88%e4%be%8b">实践案例 (8)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/%e8%a7%82%e7%82%b9%e4%b8%8e%e6%96%b9%e6%b3%95">观点与方法 (9)</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">标签</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            
+            <li>
+                <a href="/tags/automation"><i class="fas fa-tags"></i> automation</a>
+            </li>
+            
+            <li>
+                <a href="/tags/data-driven"><i class="fas fa-tags"></i> data-driven</a>
+            </li>
+            
+            <li>
+                <a href="/tags/devops"><i class="fas fa-tags"></i> devops</a>
+            </li>
+            
+            <li>
+                <a href="/tags/etsy"><i class="fas fa-tags"></i> etsy</a>
+            </li>
+            
+            <li>
+                <a href="/tags/imvu"><i class="fas fa-tags"></i> imvu</a>
+            </li>
+            
+            <li>
+                <a href="/tags/microsoft"><i class="fas fa-tags"></i> microsoft</a>
+            </li>
+            
+            <li>
+                <a href="/tags/mttr"><i class="fas fa-tags"></i> mttr</a>
+            </li>
+            
+            <li>
+                <a href="/tags/sre"><i class="fas fa-tags"></i> sre</a>
+            </li>
+            
+            <li>
+                <a href="/tags/tip"><i class="fas fa-tags"></i> tip</a>
+            </li>
+            
+            <li>
+                <a href="/tags/unit-test"><i class="fas fa-tags"></i> unit-test</a>
+            </li>
+            
+            <li>
+                <a href="/tags/valet"><i class="fas fa-tags"></i> valet</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%88%86%e6%94%af%e7%ad%96%e7%95%a5"><i class="fas fa-tags"></i> 分支策略</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95"><i class="fas fa-tags"></i> 单元测试</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%ae%89%e5%85%a8"><i class="fas fa-tags"></i> 安全</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%b7%a5%e7%a8%8b%e6%95%88%e8%83%bd"><i class="fas fa-tags"></i> 工程效能</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%b7%a5%e7%a8%8b%e7%94%9f%e4%ba%a7%e5%8a%9b"><i class="fas fa-tags"></i> 工程生产力</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%ba%a6%e9%87%8f"><i class="fas fa-tags"></i> 度量</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%ba%a6%e9%87%8f%e4%bd%93%e7%b3%bb"><i class="fas fa-tags"></i> 度量体系</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%be%aa%e8%af%81%e5%86%b3%e7%ad%96"><i class="fas fa-tags"></i> 循证决策</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e5%be%ae%e8%bd%af"><i class="fas fa-tags"></i> 微软</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%89%8e%e5%a0%86%e5%84%bf%e7%bc%96%e7%a8%8b"><i class="fas fa-tags"></i> 扎堆儿编程</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%8a%80%e6%9c%af%e7%ae%a1%e7%90%86"><i class="fas fa-tags"></i> 技术管理</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%8c%81%e7%bb%ad%e9%83%a8%e7%bd%b2"><i class="fas fa-tags"></i> 持续部署</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%8c%81%e7%bb%ad%e9%9b%86%e6%88%90"><i class="fas fa-tags"></i> 持续集成</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%95%8f%e6%8d%b7"><i class="fas fa-tags"></i> 敏捷</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%95%b0%e6%8d%ae%e8%af%b4%e8%af%9d"><i class="fas fa-tags"></i> 数据说话</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%a1%88%e4%be%8b"><i class="fas fa-tags"></i> 案例</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%b5%8b%e8%af%95%e5%8f%b3%e7%a7%bb"><i class="fas fa-tags"></i> 测试右移</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e6%b5%8b%e8%af%95%e5%b7%a6%e7%a7%bb"><i class="fas fa-tags"></i> 测试左移</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e7%a7%bb%e5%8a%a8%e5%bc%80%e5%8f%91"><i class="fas fa-tags"></i> 移动开发</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e7%b2%be%e7%9b%8a"><i class="fas fa-tags"></i> 精益</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e7%b2%be%e7%9b%8a%e8%bd%af%e4%bb%b6%e5%bc%80%e5%8f%91"><i class="fas fa-tags"></i> 精益软件开发</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e7%bb%84%e7%bb%87%e8%bd%ac%e5%9e%8b"><i class="fas fa-tags"></i> 组织转型</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e8%87%aa%e5%8a%a8%e5%8c%96%e6%b5%8b%e8%af%95"><i class="fas fa-tags"></i> 自动化测试</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e8%b4%a8%e9%87%8f%e4%bf%9d%e9%9a%9c"><i class="fas fa-tags"></i> 质量保障</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e8%b4%a8%e9%87%8f%e7%ae%a1%e7%90%86"><i class="fas fa-tags"></i> 质量管理</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e8%bd%af%e4%bb%b6%e5%b7%a5%e7%a8%8b"><i class="fas fa-tags"></i> 软件工程</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e8%bf%ad%e4%bb%a3%e7%ae%a1%e7%90%86"><i class="fas fa-tags"></i> 迭代管理</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e9%83%a8%e7%bd%b2%e6%b5%81%e6%b0%b4%e7%ba%bf"><i class="fas fa-tags"></i> 部署流水线</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e9%87%8d%e6%9e%84"><i class="fas fa-tags"></i> 重构</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e9%9a%90%e5%96%bb"><i class="fas fa-tags"></i> 隐喻</a>
+            </li>
+            
+            <li>
+                <a href="/tags/%e9%a1%b9%e7%9b%ae%e7%ae%a1%e7%90%86"><i class="fas fa-tags"></i> 项目管理</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+
+            </div>
+            
+        </div>
+        
+
+        <footer id="footer">
+    <div class="container">
+
+        
+        <div class="col-md-4 col-sm-6">
+            <h4>关于我们</h4>
+
+            <p></p>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+        <div class="col-md-4 col-sm-6">
+
+             
+            <h4>最新博客</h4>
+
+            <div class="blog-entries">
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/lake-and-rock/">
+                          
+                            <img src="/img/banners/b-2021-01/lake-and-rock.png" class="img-responsive" alt="湖水与岩石">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/lake-and-rock/">湖水与岩石</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/mttr/">
+                          
+                            <img src="/img/banners/MTTR.png" class="img-responsive" alt="系统故障的度量指标：MTTR，MTBF，MTTF">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/mttr/">系统故障的度量指标：MTTR，MTBF，MTTF</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.continuousdelivery20.com/blog/mob-programming/">
+                          
+                            <img src="/img/banners/mob-programming.png" class="img-responsive" alt="Mob Refectoring：扎堆儿编程的一次经历">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.continuousdelivery20.com/blog/mob-programming/">Mob Refectoring：扎堆儿编程的一次经历</a></h5>
+                    </div>
+                </div>
+                
+            </div>
+
+            <hr class="hidden-md hidden-lg">
+             
+
+        </div>
+        
+
+        
+        <div class="col-md-4 col-sm-6">
+
+          <h4>联系</h4>
+
+            <p class="text-uppercase"><strong>《持续交付2.0》爱好者社区</strong>
+        <br>北京国际饭店 5层
+        <br>东城区
+        <br>北京市
+        <br>
+        <strong>中国</strong>
+      </p>
+      
+
+            <a href="/contact" class="btn btn-small btn-template-main">跳到联系页面</a>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+    </div>
+    
+</footer>
+
+
+
+
+
+
+
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            
+            <p class="pull-left">Copyright ©️ 2019 - 2028, 《持续交付2.0》作者 乔梁; all rights reserved.  <a href='https://beian.miit.gov.cn/'>京ICP备18046893号-1</a></p>
+            
+            <p class="pull-right">
+              模板来自 <a href="https://bootstrapious.com/p/universal-business-e-commerce-template">Bootstrapious</a>.
+              
+
+              移植到 Hugo 来自 <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+    
+
+    
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js"></script>
+
+<script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+<script src="/js/hpneo.gmaps.js"></script>
+<script src="/js/gmaps.init.js"></script>
+<script src="/js/front.js"></script>
+
+
+<script src="/js/owl.carousel.min.js"></script>
+
+
+
+  </body>
+</html>
