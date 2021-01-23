@@ -6,10 +6,19 @@
     <description>Recent content in 工程效能 on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 14 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/tags/%E5%B7%A5%E7%A8%8B%E6%95%88%E8%83%BD/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>当代软件面临的依赖挑战</title>
+      <link>http://www.continuousdelivery20.com/blog/dependency-problems/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/dependency-problems/</guid>
+      <description>一、序 在几天前对某一段用 golang 写的代码进行 Mob CR 过程中，我们讨论到“如何管理好软件项目的依赖包”这一问题。 打开 go.sum文件，你会发现，其中某个</description>
+    </item>
     
     <item>
       <title>系统故障的度量指标：MTTR，MTBF，MTTF</title>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>依赖管理 on 持续交付 2.0</title>
+    <link>http://www.continuousdelivery20.com/tags/%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/</link>
+    <description>Recent content in 依赖管理 on 持续交付 2.0</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.continuousdelivery20.com/tags/%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>当代软件面临的依赖挑战</title>
+      <link>http://www.continuousdelivery20.com/blog/dependency-problems/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/dependency-problems/</guid>
+      <description>一、序 在几天前对某一段用 golang 写的代码进行 Mob CR 过程中，我们讨论到“如何管理好软件项目的依赖包”这一问题。 打开 go.sum文件，你会发现，其中某个</description>
+    </item>
+    
+  </channel>
+</rss>
