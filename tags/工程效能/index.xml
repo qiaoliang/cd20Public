@@ -6,10 +6,19 @@
     <description>Recent content in 工程效能 on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/tags/%E5%B7%A5%E7%A8%8B%E6%95%88%E8%83%BD/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Facebook 如何进行大规模持续交付</title>
+      <link>http://www.continuousdelivery20.com/blog/facebook-rapid-release/</link>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/facebook-rapid-release/</guid>
+      <description>软件行业已经想出了多种方法来更快、更安全、更高质量地交付代码。其中许多工作集中在诸如持续集成、持续交付、敏捷开发、DevOps 和测试驱动开发</description>
+    </item>
     
     <item>
       <title>当代软件面临的依赖管理挑战</title>

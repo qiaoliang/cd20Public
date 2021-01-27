@@ -6,10 +6,55 @@
     <description>Recent content in Tags on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DevOps</title>
+      <link>http://www.continuousdelivery20.com/tags/devops/</link>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>主干开发</title>
+      <link>http://www.continuousdelivery20.com/tags/%E4%B8%BB%E5%B9%B2%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E4%B8%BB%E5%B9%B2%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>工程效能</title>
+      <link>http://www.continuousdelivery20.com/tags/%E5%B7%A5%E7%A8%8B%E6%95%88%E8%83%BD/</link>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E5%B7%A5%E7%A8%8B%E6%95%88%E8%83%BD/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>持续交付</title>
+      <link>http://www.continuousdelivery20.com/tags/%E6%8C%81%E7%BB%AD%E4%BA%A4%E4%BB%98/</link>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E6%8C%81%E7%BB%AD%E4%BA%A4%E4%BB%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>持续集成</title>
+      <link>http://www.continuousdelivery20.com/tags/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/</link>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>依赖管理</title>
@@ -26,15 +71,6 @@
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>http://www.continuousdelivery20.com/tags/%E5%88%B6%E5%93%81%E7%AE%A1%E7%90%86/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>工程效能</title>
-      <link>http://www.continuousdelivery20.com/tags/%E5%B7%A5%E7%A8%8B%E6%95%88%E8%83%BD/</link>
-      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.continuousdelivery20.com/tags/%E5%B7%A5%E7%A8%8B%E6%95%88%E8%83%BD/</guid>
       <description></description>
     </item>
     
@@ -80,15 +116,6 @@
       <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>http://www.continuousdelivery20.com/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DevOps</title>
-      <link>http://www.continuousdelivery20.com/tags/devops/</link>
-      <pubDate>Thu, 14 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.continuousdelivery20.com/tags/devops/</guid>
       <description></description>
     </item>
     
@@ -395,15 +422,6 @@
       <pubDate>Mon, 18 May 2009 00:00:00 +0000</pubDate>
       
       <guid>http://www.continuousdelivery20.com/tags/%E5%88%86%E6%94%AF%E7%AD%96%E7%95%A5/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>持续集成</title>
-      <link>http://www.continuousdelivery20.com/tags/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/</link>
-      <pubDate>Mon, 18 May 2009 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.continuousdelivery20.com/tags/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/</guid>
       <description></description>
     </item>
     
