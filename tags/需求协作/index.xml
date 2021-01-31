@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>需求协作 on 持续交付 2.0</title>
+    <link>http://www.continuousdelivery20.com/tags/%E9%9C%80%E6%B1%82%E5%8D%8F%E4%BD%9C/</link>
+    <description>Recent content in 需求协作 on 持续交付 2.0</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 28 Jan 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.continuousdelivery20.com/tags/%E9%9C%80%E6%B1%82%E5%8D%8F%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>原子性提交是持续交付的必备技能</title>
+      <link>http://www.continuousdelivery20.com/blog/atomic-submission/</link>
+      <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/atomic-submission/</guid>
+      <description>“坚持少做，持续分解，坚持反馈，持续改善”是《持续交付 2.0 》一书中最为重要的四大工作原则。 它们在代码提交与 Code Review 中的应用就是：提交的原子性。 原子</description>
+    </item>
+    
+  </channel>
+</rss>

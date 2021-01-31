@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>原子提交 on 持续交付 2.0</title>
+    <link>http://www.continuousdelivery20.com/tags/%E5%8E%9F%E5%AD%90%E6%8F%90%E4%BA%A4/</link>
+    <description>Recent content in 原子提交 on 持续交付 2.0</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 22 Jan 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.continuousdelivery20.com/tags/%E5%8E%9F%E5%AD%90%E6%8F%90%E4%BA%A4/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何写好提交注释</title>
+      <link>http://www.continuousdelivery20.com/blog/good-commit-message/</link>
+      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/good-commit-message/</guid>
+      <description>提交注释不应该仅仅作为可有可无的附代说明，而应该作为一个公开文档，用于向未来的读者说明所做的工作以及原因。它和代码同等重要，而且也会与代码一</description>
+    </item>
+    
+  </channel>
+</rss>

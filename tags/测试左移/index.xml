@@ -6,10 +6,19 @@
     <description>Recent content in 测试左移 on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 09 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/tags/%E6%B5%8B%E8%AF%95%E5%B7%A6%E7%A7%BB/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>原子性提交是持续交付的必备技能</title>
+      <link>http://www.continuousdelivery20.com/blog/atomic-submission/</link>
+      <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/atomic-submission/</guid>
+      <description>“坚持少做，持续分解，坚持反馈，持续改善”是《持续交付 2.0 》一书中最为重要的四大工作原则。 它们在代码提交与 Code Review 中的应用就是：提交的原子性。 原子</description>
+    </item>
     
     <item>
       <title>微软:测试左移，让其运行更快、更可靠</title>

@@ -6,10 +6,19 @@
     <description>Recent content in 软件工程 on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 10 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何写好提交注释</title>
+      <link>http://www.continuousdelivery20.com/blog/good-commit-message/</link>
+      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/good-commit-message/</guid>
+      <description>提交注释不应该仅仅作为可有可无的附代说明，而应该作为一个公开文档，用于向未来的读者说明所做的工作以及原因。它和代码同等重要，而且也会与代码一</description>
+    </item>
     
     <item>
       <title>循证决策，需要六步</title>
