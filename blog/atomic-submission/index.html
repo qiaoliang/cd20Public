@@ -257,7 +257,10 @@
 <p>请注意，仅仅因为这次变更太大，审阅者就完全可以直接拒绝您。通常他们会感谢你的贡献，但要求你以某种方式把它变成一系列较小的变化。</p>
 <p>然而，假如你已经写完一个大的CL，再去将它拆分成小的提交，可能就是一个很大的工作，或者需要花费大量的时间来争论为什么审阅者应该接受你的大变更。一开始写小的CLs比较容易。</p>
 <h3 id="cl-要小到什么程度">CL 要小到什么程度</h3>
-<p>一定要尽最大的努力，<strong>让一个 CL 的改动少于 800 行，最好能在 400 行以下。</strong></p>
+<p>​一定要尽最大的努力，<strong>让一个 CL 的变更少于 800 行，大部分都应该在400行以下，最好能在 100 行以下</strong>。</p>
+<p><a href="https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/">据调查报告显示</a>，每小时最多可以评审 500 行代码，而一次 CR 最好少于 400 行，更容易最大化收益。</p>
+<p><img src="/img/blog/202101/code-review-best-practices-figure-01.gif" alt=""> <img src="/img/blog/202101/code-review-best-practices-figure-02.gif" alt=""></p>
+<h3 id="如何正确地缩减-cl-的大小">如何正确地缩减 CL 的大小</h3>
 <p>一般来说，CL的正确大小是一个独立的变化。这意味着：</p>
 <ul>
 <li>
@@ -267,7 +270,7 @@
 <p>它通常只是一个特性的一部分，而不是一次完成整个特性。CL 太小和太大都不好。你要和你的团队一起，找出一致可接受的尺寸。</p>
 </li>
 <li>
-<p>CL应包括相关的测试代码。如果这个 CL 的确无法加入自动化测试，则需要在<a href="http://www.continuousdelivery20.com/blog/good-commit-message">提交信息中写上 TestPlan</a>，以便评审者更容易理解。</p>
+<p>CL应包括相关的测试代码。如果这个 CL 的确无法加入自动化测试，则需要在<a href="http://www.continuousdelivery20.com/blog/good-commit-message/">提交信息中写上 TestPlan</a>，以便评审者更容易理解。</p>
 </li>
 <li>
 <p>评审者需要了解关于本次 CR 的所有内容都在这个 CL 、CL 的描述、现有的代码库，或他们已经评审过的CL中。</p>
