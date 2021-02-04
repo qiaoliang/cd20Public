@@ -6,10 +6,46 @@
     <description>Recent content in Tags on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 28 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Feb 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TotT</title>
+      <link>http://www.continuousdelivery20.com/tags/tott/</link>
+      <pubDate>Tue, 02 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/tott/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>测试左移</title>
+      <link>http://www.continuousdelivery20.com/tags/%E6%B5%8B%E8%AF%95%E5%B7%A6%E7%A7%BB/</link>
+      <pubDate>Tue, 02 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E6%B5%8B%E8%AF%95%E5%B7%A6%E7%A7%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>自动化测试</title>
+      <link>http://www.continuousdelivery20.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Tue, 02 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>谷歌</title>
+      <link>http://www.continuousdelivery20.com/tags/%E8%B0%B7%E6%AD%8C/</link>
+      <pubDate>Tue, 02 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/tags/%E8%B0%B7%E6%AD%8C/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Code Review</title>
@@ -35,15 +71,6 @@
       <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>http://www.continuousdelivery20.com/tags/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>测试左移</title>
-      <link>http://www.continuousdelivery20.com/tags/%E6%B5%8B%E8%AF%95%E5%B7%A6%E7%A7%BB/</link>
-      <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.continuousdelivery20.com/tags/%E6%B5%8B%E8%AF%95%E5%B7%A6%E7%A7%BB/</guid>
       <description></description>
     </item>
     
@@ -206,15 +233,6 @@
       <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>http://www.continuousdelivery20.com/tags/%E6%89%8E%E5%A0%86%E5%84%BF%E7%BC%96%E7%A8%8B/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>自动化测试</title>
-      <link>http://www.continuousdelivery20.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
-      <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.continuousdelivery20.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
       <description></description>
     </item>
     
