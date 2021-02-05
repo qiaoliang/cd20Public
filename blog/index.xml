@@ -6,10 +6,46 @@
     <description>Recent content in Blogs on 持续交付 2.0</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 02 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Feb 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.continuousdelivery20.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>清晰地创建测试数据！</title>
+      <link>http://www.continuousdelivery20.com/blog/tott-clearly-create-test-data/</link>
+      <pubDate>Fri, 05 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/tott-clearly-create-test-data/</guid>
+      <description>清晰创建测试数据 **Helper方法让创建测试数据变得更容易。但随着时间的推移，它们会变得更难理解。**因为您需要测试数据的更多变形，来满足</description>
+    </item>
+    
+    <item>
+      <title>避免写出不稳定的测试</title>
+      <link>http://www.continuousdelivery20.com/blog/tott-avoiding-flakey-tests/</link>
+      <pubDate>Fri, 05 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/tott-avoiding-flakey-tests/</guid>
+      <description>避免写出不稳定的测试 不稳定的测试会让你的生活更加困难。您会收到失败通知，便也没什么帮助。你甚至可能因对失败已麻木而错过了一个真实的失败条件。</description>
+    </item>
+    
+    <item>
+      <title>像变更检测器一样的测试代码，是有害的！</title>
+      <link>http://www.continuousdelivery20.com/blog/tott-change-detector-tests/</link>
+      <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/tott-change-detector-tests/</guid>
+      <description>像变更检测器一样的测试代码，是有害的！ 想像一下，你刚刚完成一次重构（没有改变该应用的外部行为），正打算提交这次变更。但是，为了安全起见，你打</description>
+    </item>
+    
+    <item>
+      <title>不要把逻辑放在测试用例中！</title>
+      <link>http://www.continuousdelivery20.com/blog/tott-dont-put-logic-in/</link>
+      <pubDate>Wed, 03 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.continuousdelivery20.com/blog/tott-dont-put-logic-in/</guid>
+      <description>不要把逻辑放在测试用例中！ **编程语言给了我们很大的表达能力。**运算符和条件表达式等概念是重要的工具，让我们能够编写程序，处理各种各样的输</description>
+    </item>
     
     <item>
       <title>使用自描述性的测试方法名</title>
