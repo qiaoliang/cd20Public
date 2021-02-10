@@ -8,16 +8,16 @@
   <meta name="baiduspider" content="index,nofollow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>使用自描述性的测试方法名</title>
+  <title>在测试用例中对服务调用进行契约检查！</title>
   <meta name="author" content="乔梁" />
   
   
   
   
-  <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环模型, 敏捷方法, 敏捷开发, 精益思想, Scrum, 研发效能, 效能度量, SRE, 持续部署, 工程效能, 持续集成, TotT, 自动化测试, 测试左移, 谷歌, 单元测试, 软件测试之道">
+  <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环模型, 敏捷方法, 敏捷开发, 精益思想, Scrum, 研发效能, 效能度量, SRE, 持续部署, 工程效能, 持续集成, TotT, 代码质量, 测试设计, 测试质量">
   
   
-  <meta name="description" content="Microsoft">
+  <meta name="description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
 
   <meta name="generator" content="Hugo 0.74.2" />
 
@@ -67,11 +67,11 @@
   
   <meta property="og:locale" content="zh">
   <meta property="og:site_name" content="持续交付 2.0">
-  <meta property="og:title" content="使用自描述性的测试方法名">
+  <meta property="og:title" content="在测试用例中对服务调用进行契约检查！">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="http://www.continuousdelivery20.com/blog/tott-writing-descriptive/" />
-  <meta property="og:description" content="Microsoft">
-  <meta property="og:image" content="http://www.continuousdelivery20.com/img/banners/b-2021-01/self_explanatory.png">
+  <meta property="og:url" content="http://www.continuousdelivery20.com/blog/tott-exercise-service-call/" />
+  <meta property="og:description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
+  <meta property="og:image" content="http://www.continuousdelivery20.com/img/banners/b-2021-02/05.png">
   <meta property="og:image:type" content="image/png">
   
   
@@ -80,29 +80,28 @@
     <meta property="og:image:height" content="750">
   
   
-  <meta property="og:updated_time" content="2021-02-02T00:00:00Z">
+  <meta property="og:updated_time" content="2021-02-07T00:00:00Z">
   
     
     
-    <meta property="article:section" content="观点方法">
+    <meta property="article:section" content="实践案例">
     <meta property="article:tag" content="TotT">
-    <meta property="article:tag" content="自动化测试">
-    <meta property="article:tag" content="测试左移">
-    <meta property="article:tag" content="谷歌">
+    <meta property="article:tag" content="代码质量">
+    <meta property="article:tag" content="测试设计">
     
     
-    <meta property="article:published_time" content="2021-02-02T00:00:00Z">
-    <meta property="article:modified_time" content="2021-02-02T00:00:00Z">
+    <meta property="article:published_time" content="2021-02-07T00:00:00Z">
+    <meta property="article:modified_time" content="2021-02-07T00:00:00Z">
   
 
   
   <meta name="twitter:card" content="summary_large_image">
   
-  <meta name="twitter:title" content="使用自描述性的测试方法名">
+  <meta name="twitter:title" content="在测试用例中对服务调用进行契约检查！">
   
-  <meta name="twitter:image" content="http://www.continuousdelivery20.com/img/banners/b-2021-01/self_explanatory.png">
+  <meta name="twitter:image" content="http://www.continuousdelivery20.com/img/banners/b-2021-02/05.png">
   
-  <meta name="twitter:description" content="Microsoft">
+  <meta name="twitter:description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
   
 
 </head>
@@ -121,9 +120,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="/">
-                    <img src="/img/logo.png" alt="使用自描述性的测试方法名 logo" class="hidden-xs hidden-sm">
-                    <img src="/img/logo-small.png" alt="使用自描述性的测试方法名 logo" class="visible-xs visible-sm">
-                    <span class="sr-only">使用自描述性的测试方法名 - 跳到主页</span>
+                    <img src="/img/logo.png" alt="在测试用例中对服务调用进行契约检查！ logo" class="hidden-xs hidden-sm">
+                    <img src="/img/logo-small.png" alt="在测试用例中对服务调用进行契约检查！ logo" class="visible-xs visible-sm">
+                    <span class="sr-only">在测试用例中对服务调用进行契约检查！ - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -201,7 +200,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>使用自描述性的测试方法名</h1>
+                <h1>在测试用例中对服务调用进行契约检查！</h1>
             </div>
         </div>
     </div>
@@ -217,46 +216,30 @@
 
                     <div class="col-md-9" id="blog-post">
 
-                        <p class="text-muted text-uppercase mb-small text-right">由 <a href="#">乔梁</a> | 2021-02-02</p>
+                        <p class="text-muted text-uppercase mb-small text-right">由 <a href="#">乔梁</a> | 2021-02-07</p>
 
                         <div id="post-content">
-                          <h3 id="使用描述性的测试名称">使用描述性的测试名称</h3>
-<p><strong>猜一猜你会花多长时间才能了解下面这段测试代码用来验证什么样的行为?</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Test</span> <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">isUserLockedOut_invalidLogin</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-  authenticator<span style="color:#f92672">.</span><span style="color:#a6e22e">authenticate</span><span style="color:#f92672">(</span>username<span style="color:#f92672">,</span> invalidPassword<span style="color:#f92672">);</span>
-  assertFalse<span style="color:#f92672">(</span>authenticator<span style="color:#f92672">.</span><span style="color:#a6e22e">isUserLockedOut</span><span style="color:#f92672">(</span>username<span style="color:#f92672">));</span>
+                          <h3 id="在测试用例中对服务调用进行契约检查">在测试用例中对服务调用进行契约检查</h3>
+<p>下面的测试用例将对 CloudService 的服务调用进行模拟替代（mocks）。 <strong>这个测试用例真的能为我们提供足够的信心吗，它让你相信：这个服务调用是可以正确工作的了么？</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Test</span> <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">uploadFileToCloudStorage</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  when<span style="color:#f92672">(</span>mockCloudService<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>
+          WriteRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">newBuilder</span><span style="color:#f92672">().</span><span style="color:#a6e22e">setUserId</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">“</span>testuser<span style="color:#960050;background-color:#1e0010">”</span><span style="color:#f92672">).</span><span style="color:#a6e22e">setFileType</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">“</span>plain<span style="color:#f92672">/</span>text<span style="color:#960050;background-color:#1e0010">”</span><span style="color:#f92672">)...))</span>
+    <span style="color:#f92672">.</span><span style="color:#a6e22e">thenReturn</span><span style="color:#f92672">(</span>WriteResponse<span style="color:#f92672">.</span><span style="color:#a6e22e">newBuilder</span><span style="color:#f92672">().</span><span style="color:#a6e22e">setUploadId</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">“</span>uploadId<span style="color:#960050;background-color:#1e0010">”</span><span style="color:#f92672">).</span><span style="color:#a6e22e">build</span><span style="color:#f92672">());</span>
 
-  authenticator<span style="color:#f92672">.</span><span style="color:#a6e22e">authenticate</span><span style="color:#f92672">(</span>username<span style="color:#f92672">,</span> invalidPassword<span style="color:#f92672">);</span>
-  assertFalse<span style="color:#f92672">(</span>authenticator<span style="color:#f92672">.</span><span style="color:#a6e22e">isUserLockedOut</span><span style="color:#f92672">(</span>username<span style="color:#f92672">));</span>
+  CloudUploader cloudUploader <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CloudUploader<span style="color:#f92672">(</span>mockCloudService<span style="color:#f92672">);</span>
 
-  authenticator<span style="color:#f92672">.</span><span style="color:#a6e22e">authenticate</span><span style="color:#f92672">(</span>username<span style="color:#f92672">,</span> invalidPassword<span style="color:#f92672">);</span>
-  assertTrue<span style="color:#f92672">(</span>authenticator<span style="color:#f92672">.</span><span style="color:#a6e22e">isUserLockedOut</span><span style="color:#f92672">(</span>username<span style="color:#f92672">));</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p><strong>你可能要从头到尾读完每一行代码才能知道</strong> (甚至不至读一遍) 并理解每一行在做什么. 但是， <strong>假如我们把这个测试用例名改成下面的样子，你会花多长时间呢?</strong></p>
-<p><code>isUserLockedOut_lockOutUserAfterThreeInvalidLoginAttempts</code></p>
-<p>现在，你只需要读一下测试用例的名字，就应该知道被测试的行为是什么了，甚至不需要读测试代码。在第一个代码示例中的测试用例名中一个提示，那就是“invalidLogin”，但它并没有真正地告诉你，我们期望的结果到底是什么，所以，你不得不读完所有的代码才能知道。</p>
-<p>在测试用例名字中包含将测试场景和期望的结果还有几个其它的好处：</p>
-<ul>
-<li>
-<p>如果你想了解某个类所有可能的行为，你所需要做的只是在它对应的那些测试用例类的测试方法名，而不是花数十分钟或者几个小时反复翻看测试代码，甚至生产代码本身，才能知道它的行为。在 Code Review 的时候，这种做法也会很有用，因为你在 Review 这段代码时，就会很快知道这些测试是否覆盖了所有的用例。</p>
-</li>
-<li>
-<p>通过给测试用例一个更加明确的名称，会迫使你将测试不同的行为拆分到单独的测试用例中。否则，您可能会尝试将不同行为的断言都放在一个测试用例中。而随着时间的推移，这可能导致测试用例不断增长，变得难以理解和维护。</p>
-</li>
-<li>
-<p>在某些情况下，我们很可能无法通过测试代码本身非常清晰地就表达打算测试哪一个确切行为。此时，如果测试名称没有明确说明这一点，你很可能要去猜测测试实际上在测什么。</p>
-</li>
-<li>
-<p>你能很容易地判断出，是否还有哪些功能没有被测试到。比如，当你没发现那个描述你正在寻找的代码行为的测试名时，你就知道代码的作都没有写全测试。</p>
-</li>
-<li>
-<p>当测试失败时，你能立即看到哪个功能被破坏了。</p>
-</li>
-</ul>
-<p>有几种常见的测试名称的命名结构模式，其中一种就是将测试名写成一个句子，并在名称中包含关键字 “should” ，例如, <code>shouldLockOutUserAfterThreeInvalidLoginAttempts</code>。无论你用什么模式，有个建议是通用的： 确保测试用例名字中包括被测试的场景和期望的输出。</p>
-<p>当然，有时只是指定被测方法的名字就足够了，特别是当这个方法非常简单，并且只有一个行为，而这个行为就是这个方法名本身。</p>
-<h5 id="原文链接">原文链接</h5>
-<p><a href="https://testing.googleblog.com/2014/10/testing-on-toilet-writing-descriptive.html">谷歌TotT:编写具有描述性的测试方法名</a></p>
+  Uri uri <span style="color:#f92672">=</span> cloudUploader<span style="color:#f92672">.</span><span style="color:#a6e22e">uploadFile</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">“</span><span style="color:#f92672">/</span>path<span style="color:#f92672">/</span>to<span style="color:#f92672">/</span>foo<span style="color:#f92672">.</span><span style="color:#a6e22e">txt</span><span style="color:#960050;background-color:#1e0010">”</span><span style="color:#f92672">));</span>
+  <span style="color:#75715e">// The uploaded file URI contains the user ID, file type, and upload ID. (Or does it?)
+</span><span style="color:#75715e"></span>  assertThat<span style="color:#f92672">(</span>uri<span style="color:#f92672">).</span><span style="color:#a6e22e">isEqualTo</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Uri<span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">“</span><span style="color:#f92672">/</span>testuser<span style="color:#f92672">/</span>text<span style="color:#f92672">/</span>uploadId<span style="color:#f92672">.</span><span style="color:#a6e22e">txt</span><span style="color:#960050;background-color:#1e0010">”</span><span style="color:#f92672">));</span>
+</code></pre></div><p><strong>这个测试中，很多地方都可能出错，</strong> 尤其是当服务契约变得复杂时。例如，plain/text 可能不是一个有效的文件类型，而你验证上传文件的 URI 是正确的。</p>
+<p>**如果被测代码依赖于某个服务的契约，建议对这个服务调用进行检查，**而不是对其进行模拟替代（mocking it out）。这让你对能够正确使用这个外部服务更有信心：</p>
+<!-- raw HTML omitted -->
+<h4 id="你如何检查这个服务调用呢">你如何检查这个服务调用呢？</h4>
+<ol>
+<li><strong>使用一个 fake 服务</strong>。一个 fack 对象是某个真实服务的快速且轻量级的实现，它的行为就象它模仿的真实服务一样。一个fake服务通常是由服务的提供者负责维护；除非你能保证Fake服务的行为与真实实现一直保持一致，否则不要自己创建自己的fake服务。关于更多的Fake服务，参见 <a href="http://testing.googleblog.com/2013/06/testing-on-toilet-fake-your-way-to.html">testing.googleblog.com/2013/06/testing-on-toilet-fake-your-way-to.html</a>.</li>
+<li><strong>使用一个密闭的(hermetic）服务器</strong>。这是一个真实的服务，它是由测试用例在其运行的同一台机器上启动的。使用密闭服务器的缺点是启动它并与其交互会让测试运行比较慢。关于更多的密闭服务器，参见 <a href="http://testing.googleblog.com/2012/10/hermetic-servers.html">testing.googleblog.com/2012/10/hermetic-servers.html</a>.</li>
+</ol>
+<p>如果众多使用的服务并没有fake服务或者密闭服务器，模拟器（mock）可有是你的唯一选择了。但是，如果**你的测试并没有使用真正的调用契约来请求真正的服务，那你要格外小心，确保那个测试所调用的真正服务是正常工作的，例如可以通过一个全面的端到端的测试用例，或者求助于手工测试(但这可能效率低，而且不容易扩展规模)。</p>
 
                         </div>
                         
@@ -292,7 +275,7 @@
             
             
             <li>
-                <a href="/categories/%e5%ae%9e%e8%b7%b5%e6%a1%88%e4%be%8b">实践案例 (13)</a>
+                <a href="/categories/%e5%ae%9e%e8%b7%b5%e6%a1%88%e4%be%8b">实践案例 (18)</a>
             </li>
             
             <li>
@@ -300,7 +283,7 @@
             </li>
             
             <li>
-                <a href="/categories/%e8%a7%82%e7%82%b9%e6%96%b9%e6%b3%95">观点方法 (2)</a>
+                <a href="/categories/%e8%a7%82%e7%82%b9%e6%96%b9%e6%b3%95">观点方法 (1)</a>
             </li>
             
         </ul>
@@ -502,10 +485,6 @@
             </li>
             
             <li>
-                <a href="/tags/%e8%b0%b7%e6%ad%8c"><i class="fas fa-tags"></i> 谷歌</a>
-            </li>
-            
-            <li>
                 <a href="/tags/%e8%b4%a8%e9%87%8f%e4%bf%9d%e9%9a%9c"><i class="fas fa-tags"></i> 质量保障</a>
             </li>
             
@@ -590,40 +569,40 @@
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="http://www.continuousdelivery20.com/blog/tott-clearly-create-test-data/">
+                        <a href="http://www.continuousdelivery20.com/blog/tott-keep-cause-clear/">
                           
-                            <img src="/img/banners/default.png" class="img-responsive" alt="清晰地创建测试数据！">
+                            <img src="/img/banners/default.png" class="img-responsive" alt="保证原因与影响清晰">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="http://www.continuousdelivery20.com/blog/tott-clearly-create-test-data/">清晰地创建测试数据！</a></h5>
+                        <h5><a href="http://www.continuousdelivery20.com/blog/tott-keep-cause-clear/">保证原因与影响清晰</a></h5>
                     </div>
                 </div>
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="http://www.continuousdelivery20.com/blog/tott-avoiding-flakey-tests/">
+                        <a href="http://www.continuousdelivery20.com/blog/tott-only-verify-state-changing/">
                           
-                            <img src="/img/banners/default.png" class="img-responsive" alt="避免写出不稳定的测试">
+                            <img src="/img/banners/default.png" class="img-responsive" alt="只验证发生状态变化的方法调用">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="http://www.continuousdelivery20.com/blog/tott-avoiding-flakey-tests/">避免写出不稳定的测试</a></h5>
+                        <h5><a href="http://www.continuousdelivery20.com/blog/tott-only-verify-state-changing/">只验证发生状态变化的方法调用</a></h5>
                     </div>
                 </div>
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="http://www.continuousdelivery20.com/blog/tott-change-detector-tests/">
+                        <a href="http://www.continuousdelivery20.com/blog/tott-hermetic-servers/">
                           
-                            <img src="/img/banners/default.png" class="img-responsive" alt="像变更检测器一样的测试代码，是有害的！">
+                            <img src="/img/banners/b-2021-02/06.png" class="img-responsive" alt="使用封闭服务进行端到端的测试（Hermetic Servers）！">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="http://www.continuousdelivery20.com/blog/tott-change-detector-tests/">像变更检测器一样的测试代码，是有害的！</a></h5>
+                        <h5><a href="http://www.continuousdelivery20.com/blog/tott-hermetic-servers/">使用封闭服务进行端到端的测试（Hermetic Servers）！</a></h5>
                     </div>
                 </div>
                 

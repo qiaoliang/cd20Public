@@ -8,13 +8,13 @@
   <meta name="baiduspider" content="index,nofollow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <title>谷歌</title>
+  <title>使用封闭服务进行端到端的测试（Hermetic Servers）！</title>
   <meta name="author" content="乔梁" />
   
   
   
   
-  <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环模型, 敏捷方法, 敏捷开发, 精益思想, Scrum, 研发效能, 效能度量, SRE, 持续部署, 工程效能, 持续集成">
+  <meta name="keywords" content="devops, 持续交付, 轻敏捷, 双环模型, 敏捷方法, 敏捷开发, 精益思想, Scrum, 研发效能, 效能度量, SRE, 持续部署, 工程效能, 持续集成, TotT, 代码质量, 测试设计, 测试质量">
   
   
   <meta name="description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
@@ -67,28 +67,39 @@
   
   <meta property="og:locale" content="zh">
   <meta property="og:site_name" content="持续交付 2.0">
-  <meta property="og:title" content="谷歌">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="http://www.continuousdelivery20.com/tags/%E8%B0%B7%E6%AD%8C/" />
+  <meta property="og:title" content="使用封闭服务进行端到端的测试（Hermetic Servers）！">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://www.continuousdelivery20.com/blog/tott-hermetic-servers/" />
   <meta property="og:description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
-  <meta property="og:image" content="http://www.continuousdelivery20.com/img/sharing-default.png">
+  <meta property="og:image" content="http://www.continuousdelivery20.com/img/banners/b-2021-02/06.png">
   <meta property="og:image:type" content="image/png">
   
   
   
-    <meta property="og:image:width" content="800">
-    <meta property="og:image:height" content="420">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="750">
   
   
-  <meta property="og:updated_time" content="2021-02-02T00:00:00Z">
+  <meta property="og:updated_time" content="2021-02-09T00:00:00Z">
+  
+    
+    
+    <meta property="article:section" content="实践案例">
+    <meta property="article:tag" content="TotT">
+    <meta property="article:tag" content="代码质量">
+    <meta property="article:tag" content="测试设计">
+    
+    
+    <meta property="article:published_time" content="2021-02-09T00:00:00Z">
+    <meta property="article:modified_time" content="2021-02-09T00:00:00Z">
   
 
   
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   
-  <meta name="twitter:title" content="谷歌">
+  <meta name="twitter:title" content="使用封闭服务进行端到端的测试（Hermetic Servers）！">
   
-  <meta name="twitter:image" content="http://www.continuousdelivery20.com/img/sharing-default.png">
+  <meta name="twitter:image" content="http://www.continuousdelivery20.com/img/banners/b-2021-02/06.png">
   
   <meta name="twitter:description" content="持续交付2.0 爱好者网站，本网站讨论持续交付，DevOps，敏捷开发，精益思想，Scrum，敏捷方法，用户故事">
   
@@ -109,9 +120,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="/">
-                    <img src="/img/logo.png" alt="谷歌 logo" class="hidden-xs hidden-sm">
-                    <img src="/img/logo-small.png" alt="谷歌 logo" class="visible-xs visible-sm">
-                    <span class="sr-only">谷歌 - 跳到主页</span>
+                    <img src="/img/logo.png" alt="使用封闭服务进行端到端的测试（Hermetic Servers）！ logo" class="hidden-xs hidden-sm">
+                    <img src="/img/logo-small.png" alt="使用封闭服务进行端到端的测试（Hermetic Servers）！ logo" class="visible-xs visible-sm">
+                    <span class="sr-only">使用封闭服务进行端到端的测试（Hermetic Servers）！ - 跳到主页</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -134,7 +145,7 @@
                   </li>
                   
                   
-                  <li class="dropdown">
+                  <li class="dropdown active">
                     
                     <a href="/blog/">博客</a>
                     
@@ -189,7 +200,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>谷歌</h1>
+                <h1>使用封闭服务进行端到端的测试（Hermetic Servers）！</h1>
             </div>
         </div>
     </div>
@@ -198,59 +209,65 @@
 
         <div id="content">
             <div class="container">
+
                 <div class="row">
+
                     
 
-                    <div class="col-md-9" id="blog-listing-medium">
+                    <div class="col-md-9" id="blog-post">
 
+                        <p class="text-muted text-uppercase mb-small text-right">由 <a href="#">乔梁</a> | 2021-02-09</p>
+
+                        <div id="post-content">
+                          <p>想像一下，我们有一个复杂的富Web应用程序。在其之下，可能是由错综复杂的服务器集群提供服务，每个服务器执行不同的任务，而且大多数服务器之间都有交互。任何的用户操作都会经历一个迷宫之旅，从用户点击开始，到数据存储之间，需要经过很多服务调用。很多谷歌的网络应用都是这样的，包括Gmail和Google+。那么，我们如何为它们编写端到端的测试呢？</p>
+<h4 id="端到端测试">端到端测试</h4>
+<p>在Google所有测试组成的世界中，一个端到端测试是指用于检查到完整整服务栈，从用户请求开妈，到得到最终的响应。下图中是一个端到端测试用来检查被测系统的简要流程图。值得注意是主，在被测系统中的前端服务器会连接一个第三方的后端服务，而它是当前这个模拟用户并不需要调求的。</p>
+<p><img src="/img/2021-02/TotT-02-02-1-SUT.jpg" alt="被测系统"></p>
+<p>为这样的系统写快速及可靠的端到端自动化测试用例有很多挑战。挑战之一就是避免网络访问。包含网络访问的自动化测试要比仅使用本地资源要慢，而且由于外部服务可能存在的不可用性或者对其不可控性，使用外部服务很可能会导致<a href="http://www.continuousdelivery20.com/blog/tott-avoiding-flakey-tests/">测试随机失败问题</a>。</p>
+<h4 id="封闭服务器">封闭服务器</h4>
+<p>我们在谷歌用于设计端到端测试的一种技巧就是使用封闭服务器(Hermetic Servers)。</p>
+<p>使用是封闭服务器？简单来说，就是指运行在同一个节点的服务器。如果你能够在同一个机器上启动所有需要的服务器(即不需要访问网络），而且服务器的行为与预期保持一致，那么，你就有&quot;封闭服务器了&rdquo;。通常的&quot;封闭&quot;是指完全与外界隔离的系统，并不必须是在同一台机器上，所以，这里的封闭服务器算是它的一种特例。</p>
+<p>为什么封闭服务器是有益的？如果你的被测系统是由封闭服务器构成的，就可以在单台服务器上完整启动；也就没有必要进行网络访问了。单台服务器既可以是一台物理机器，也可以是一台虚拟机器。</p>
+<h4 id="封闭服务器的设计">封闭服务器的设计</h4>
+<p>构建封闭服务器的过程是在对任何新服务设计的早期就应该考虑的。我们需要注意的事项如下：</p>
+<ul>
+<li>所有对外部服务的连接都应该使用某种合适的&quot;依赖注入&quot;的方式在运行时注入，例如命令行启动参与，或者<a href="http://code.google.com/p/google-guice/">Guice</a>。</li>
+<li>所需的静态文件都应该与服务的二进制文件绑定在一起。</li>
+<li>如果服务器需要访问数据存储，确保数据存储可以使用数据文件或者内存式数据存储来冒充（faked）。</li>
+</ul>
+<p>满足上述要求就可以确保我们有了高度可配置的服务器，就有成为一个封闭服务器的潜质了。但它还没为在测试中使用而准备好。我们还需要再做几件事情才可以：</p>
+<ul>
+<li>确保我们测试中没有使用到那些连接点要有适当的冒充(<a href="http://xunitpatterns.com/Fake%20Object.html">fakes</a>)或模拟(mocks)去验证这种不连接性。</li>
+<li>提供一些模块(modules)，使得更容易使用测试数据来组装数据存储。</li>
+<li>提供一些日志模块(log modules)，追踪被测系统中的请求/ 响应链路。</li>
+</ul>
+<p>在测试中使用封闭服务器</p>
+<p>我们以上面图中的例子来讲解一下封闭服务器的使用。首先，我们假设所有的服务都是封闭服务。下面是对同一个用户请求，端到端测试是如何运行的：</p>
+<p><img src="../../images/TotT-02-02-2-E2ETest.jpg" alt="使用封闭服务器的被测系统"></p>
+<p>端到端测试的步骤如下：</p>
+<ul>
+<li>启动图中的被测试系统</li>
+<li>通过测试用的客户端向被测系统发出一个请求</li>
+<li>验证从被测试系统返回的响应结果。</li>
+</ul>
+<p>这里需要注意的一点是：在这个测试中，我们并不需要连接这个模拟的后端服务器。如果我们真的想要测试一个需要这个后端服务器的请求，我们也必须在连接点提供一个封闭服务。</p>
+<p>这种端到端测试<strong>更可靠</strong>，因为它不使用网络连接。它<strong>更快</strong>，因为它所需要的一切都在内存或本地硬盘中可用。</p>
+<p>谷歌是在其持续集成系统上运行这种测试，因此对于被测系统中的任何一个服务做出代码变更时，它们都会被运行。一旦测试失败，日志模块将帮助跟踪被测系统中发生故障的位置。</p>
+<p>谷歌在很多端到端测试中使用了密封服务。一些常见的情况包括：</p>
+<ul>
+<li>使用<a href="https://github.com/google/guice">Guice</a> 对服务器进行启动测试，以验证启动时没有Guice 错误。</li>
+<li>对后台服务进行API测试。</li>
+<li>迷你性能测试。</li>
+<li>前端服务的UI和API测试。</li>
+</ul>
+<h4 id="结论">结论</h4>
+<p>封闭服务器的确有一些限制性。它们将增加测试的运行时间，因为每次运行端到端测试时都必须启动整个SUT。如果你的测试使用有限的资源（如内存和CPU）运行，那么当服务器交互变得越来越复杂时，封闭服务器可能会使测试超过这些限制。另外，在内存数据存储中使用的数据集大小也比真实的生产数据存储的数据集要小得多。</p>
+<p>封闭服务器是一个很好的测试工具。像所有其他工具一样，它们需要在适当的地方得到深思熟虑的使用。</p>
+
+                        </div>
                         
                         
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="http://www.continuousdelivery20.com/blog/tott-writing-descriptive/">
-                                          
-                                          <img src="/img/banners/b-2021-01/self_explanatory.png" class="img-responsive" alt="">
-                                          
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="http://www.continuousdelivery20.com/blog/tott-writing-descriptive/">使用自描述性的测试方法名</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          
-                                          由 <a href="#">乔梁</a>
-                                          
-                                          
-                                          
-                                          in <a href="/categories/%e8%a7%82%e7%82%b9%e6%96%b9%e6%b3%95">观点方法</a>
-                                          
-                                          
 
-                                        </p>
-                                        <p class="date-comments">
-                                            <a href="http://www.continuousdelivery20.com/blog/tott-writing-descriptive/"><i class="far fa-calendar"></i> 2021-02-02</a>
-                                        </p>
-                                    </div>
-                                    <p class="intro">使用描述性的测试名称 猜一猜你会花多长时间才能了解下面这段测试代码用来验证什么样的行为? @Test public void isUserLockedOut_invalidLogin() { authenticator.authenticate(username, invalidPassword); assertFalse(authenticator.isUserLockedOut(username)); authenticator.authenticate(username, invalidPassword); assertFalse(authenticator.isUserLockedOut(username)); authenticator.authenticate(username, invalidPassword); assertTrue(authenticator.isUserLockedOut(username)); } 你可能要从头到尾读完每一</p>
-                                    <p class="read-more"><a href="http://www.continuousdelivery20.com/blog/tott-writing-descriptive/" class="btn btn-template-main">继续阅读</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        
-
-                        <ul class="pager">
-                            
-                            <li class="previous disabled"><a href="#">&larr; 更新</a></li>
-                            
-
-                            
-                            <li class="next disabled"><a href="#">更旧 &rarr;</a></li>
-                            
-                        </ul>
                     </div>
                     
 
@@ -281,7 +298,7 @@
             
             
             <li>
-                <a href="/categories/%e5%ae%9e%e8%b7%b5%e6%a1%88%e4%be%8b">实践案例 (13)</a>
+                <a href="/categories/%e5%ae%9e%e8%b7%b5%e6%a1%88%e4%be%8b">实践案例 (18)</a>
             </li>
             
             <li>
@@ -289,7 +306,7 @@
             </li>
             
             <li>
-                <a href="/categories/%e8%a7%82%e7%82%b9%e6%96%b9%e6%b3%95">观点方法 (2)</a>
+                <a href="/categories/%e8%a7%82%e7%82%b9%e6%96%b9%e6%b3%95">观点方法 (1)</a>
             </li>
             
         </ul>
@@ -491,10 +508,6 @@
             </li>
             
             <li>
-                <a href="/tags/%e8%b0%b7%e6%ad%8c"><i class="fas fa-tags"></i> 谷歌</a>
-            </li>
-            
-            <li>
                 <a href="/tags/%e8%b4%a8%e9%87%8f%e4%bf%9d%e9%9a%9c"><i class="fas fa-tags"></i> 质量保障</a>
             </li>
             
@@ -549,6 +562,7 @@
 
                 </div>
                 
+
             </div>
             
         </div>
@@ -578,40 +592,40 @@
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="http://www.continuousdelivery20.com/blog/tott-clearly-create-test-data/">
+                        <a href="http://www.continuousdelivery20.com/blog/tott-keep-cause-clear/">
                           
-                            <img src="/img/banners/default.png" class="img-responsive" alt="清晰地创建测试数据！">
+                            <img src="/img/banners/default.png" class="img-responsive" alt="保证原因与影响清晰">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="http://www.continuousdelivery20.com/blog/tott-clearly-create-test-data/">清晰地创建测试数据！</a></h5>
+                        <h5><a href="http://www.continuousdelivery20.com/blog/tott-keep-cause-clear/">保证原因与影响清晰</a></h5>
                     </div>
                 </div>
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="http://www.continuousdelivery20.com/blog/tott-avoiding-flakey-tests/">
+                        <a href="http://www.continuousdelivery20.com/blog/tott-only-verify-state-changing/">
                           
-                            <img src="/img/banners/default.png" class="img-responsive" alt="避免写出不稳定的测试">
+                            <img src="/img/banners/default.png" class="img-responsive" alt="只验证发生状态变化的方法调用">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="http://www.continuousdelivery20.com/blog/tott-avoiding-flakey-tests/">避免写出不稳定的测试</a></h5>
+                        <h5><a href="http://www.continuousdelivery20.com/blog/tott-only-verify-state-changing/">只验证发生状态变化的方法调用</a></h5>
                     </div>
                 </div>
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="http://www.continuousdelivery20.com/blog/tott-change-detector-tests/">
+                        <a href="http://www.continuousdelivery20.com/blog/tott-hermetic-servers/">
                           
-                            <img src="/img/banners/default.png" class="img-responsive" alt="像变更检测器一样的测试代码，是有害的！">
+                            <img src="/img/banners/b-2021-02/06.png" class="img-responsive" alt="使用封闭服务进行端到端的测试（Hermetic Servers）！">
                           
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="http://www.continuousdelivery20.com/blog/tott-change-detector-tests/">像变更检测器一样的测试代码，是有害的！</a></h5>
+                        <h5><a href="http://www.continuousdelivery20.com/blog/tott-hermetic-servers/">使用封闭服务进行端到端的测试（Hermetic Servers）！</a></h5>
                     </div>
                 </div>
                 
